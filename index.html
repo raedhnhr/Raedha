@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Raed Hassan Haidar — Constructor de marcas emocionales</title>
-<meta name="description" content="Raed Hassan Haidar · Constructor de marcas emocionales · Co-fundador de Ta-Umm · Creador de Pyraxis · Houston, TX." />
+<title data-es="Raed Hassan Haidar — Constructor de marcas emocionales" data-en="Raed Hassan Haidar — Builder of emotional brands">Raed Hassan Haidar — Constructor de marcas emocionales</title>
+<meta name="description" content="Raed Hassan Haidar · Constructor de marcas emocionales · Co-fundador de Ta-Umm · Creador de Pyraxis · Houston, TX." data-es="Raed Hassan Haidar · Constructor de marcas emocionales · Co-fundador de Ta-Umm · Creador de Pyraxis · Houston, TX." data-en="Raed Hassan Haidar · Builder of emotional brands · Co-founder of Ta-Umm · Creator of Pyraxis · Houston, TX." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -607,6 +607,40 @@
   .reveal-stagger.in > *:nth-child(7){transition-delay:.65s}
   .reveal-stagger.in > *:nth-child(8){transition-delay:.75s}
 
+  /* LANGUAGE TOGGLE */
+  .lang-toggle{
+    display:inline-flex;align-items:center;
+    gap:2px;
+    margin-left:24px;
+    padding:4px;
+    background:rgba(20,20,20,.04);
+    border:1px solid var(--line);
+    border-radius:999px;
+    transition:all .3s ease;
+  }
+  nav.scrolled .lang-toggle{
+    background:rgba(20,20,20,.05);
+  }
+  .lang-btn{
+    background:transparent;
+    border:none;
+    padding:6px 12px;
+    font-family:'Inter',sans-serif;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--muted);
+    cursor:pointer;
+    border-radius:999px;
+    transition:all .25s ease;
+  }
+  .lang-btn:hover{color:var(--ink)}
+  .lang-btn.active{
+    background:var(--ink);
+    color:var(--bg);
+    box-shadow:0 2px 8px rgba(20,20,20,.15);
+  }
+
   /* RESPONSIVE */
   @media (max-width: 980px){
     .hero{padding:120px 0 60px}
@@ -640,6 +674,8 @@
     .hero h1{font-size:42px}
     form{padding:26px}
     .pyraxis-banner{max-width:100%}
+    .lang-toggle{margin-left:auto;margin-right:12px}
+    .lang-btn{padding:5px 10px;font-size:11px}
   }
 </style>
 </head>
@@ -653,11 +689,15 @@
       <span>Raed Hassan</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
       <li><a href="#services">Pyraxis</a></li>
-      <li><a href="#gallery">Contenido</a></li>
-      <li><a href="#contact" class="nav-cta">Trabaja conmigo</a></li>
+      <li><a href="#gallery" data-es="Contenido" data-en="Content">Contenido</a></li>
+      <li><a href="#contact" class="nav-cta" data-es="Trabaja conmigo" data-en="Work with me">Trabaja conmigo</a></li>
     </ul>
+    <div class="lang-toggle" role="group" aria-label="Language selector">
+      <button type="button" class="lang-btn active" data-lang="es">ES</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
     <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
 </nav>
@@ -667,19 +707,19 @@
   <div class="container">
     <div class="hero-grid">
       <div class="reveal">
-        <span class="hero-tagline"><span class="dot"></span>Marca personal · Brand Strategist</span>
-        <h1>Lo que sientes <em>no es</em> un accidente.</h1>
-        <p class="hero-sub">Soy Raed. Construyo mi marca personal con contenido emocional y analítico — y ayudo a otras marcas a hacer lo mismo desde Pyraxis, mi agencia de marketing digital.</p>
-        <p class="hero-quote">"What you feel is not an accident."</p>
+        <span class="hero-tagline" data-es='<span class="dot"></span>Marca personal · Brand Strategist' data-en='<span class="dot"></span>Personal brand · Brand Strategist'><span class="dot"></span>Marca personal · Brand Strategist</span>
+        <h1 data-es="Lo que sientes <em>no es</em> un accidente." data-en="What you feel <em>isn't</em> an accident.">Lo que sientes <em>no es</em> un accidente.</h1>
+        <p class="hero-sub" data-es="Soy Raed. Construyo mi marca personal con contenido emocional y analítico — y ayudo a otras marcas a hacer lo mismo desde Pyraxis, mi agencia de marketing digital." data-en="I'm Raed. I build my personal brand with emotional, analytical content — and I help other brands do the same through Pyraxis, my digital marketing agency.">Soy Raed. Construyo mi marca personal con contenido emocional y analítico — y ayudo a otras marcas a hacer lo mismo desde Pyraxis, mi agencia de marketing digital.</p>
+        <p class="hero-quote" data-es='"What you feel is not an accident."' data-en='"Lo que sientes no es un accidente."'>"What you feel is not an accident."</p>
         <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary">Trabaja conmigo →</a>
-          <a href="#services" class="btn btn-ghost">Ver Pyraxis</a>
+          <a href="#contact" class="btn btn-primary" data-es="Trabaja conmigo →" data-en="Work with me →">Trabaja conmigo →</a>
+          <a href="#services" class="btn btn-ghost" data-es="Ver Pyraxis" data-en="See Pyraxis">Ver Pyraxis</a>
         </div>
         <div class="community-pill">
           <span class="community-pill-num">252</span>
           <div>
-            <div class="community-pill-label">Posts publicados</div>
-            <div style="font-size:13px;color:var(--ink-soft);margin-top:2px">Storytelling diario · 🇻🇪🇱🇧 Houston, TX</div>
+            <div class="community-pill-label" data-es="Posts publicados" data-en="Published posts">Posts publicados</div>
+            <div style="font-size:13px;color:var(--ink-soft);margin-top:2px" data-es="Storytelling diario · 🇻🇪🇱🇧 Houston, TX" data-en="Daily storytelling · 🇻🇪🇱🇧 Houston, TX">Storytelling diario · 🇻🇪🇱🇧 Houston, TX</div>
           </div>
         </div>
       </div>
@@ -690,7 +730,7 @@
           <div class="ig-handle-block">
             <div class="ig-handle">
               <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">raedha</a>
-              <span class="verified" aria-label="Verificado">
+              <span class="verified" data-es-aria="Verificado" data-en-aria="Verified" aria-label="Verificado">
                 <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
               </span>
             </div>
@@ -699,12 +739,18 @@
         </div>
 
         <div class="ig-stats">
-          <div class="ig-stat"><strong>252</strong><span>posts</span></div>
-          <div class="ig-stat"><strong>1.440</strong><span>seguidores</span></div>
-          <div class="ig-stat"><strong>1.456</strong><span>seguidos</span></div>
+          <div class="ig-stat"><strong>252</strong><span data-es="posts" data-en="posts">posts</span></div>
+          <div class="ig-stat"><strong>1.440</strong><span data-es="seguidores" data-en="followers">seguidores</span></div>
+          <div class="ig-stat"><strong>1.456</strong><span data-es="seguidos" data-en="following">seguidos</span></div>
         </div>
 
-        <div class="ig-bio">
+        <div class="ig-bio" data-es='<strong>🇻🇪🇱🇧 · Houston, TX</strong>
+          Constructor de marcas emocionales.
+          <span class="line-italic">What you feel is not an accident.</span>
+          <span class="brands">Ta-Umm 👑 · Pyraxis 🐦‍🔥</span>' data-en='<strong>🇻🇪🇱🇧 · Houston, TX</strong>
+          Builder of emotional brands.
+          <span class="line-italic">What you feel is not an accident.</span>
+          <span class="brands">Ta-Umm 👑 · Pyraxis 🐦‍🔥</span>'>
           <strong>🇻🇪🇱🇧 · Houston, TX</strong>
           Constructor de marcas emocionales.
           <span class="line-italic">What you feel is not an accident.</span>
@@ -712,9 +758,9 @@
         </div>
 
         <div class="ig-actions">
-          <a href="#contact" class="ig-btn primary">Contactar</a>
-          <a href="#services" class="ig-btn secondary">Servicios</a>
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-btn icon" aria-label="Abrir Instagram">
+          <a href="#contact" class="ig-btn primary" data-es="Contactar" data-en="Contact">Contactar</a>
+          <a href="#services" class="ig-btn secondary" data-es="Servicios" data-en="Services">Servicios</a>
+          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-btn icon" data-es-aria="Abrir Instagram" data-en-aria="Open Instagram" aria-label="Abrir Instagram">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
           </a>
         </div>
@@ -737,21 +783,21 @@
   <div class="container">
     <div class="about-grid">
       <div class="reveal">
-        <span class="section-tag">Sobre mí</span>
-        <h2 class="section-title">Construyo marca personal con <em>contenido emocional</em> y analítico.</h2>
+        <span class="section-tag" data-es="Sobre mí" data-en="About">Sobre mí</span>
+        <h2 class="section-title" data-es="Construyo marca personal con <em>contenido emocional</em> y analítico." data-en="I build personal brand with <em>emotional, analytical</em> content.">Construyo marca personal con <em>contenido emocional</em> y analítico.</h2>
         <div class="about-text">
-          <p>Soy Raed Hassan Haidar. Venezolano-libanés viviendo en Houston, Texas. Mi día a día gira en torno a una idea: las marcas que ganan no son las que más venden, son las que más se sienten.</p>
-          <p>Por eso creé <strong>Pyraxis</strong> — mi agencia de marketing digital donde ayudo a otras marcas a sonar como ellas mismas, no como cualquiera. Auditorías, estrategia, web y contenido viral, con storytelling en el centro.</p>
-          <p>Aparte de mi marca personal, también soy <strong>co-fundador de Ta-Umm</strong>, el proyecto familiar de mi familia. Es un capítulo aparte de lo que comparto aquí: el contenido de esta web y de mi cuenta personal está dedicado a marca, estrategia y storytelling — no al día a día del food truck.</p>
+          <p data-es="Soy Raed Hassan Haidar. Venezolano-libanés viviendo en Houston, Texas. Mi día a día gira en torno a una idea: las marcas que ganan no son las que más venden, son las que más se sienten." data-en="I'm Raed Hassan Haidar. Venezuelan-Lebanese, living in Houston, Texas. My everyday life revolves around one idea: the brands that win aren't the ones that sell the most — they're the ones that are felt the most.">Soy Raed Hassan Haidar. Venezolano-libanés viviendo en Houston, Texas. Mi día a día gira en torno a una idea: las marcas que ganan no son las que más venden, son las que más se sienten.</p>
+          <p data-es="Por eso creé <strong>Pyraxis</strong> — mi agencia de marketing digital donde ayudo a otras marcas a sonar como ellas mismas, no como cualquiera. Auditorías, estrategia, web y contenido viral, con storytelling en el centro." data-en="That's why I created <strong>Pyraxis</strong> — my digital marketing agency, where I help other brands sound like themselves, not like anyone else. Audits, strategy, web and viral content, with storytelling at the center.">Por eso creé <strong>Pyraxis</strong> — mi agencia de marketing digital donde ayudo a otras marcas a sonar como ellas mismas, no como cualquiera. Auditorías, estrategia, web y contenido viral, con storytelling en el centro.</p>
+          <p data-es="Aparte de mi marca personal, también soy <strong>co-fundador de Ta-Umm</strong>, el proyecto familiar de mi familia. Es un capítulo aparte de lo que comparto aquí: el contenido de esta web y de mi cuenta personal está dedicado a marca, estrategia y storytelling." data-en="I'm also <strong>co-founder of Ta-Umm</strong>, my family's project. That's a separate chapter from what I share here: this website and my personal account are dedicated to brand, strategy and storytelling.">Aparte de mi marca personal, también soy <strong>co-fundador de Ta-Umm</strong>, el proyecto familiar de mi familia. Es un capítulo aparte de lo que comparto aquí: el contenido de esta web y de mi cuenta personal está dedicado a marca, estrategia y storytelling.</p>
         </div>
         <div class="expertise reveal-stagger">
           <span class="pill">Brand Strategy</span>
           <span class="pill">Storytelling</span>
-          <span class="pill">Marca Personal</span>
-          <span class="pill">Contenido Viral</span>
-          <span class="pill">Auditorías de Marca</span>
-          <span class="pill">Estrategia Digital</span>
-          <span class="pill">Calendarios Editoriales</span>
+          <span class="pill" data-es="Marca Personal" data-en="Personal Branding">Marca Personal</span>
+          <span class="pill" data-es="Contenido Viral" data-en="Viral Content">Contenido Viral</span>
+          <span class="pill" data-es="Auditorías de Marca" data-en="Brand Audits">Auditorías de Marca</span>
+          <span class="pill" data-es="Estrategia Digital" data-en="Digital Strategy">Estrategia Digital</span>
+          <span class="pill" data-es="Calendarios Editoriales" data-en="Editorial Calendars">Calendarios Editoriales</span>
         </div>
       </div>
       <div class="reveal about-photo-stack">
@@ -767,46 +813,46 @@
 <section id="services" class="services">
   <div class="container">
     <div class="reveal">
-      <span class="section-tag">Servicios · Pyraxis</span>
-      <h2 class="section-title">Marketing digital con <em>alma</em> y método.</h2>
-      <p class="section-lead">Pyraxis es la agencia donde traduzco la estrategia de marca emocional a piezas concretas que tu negocio puede ejecutar mañana mismo.</p>
+      <span class="section-tag" data-es="Servicios · Pyraxis" data-en="Services · Pyraxis">Servicios · Pyraxis</span>
+      <h2 class="section-title" data-es="Marketing digital con <em>alma</em> y método." data-en="Digital marketing with <em>soul</em> and method.">Marketing digital con <em>alma</em> y método.</h2>
+      <p class="section-lead" data-es="Pyraxis es la agencia donde traduzco la estrategia de marca emocional a piezas concretas que tu negocio puede ejecutar mañana mismo." data-en="Pyraxis is the agency where I translate emotional brand strategy into concrete pieces your business can execute tomorrow.">Pyraxis es la agencia donde traduzco la estrategia de marca emocional a piezas concretas que tu negocio puede ejecutar mañana mismo.</p>
     </div>
 
     <div class="pyraxis-banner reveal">
       <div class="pyraxis-mark">🐦‍🔥</div>
       <div>
         <strong>Pyraxis</strong>
-        <span>Agencia de marketing digital</span>
+        <span data-es="Agencia de marketing digital" data-en="Digital marketing agency">Agencia de marketing digital</span>
       </div>
     </div>
 
     <div class="services-grid reveal-stagger">
       <div class="service-card">
         <div class="service-icon">🔍</div>
-        <h3>Auditorías de marca</h3>
-        <p>Diagnóstico completo de tu presencia digital, posicionamiento, voz y narrativa. Encontramos los huecos antes de cubrirlos.</p>
-        <span class="service-tag">Punto de partida</span>
+        <h3 data-es="Auditorías de marca" data-en="Brand audits">Auditorías de marca</h3>
+        <p data-es="Diagnóstico completo de tu presencia digital, posicionamiento, voz y narrativa. Encontramos los huecos antes de cubrirlos." data-en="Full diagnosis of your digital presence, positioning, voice and narrative. We find the gaps before we close them.">Diagnóstico completo de tu presencia digital, posicionamiento, voz y narrativa. Encontramos los huecos antes de cubrirlos.</p>
+        <span class="service-tag" data-es="Punto de partida" data-en="Starting point">Punto de partida</span>
       </div>
 
       <div class="service-card">
         <div class="service-icon">💻</div>
-        <h3>Páginas web</h3>
-        <p>Webs que cuentan tu historia y convierten. Diseñadas para que el visitante sienta antes de pensar.</p>
-        <span class="service-tag">Diseño + estrategia</span>
+        <h3 data-es="Páginas web" data-en="Websites">Páginas web</h3>
+        <p data-es="Webs que cuentan tu historia y convierten. Diseñadas para que el visitante sienta antes de pensar." data-en="Websites that tell your story and convert. Designed so visitors feel before they think.">Webs que cuentan tu historia y convierten. Diseñadas para que el visitante sienta antes de pensar.</p>
+        <span class="service-tag" data-es="Diseño + estrategia" data-en="Design + strategy">Diseño + estrategia</span>
       </div>
 
       <div class="service-card">
         <div class="service-icon">🎯</div>
-        <h3>Estrategia de marca</h3>
-        <p>Definimos el porqué, el cómo y el qué. Posicionamiento, voz, audiencia y la promesa que hace única a tu marca.</p>
-        <span class="service-tag">Lo que sostiene todo</span>
+        <h3 data-es="Estrategia de marca" data-en="Brand strategy">Estrategia de marca</h3>
+        <p data-es="Definimos el porqué, el cómo y el qué. Posicionamiento, voz, audiencia y la promesa que hace única a tu marca." data-en="We define the why, how and what. Positioning, voice, audience and the promise that makes your brand unique.">Definimos el porqué, el cómo y el qué. Posicionamiento, voz, audiencia y la promesa que hace única a tu marca.</p>
+        <span class="service-tag" data-es="Lo que sostiene todo" data-en="The foundation">Lo que sostiene todo</span>
       </div>
 
       <div class="service-card">
         <div class="service-icon">📅</div>
-        <h3>Calendarios de contenido</h3>
-        <p>Calendarios editoriales con guiones en formato viral, listos para grabar. Storytelling estructurado, mes a mes.</p>
-        <span class="service-tag">Guiones incluidos</span>
+        <h3 data-es="Calendarios de contenido" data-en="Content calendars">Calendarios de contenido</h3>
+        <p data-es="Calendarios editoriales con guiones en formato viral, listos para grabar. Storytelling estructurado, mes a mes." data-en="Editorial calendars with viral-format scripts, ready to record. Structured storytelling, month by month.">Calendarios editoriales con guiones en formato viral, listos para grabar. Storytelling estructurado, mes a mes.</p>
+        <span class="service-tag" data-es="Guiones incluidos" data-en="Scripts included">Guiones incluidos</span>
       </div>
     </div>
 
@@ -817,9 +863,9 @@
 <section id="gallery" class="gallery">
   <div class="container">
     <div class="reveal">
-      <span class="section-tag">Contenido</span>
-      <h2 class="section-title">Storytelling <em>diario.</em></h2>
-      <p class="section-lead">Una mirada al contenido que publico en mi cuenta personal. Historias propias, marca personal y los aprendizajes que voy compartiendo a diario.</p>
+      <span class="section-tag" data-es="Contenido" data-en="Content">Contenido</span>
+      <h2 class="section-title" data-es="Storytelling <em>diario.</em>" data-en="Daily <em>storytelling.</em>">Storytelling <em>diario.</em></h2>
+      <p class="section-lead" data-es="Una mirada al contenido que publico en mi cuenta personal. Historias propias, marca personal y los aprendizajes que voy compartiendo a diario." data-en="A glimpse at the content I publish on my personal account. Personal stories, personal branding and the lessons I share day by day.">Una mirada al contenido que publico en mi cuenta personal. Historias propias, marca personal y los aprendizajes que voy compartiendo a diario.</p>
     </div>
 
     <div class="gallery-grid reveal-stagger">
@@ -843,10 +889,10 @@
 <section class="metrics">
   <div class="container">
     <div class="metrics-grid reveal-stagger">
-      <div class="metric"><strong data-count="252">0</strong><span>Posts de storytelling</span></div>
-      <div class="metric"><strong data-count="1440">0</strong><span>Seguidores en Instagram</span></div>
-      <div class="metric"><strong data-count="4">0</strong><span>Servicios Pyraxis</span></div>
-      <div class="metric"><strong data-count="2">0</strong><span>Marcas construidas</span></div>
+      <div class="metric"><strong data-count="252">0</strong><span data-es="Posts de storytelling" data-en="Storytelling posts">Posts de storytelling</span></div>
+      <div class="metric"><strong data-count="1440">0</strong><span data-es="Seguidores en Instagram" data-en="Instagram followers">Seguidores en Instagram</span></div>
+      <div class="metric"><strong data-count="4">0</strong><span data-es="Servicios Pyraxis" data-en="Pyraxis services">Servicios Pyraxis</span></div>
+      <div class="metric"><strong data-count="2">0</strong><span data-es="Marcas construidas" data-en="Brands built">Marcas construidas</span></div>
     </div>
   </div>
 </section>
@@ -856,22 +902,22 @@
   <div class="container">
     <div class="contact-grid">
       <div class="reveal">
-        <span class="section-tag">Trabaja conmigo</span>
-        <h2>¿Tienes una marca <em>que merece</em> ser sentida?</h2>
-        <p>Cuéntame qué estás construyendo. Si encaja con lo que hago, te respondo en menos de 48h.</p>
+        <span class="section-tag" data-es="Trabaja conmigo" data-en="Work with me">Trabaja conmigo</span>
+        <h2 data-es="¿Tienes una marca <em>que merece</em> ser sentida?" data-en="Do you have a brand <em>that deserves</em> to be felt?">¿Tienes una marca <em>que merece</em> ser sentida?</h2>
+        <p data-es="Cuéntame qué estás construyendo. Si encaja con lo que hago, te respondo en menos de 48h." data-en="Tell me what you're building. If it fits what I do, I'll get back to you in less than 48h.">Cuéntame qué estás construyendo. Si encaja con lo que hago, te respondo en menos de 48h.</p>
 
         <div class="contact-info-block">
-          <span class="label">Email directo</span>
+          <span class="label" data-es="Email directo" data-en="Direct email">Email directo</span>
           <a href="mailto:raedhassan15@gmail.com">raedhassan15@gmail.com</a>
         </div>
 
         <div class="contact-info-block">
-          <span class="label">Ubicación</span>
+          <span class="label" data-es="Ubicación" data-en="Location">Ubicación</span>
           <a href="#" style="border:none;cursor:default">Houston, TX · 🇻🇪🇱🇧</a>
         </div>
 
         <div class="socials-row">
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram personal">
+          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="social-icon" data-es-aria="Instagram personal" data-en-aria="Personal Instagram" aria-label="Instagram personal">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
           <a href="https://www.tiktok.com/@raedhnhr" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
@@ -886,31 +932,31 @@
         </div>
       </div>
 
-      <form class="reveal" onsubmit="event.preventDefault(); alert('¡Gracias! Te respondo pronto a tu email.'); this.reset();">
+      <form class="reveal" id="contactForm">
         <div class="form-row">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" required placeholder="Tu nombre completo">
+          <label for="name" data-es="Nombre" data-en="Name">Nombre</label>
+          <input type="text" id="name" required placeholder="Tu nombre completo" data-es-ph="Tu nombre completo" data-en-ph="Your full name">
         </div>
         <div class="form-row">
-          <label for="email">Email</label>
-          <input type="email" id="email" required placeholder="tu@email.com">
+          <label for="email" data-es="Email" data-en="Email">Email</label>
+          <input type="email" id="email" required placeholder="tu@email.com" data-es-ph="tu@email.com" data-en-ph="your@email.com">
         </div>
         <div class="form-row">
-          <label for="topic">Qué necesitas</label>
+          <label for="topic" data-es="Qué necesitas" data-en="What you need">Qué necesitas</label>
           <select id="topic" required>
-            <option value="">Elige una opción</option>
-            <option>Auditoría de marca</option>
-            <option>Página web</option>
-            <option>Estrategia de marca</option>
-            <option>Calendario de contenidos</option>
-            <option>Otra cosa</option>
+            <option value="" data-es="Elige una opción" data-en="Choose an option">Elige una opción</option>
+            <option data-es="Auditoría de marca" data-en="Brand audit">Auditoría de marca</option>
+            <option data-es="Página web" data-en="Website">Página web</option>
+            <option data-es="Estrategia de marca" data-en="Brand strategy">Estrategia de marca</option>
+            <option data-es="Calendario de contenidos" data-en="Content calendar">Calendario de contenidos</option>
+            <option data-es="Otra cosa" data-en="Something else">Otra cosa</option>
           </select>
         </div>
         <div class="form-row">
-          <label for="msg">Cuéntame tu proyecto</label>
-          <textarea id="msg" required placeholder="Háblame de tu marca, dónde estás y a dónde quieres llegar..."></textarea>
+          <label for="msg" data-es="Cuéntame tu proyecto" data-en="Tell me about your project">Cuéntame tu proyecto</label>
+          <textarea id="msg" required placeholder="Háblame de tu marca, dónde estás y a dónde quieres llegar..." data-es-ph="Háblame de tu marca, dónde estás y a dónde quieres llegar..." data-en-ph="Tell me about your brand, where you are and where you want to go..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar mensaje →</button>
+        <button type="submit" class="btn btn-primary" data-es="Enviar mensaje →" data-en="Send message →">Enviar mensaje →</button>
       </form>
     </div>
   </div>
@@ -923,11 +969,73 @@
       <span class="brand-mark">R</span>
       <span>Raed Hassan</span>
     </a>
-    <p>© 2026 Raed Hassan Haidar · Constructor de marcas emocionales · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a></p>
+    <p data-es='© 2026 Raed Hassan Haidar · Constructor de marcas emocionales · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>' data-en='© 2026 Raed Hassan Haidar · Builder of emotional brands · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>'>© 2026 Raed Hassan Haidar · Constructor de marcas emocionales · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a></p>
   </div>
 </footer>
 
 <script>
+  // ============ LANGUAGE / i18n ============
+  const LANG_KEY = 'raedha_lang';
+  function getInitialLang(){
+    try{
+      const saved = localStorage.getItem(LANG_KEY);
+      if (saved === 'es' || saved === 'en') return saved;
+    }catch(e){}
+    const browser = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+    return browser.startsWith('es') ? 'es' : 'en';
+  }
+  function setLang(lang){
+    if (lang !== 'es' && lang !== 'en') lang = 'es';
+    document.documentElement.lang = lang;
+
+    // innerHTML
+    document.querySelectorAll('[data-es][data-en]').forEach(el => {
+      const val = el.dataset[lang];
+      if (val !== undefined) el.innerHTML = val;
+    });
+    // placeholder
+    document.querySelectorAll('[data-es-ph][data-en-ph]').forEach(el => {
+      const val = el.dataset[lang === 'es' ? 'esPh' : 'enPh'];
+      if (val !== undefined) el.placeholder = val;
+    });
+    // aria-label
+    document.querySelectorAll('[data-es-aria][data-en-aria]').forEach(el => {
+      const val = el.dataset[lang === 'es' ? 'esAria' : 'enAria'];
+      if (val !== undefined) el.setAttribute('aria-label', val);
+    });
+    // <title> and meta description
+    const titleEl = document.querySelector('title[data-es][data-en]');
+    if (titleEl) document.title = titleEl.dataset[lang];
+    const descEl = document.querySelector('meta[name="description"][data-es][data-en]');
+    if (descEl) descEl.setAttribute('content', descEl.dataset[lang]);
+
+    // Toggle visual state
+    document.querySelectorAll('.lang-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.lang === lang);
+    });
+
+    // Number formatting locale for counters
+    window.__numLocale = lang === 'es' ? 'es-ES' : 'en-US';
+
+    try{ localStorage.setItem(LANG_KEY, lang); }catch(e){}
+  }
+  // Apply BEFORE other scripts to avoid flash
+  setLang(getInitialLang());
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLang(btn.dataset.lang));
+  });
+
+  // ============ CONTACT FORM ============
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+    const msg = lang === 'es'
+      ? '¡Gracias! Te respondo pronto a tu email.'
+      : 'Thanks! I\'ll get back to you soon by email.';
+    alert(msg);
+    this.reset();
+  });
+
   // Nav scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
@@ -962,7 +1070,7 @@
         const target = parseInt(el.dataset.count, 10);
         const duration = 1800;
         const start = performance.now();
-        const fmt = (n) => target >= 1000 ? n.toLocaleString('es-ES') : n.toString();
+        const fmt = (n) => target >= 1000 ? n.toLocaleString(window.__numLocale || 'es-ES') : n.toString();
         const tick = (now) => {
           const p = Math.min((now - start) / duration, 1);
           const eased = 1 - Math.pow(1 - p, 3);
