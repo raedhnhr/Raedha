@@ -1,1207 +1,1386 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title data-es="Raed Hassan Haidar — Constructor de marcas emocionales" data-en="Raed Hassan Haidar — Builder of emotional brands">Raed Hassan Haidar — Constructor de marcas emocionales</title>
-<meta name="description" content="Raed Hassan Haidar · Constructor de marcas emocionales · Co-fundador de Ta-Umm · Creador de Pyraxis · Houston, TX." data-es="Raed Hassan Haidar · Constructor de marcas emocionales · Co-fundador de Ta-Umm · Creador de Pyraxis · Houston, TX." data-en="Raed Hassan Haidar · Builder of emotional brands · Co-founder of Ta-Umm · Creator of Pyraxis · Houston, TX." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raed Hassan Haidar | Constructor de marcas — Pyraxis · Katy, TX</title>
+<meta name="description" content="Raed Hassan Haidar, constructor de marcas en Katy, Texas. Fundador de Pyraxis y de Ta-Umm Mediterranean Food. Páginas web, auditorías de marca, logos y branding con propósito.">
+<meta name="author" content="Raed Hassan Haidar · Pyraxis">
+<meta property="og:title" content="Raed Hassan Haidar | Constructor de marcas — Pyraxis">
+<meta property="og:description" content="Marcas con propósito y emoción. Páginas web, auditorías de marca, logos y branding desde Katy, Texas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://raedha.vercel.app/">
+<meta property="og:image" content="https://raedha.vercel.app/assets/pyraxis-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#03060f">
+<link rel="icon" href="assets/pyraxis-icon.png">
+<link rel="apple-touch-icon" href="assets/pyraxis-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#fafaf7;
-    --bg-soft:#f4f1ea;
-    --ink:#141414;
-    --ink-soft:#3a3a3a;
-    --muted:#7a756c;
-    --line:rgba(20,20,20,0.08);
-    --gold:#c8a35c;
-    --gold-deep:#a8842f;
-    --gold-soft:#e8d6a8;
-    --cream:#f6efde;
-    --accent-grad:linear-gradient(135deg,#e8d6a8 0%,#c8a35c 45%,#a8842f 100%);
-    --story-grad:linear-gradient(45deg,#feda75 0%,#fa7e1e 25%,#d62976 50%,#962fbf 75%,#4f5bd5 100%);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    line-height:1.6;
-    overflow-x:hidden;
-    -webkit-font-smoothing:antialiased;
-  }
-  ::selection{background:var(--gold);color:#fff}
-  ::-webkit-scrollbar{width:10px}
-  ::-webkit-scrollbar-track{background:var(--bg-soft)}
-  ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:6px}
-  ::-webkit-scrollbar-thumb:hover{background:var(--gold-deep)}
+/* ============================================================
+   RAED HASSAN — CONSTRUCTOR DE MARCAS · PYRAXIS
+   Paleta: azul marino profundo · dorado · vino · blanco
+   Tipografía: Cormorant Garamond (display) + Instrument Sans (texto)
+   ============================================================ */
+:root{
+  --ink:#03060f;
+  --ink-2:#050b1c;
+  --ink-3:#071230;
+  --navy:#011d57;
+  --gold:#C6A15B;
+  --gold-lt:#E4C88C;
+  --gold-dp:#8a6d34;
+  --wine:#3c071b;
+  --white:#ffffff;
+  --text:#e8ecf5;
+  --dim:#98a3ba;
+  --dim-2:#6b7690;
+  --line:rgba(198,161,91,.20);
+  --line-soft:rgba(232,236,245,.10);
+  --gold-grad:linear-gradient(115deg,#8a6d34 0%,#e9d5a4 17%,#c6a15b 33%,#fff4dc 47%,#a9843f 61%,#e4c88c 78%,#7d6330 100%);
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);
+  color:var(--text);
+  font-family:'Instrument Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-weight:400;
+  line-height:1.72;
+  overflow-x:hidden;
+  letter-spacing:.01em;
+}
+::selection{background:var(--gold);color:var(--ink)}
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#5b4a25,#c6a15b,#5b4a25);border-radius:9px}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#8a6d34,#e4c88c,#8a6d34)}
 
-  .container{max-width:1240px;margin:0 auto;padding:0 28px}
+/* --- Grano de película --- */
+body::after{
+  content:'';position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-  /* NAV */
-  nav{
-    position:fixed;top:0;left:0;right:0;z-index:1000;
-    padding:18px 0;
-    transition:all .35s cubic-bezier(.4,0,.2,1);
-    border-bottom:1px solid transparent;
-  }
-  nav.scrolled{
-    background:rgba(250,250,247,0.85);
-    backdrop-filter:blur(20px) saturate(180%);
-    -webkit-backdrop-filter:blur(20px) saturate(180%);
-    border-bottom:1px solid var(--line);
-    padding:14px 0;
-  }
-  nav .container{display:flex;justify-content:space-between;align-items:center}
-  .brand{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:22px;
-    letter-spacing:-.01em;
-    display:flex;align-items:center;gap:8px;
-  }
-  .brand-mark{
-    width:34px;height:34px;border-radius:50%;
-    background:var(--accent-grad);
-    display:grid;place-items:center;
-    color:#fff;font-weight:700;font-size:14px;
-    box-shadow:0 4px 12px rgba(168,132,47,.35);
-  }
-  .nav-links{display:flex;gap:34px;list-style:none}
-  .nav-links a{
-    color:var(--ink-soft);text-decoration:none;
-    font-size:14px;font-weight:500;
-    position:relative;
-    transition:color .25s;
-  }
-  .nav-links a::after{
-    content:'';position:absolute;left:0;bottom:-6px;
-    width:0;height:1px;background:var(--gold);
-    transition:width .3s ease;
-  }
-  .nav-links a:hover{color:var(--ink)}
-  .nav-links a:hover::after{width:100%}
-  .nav-cta{
-    padding:10px 22px;border-radius:999px;
-    background:var(--ink);color:#fff !important;
-    font-size:13px;font-weight:600;
-  }
-  .nav-cta::after{display:none !important}
-  .menu-toggle{display:none;background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink)}
+/* --- Tipografía --- */
+h1,h2,h3,.display{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.06;letter-spacing:0}
+.gold{
+  background:var(--gold-grad);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  background-size:200% 100%;
+  animation:sheen 9s ease-in-out infinite;
+}
+@keyframes sheen{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.eyebrow{
+  font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;display:inline-block;
+}
+.eyebrow::before{
+  content:'';display:inline-block;width:36px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold));
+  vertical-align:middle;margin-right:14px;
+}
+.lede{font-size:clamp(1rem,1.5vw,1.14rem);color:var(--dim);max-width:62ch}
+em{font-style:italic}
 
-  /* HERO */
-  .hero{
-    padding:140px 0 80px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:'';position:absolute;
-    top:-200px;right:-100px;
-    width:500px;height:500px;
-    background:radial-gradient(circle,rgba(232,214,168,.5) 0%,transparent 65%);
-    filter:blur(40px);
-    z-index:0;
-  }
-  .hero::after{
-    content:'';position:absolute;
-    bottom:-150px;left:-100px;
-    width:400px;height:400px;
-    background:radial-gradient(circle,rgba(200,163,92,.25) 0%,transparent 65%);
-    filter:blur(30px);
-    z-index:0;
-  }
-  .hero-grid{
-    display:grid;
-    grid-template-columns:1.1fr .95fr;
-    gap:80px;align-items:center;
-    position:relative;z-index:1;
-  }
+/* --- Layout --- */
+section{position:relative;padding:clamp(86px,10vw,150px) 0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(22px,5vw,40px)}
+.sec-title{font-size:clamp(2.1rem,5vw,3.9rem);margin:20px 0 26px}
 
-  .hero-tagline{
-    display:inline-flex;align-items:center;gap:10px;
-    padding:8px 16px;border-radius:999px;
-    background:rgba(200,163,92,.12);
-    border:1px solid rgba(200,163,92,.25);
-    font-size:12px;font-weight:600;letter-spacing:.08em;
-    color:var(--gold-deep);
-    text-transform:uppercase;
-    margin-bottom:28px;
-  }
-  .hero-tagline .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.4)}}
+/* --- Reveal --- */
+.rv{opacity:0;transform:translateY(36px);transition:opacity 1.05s var(--ease),transform 1.05s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-l{opacity:0;transform:translateX(-44px);transition:opacity 1.05s var(--ease),transform 1.05s var(--ease)}
+.rv-l.in{opacity:1;transform:none}
+.rv-r{opacity:0;transform:translateX(44px);transition:opacity 1.05s var(--ease),transform 1.05s var(--ease)}
+.rv-r.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv,.rv-l,.rv-r{opacity:1!important;transform:none!important;transition:none!important}
+  .stage-name,.stage-last,.stage-photo{opacity:1!important;transform:none!important;animation:none!important}
+  .gold{animation:none}
+  html{scroll-behavior:auto}
+}
 
-  .hero h1{
-    font-family:'Fraunces',serif;
-    font-size:clamp(44px,6vw,76px);
-    font-weight:500;
-    line-height:1.02;
-    letter-spacing:-.025em;
-    margin-bottom:28px;
-  }
-  .hero h1 em{
-    font-style:italic;font-weight:400;
-    background:var(--accent-grad);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-  }
-  .hero-sub{
-    font-size:19px;color:var(--ink-soft);
-    max-width:520px;margin-bottom:36px;
-    line-height:1.55;
-  }
-  .hero-quote{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:17px;
-    color:var(--muted);
-    border-left:2px solid var(--gold);
-    padding-left:16px;
-    margin-bottom:36px;
-  }
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
-  .btn{
-    padding:14px 26px;border-radius:999px;
-    font-size:14px;font-weight:600;
-    text-decoration:none;cursor:pointer;
-    display:inline-flex;align-items:center;gap:8px;
-    transition:all .3s cubic-bezier(.4,0,.2,1);
-    border:none;
-    font-family:inherit;
-  }
-  .btn-primary{
-    background:var(--ink);color:#fff;
-    box-shadow:0 6px 20px rgba(20,20,20,.18);
-  }
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(20,20,20,.28)}
-  .btn-ghost{
-    background:transparent;color:var(--ink);
-    border:1px solid var(--ink);
-  }
-  .btn-ghost:hover{background:var(--ink);color:#fff}
+/* ===================== NAV ===================== */
+nav{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  padding:24px 0;transition:all .55s var(--ease);
+  border-bottom:1px solid transparent;
+}
+nav.stuck{
+  padding:14px 0;background:rgba(3,6,15,.82);
+  backdrop-filter:blur(22px) saturate(140%);
+  -webkit-backdrop-filter:blur(22px) saturate(140%);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{max-width:var(--maxw);margin:0 auto;padding:0 clamp(22px,5vw,40px);display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0}
+.brand-mark{
+  width:42px;height:42px;border:1px solid var(--line);border-radius:50%;
+  display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.15rem;
+  letter-spacing:.02em;transition:all .5s var(--ease);flex-shrink:0;
+  box-shadow:inset 0 0 22px rgba(1,29,87,.85);
+}
+.brand:hover .brand-mark{border-color:var(--gold);transform:rotate(-8deg)}
+.brand-txt{line-height:1.15}
+.brand-txt b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:.98rem;letter-spacing:.1em;color:var(--white)}
+.brand-txt span{display:block;font-size:.53rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.nav-right{display:flex;align-items:center;gap:20px}
+.nav-links{display:flex;gap:clamp(16px,2vw,28px);align-items:center;list-style:none}
+.nav-links a{
+  color:var(--dim);text-decoration:none;font-size:.7rem;
+  letter-spacing:.18em;text-transform:uppercase;position:relative;padding:6px 0;transition:color .4s;white-space:nowrap;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;left:0;width:0;height:1px;
+  background:var(--gold-grad);transition:width .5s var(--ease);
+}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{
+  border:1px solid var(--line);padding:11px 20px;border-radius:100px;
+  color:var(--gold-lt)!important;transition:all .5s var(--ease);
+}
+.nav-cta::after{display:none}
+.nav-cta:hover{background:var(--gold);color:var(--ink)!important;border-color:var(--gold)}
 
-  .community-pill{
-    display:inline-flex;align-items:center;gap:14px;
-    padding:14px 22px;border-radius:18px;
-    background:#fff;border:1px solid var(--line);
-    box-shadow:0 8px 30px rgba(20,20,20,.06);
-  }
-  .community-pill-num{
-    font-family:'Fraunces',serif;font-size:32px;font-weight:600;
-    background:var(--accent-grad);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    line-height:1;
-  }
-  .community-pill-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.lang{display:flex;align-items:center;border:1px solid var(--line);border-radius:100px;overflow:hidden;flex-shrink:0}
+.lang button{
+  background:none;border:0;cursor:pointer;padding:8px 12px;
+  font-family:'Instrument Sans',sans-serif;font-size:.62rem;font-weight:600;
+  letter-spacing:.14em;color:var(--dim-2);transition:all .45s var(--ease);
+}
+.lang button:hover{color:var(--white)}
+.lang button.on{background:var(--gold);color:var(--ink)}
 
-  /* IG CARD */
-  .ig-card{
-    background:#fff;
-    border-radius:32px;
-    padding:36px 32px 28px;
-    box-shadow:
-      0 30px 80px -20px rgba(20,20,20,.18),
-      0 8px 24px rgba(20,20,20,.06),
-      0 0 0 1px var(--line);
-    position:relative;
-    overflow:hidden;
-  }
-  .ig-card::before{
-    content:'';position:absolute;top:0;left:0;right:0;height:3px;
-    background:var(--accent-grad);
-  }
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
+.burger span{display:block;width:24px;height:1px;background:var(--gold-lt);transition:all .4s var(--ease)}
+.burger.x span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.x span:nth-child(2){opacity:0}
+.burger.x span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
-  .ig-card-header{display:flex;align-items:center;gap:18px;margin-bottom:22px}
-  .ig-avatar-ring{
-    width:96px;height:96px;border-radius:50%;
-    padding:3px;
-    background:var(--story-grad);
-    background-size:200% 200%;
-    animation:rotateGrad 6s linear infinite;
-    flex-shrink:0;
-  }
-  @keyframes rotateGrad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-  .ig-avatar-ring-inner{
-    width:100%;height:100%;border-radius:50%;
-    background:#fff;padding:3px;
-  }
-  .ig-avatar{
-    width:100%;height:100%;border-radius:50%;
-    background:var(--accent-grad);
-    background-image:url('assets/instagram/profile.jpg'), var(--accent-grad);
-    background-size:cover;background-position:center;
-    display:flex;align-items:center;justify-content:center;
-    color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:32px;
-    position:relative;
-  }
-  .ig-avatar::before{
-    content:'';
-    position:absolute;
-    z-index:0;
-  }
-  .ig-handle-block{flex:1;min-width:0}
-  .ig-handle{
-    font-size:20px;font-weight:600;
-    display:flex;align-items:center;gap:8px;
-    margin-bottom:4px;
-  }
-  .ig-handle a{color:var(--ink);text-decoration:none}
-  .verified{
-    width:20px;height:20px;border-radius:50%;
-    background:linear-gradient(135deg,#3897f0 0%,#1565c0 100%);
-    display:inline-grid;place-items:center;
-    box-shadow:0 2px 6px rgba(56,151,240,.35);
-    flex-shrink:0;
-  }
-  .verified svg{width:11px;height:11px;fill:#fff}
-  .ig-name{font-family:'Fraunces',serif;font-size:15px;color:var(--muted);font-weight:500}
+/* ===================== HERO ===================== */
+.hero{min-height:100svh;display:flex;align-items:center;padding:106px 0 58px;overflow:hidden;text-align:center}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg::before{
+  content:'';position:absolute;top:-32%;left:50%;transform:translateX(-50%);
+  width:min(1150px,150vw);height:min(1150px,150vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(1,29,87,.62) 0%,rgba(1,29,87,.20) 40%,transparent 70%);
+}
+.hero-bg::after{
+  content:'';position:absolute;bottom:-24%;right:-12%;
+  width:min(780px,110vw);height:min(780px,110vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(198,161,91,.10) 0%,rgba(60,7,27,.18) 45%,transparent 68%);
+}
+.orbit{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(900px,124vw);height:min(900px,124vw);border-radius:50%;
+  border:1px solid rgba(198,161,91,.11);z-index:0;
+}
+.orbit::before{content:'';position:absolute;inset:11%;border-radius:50%;border:1px solid rgba(198,161,91,.07)}
+.orbit::after{
+  content:'';position:absolute;top:50%;left:-4px;width:7px;height:7px;border-radius:50%;
+  background:var(--gold-lt);box-shadow:0 0 20px 4px rgba(198,161,91,.6);
+}
+.hero-in{position:relative;z-index:2;width:100%}
+/* Retrato al centro, el nombre alrededor */
+.stage{
+  position:relative;margin:18px 0 0;
+  display:grid;grid-template-columns:1fr auto 1fr;
+  align-items:center;justify-items:center;font-weight:300;
+}
+.stage-name,.stage-last{
+  font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;text-transform:uppercase;
+  font-size:clamp(2.3rem,6.6vw,5.6rem);line-height:.92;letter-spacing:.02em;
+  white-space:nowrap;position:relative;z-index:1;
+  opacity:0;animation:riseIn 1.25s var(--ease) forwards;
+}
+.stage-name.l{justify-self:end;margin-right:clamp(-56px,-2.6vw,-10px);animation-delay:.15s}
+.stage-name.r{justify-self:start;margin-left:clamp(-56px,-2.6vw,-10px);animation-delay:.3s}
+.stage-last{grid-column:1/-1;margin-top:clamp(-26px,-2vw,-8px);z-index:3;letter-spacing:.06em;animation-delay:.44s}
+.stage-photo{
+  position:relative;z-index:2;display:block;
+  width:clamp(180px,21vw,290px);aspect-ratio:3/4;
+  opacity:0;animation:riseIn 1.35s var(--ease) .04s forwards;
+  -webkit-mask-image:radial-gradient(ellipse 64% 66% at 50% 40%,#000 30%,rgba(0,0,0,.72) 58%,transparent 86%);
+  mask-image:radial-gradient(ellipse 64% 66% at 50% 40%,#000 30%,rgba(0,0,0,.72) 58%,transparent 86%);
+}
+.stage-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.06) brightness(.97)}
+.stage-photo::after{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 62% 64% at 50% 40%,transparent 38%,rgba(3,6,15,.55) 72%,rgba(3,6,15,.92) 100%),
+    linear-gradient(180deg,rgba(1,29,87,.16) 0%,transparent 40%,rgba(3,6,15,.55) 100%);
+}
+@keyframes riseIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.hero-sub{
+  margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 22px;
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);
+  opacity:0;animation:fadeIn 1.2s var(--ease) .7s forwards;
+}
+.hero-sub span{display:flex;align-items:center;gap:24px}
+.hero-sub span::after{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;opacity:.8}
+.hero-sub span:last-child::after{display:none}
+@keyframes fadeIn{to{opacity:1}}
+.hero-tag{
+  margin:22px auto 0;max-width:54ch;font-size:clamp(1rem,1.6vw,1.14rem);color:var(--dim);
+  opacity:0;animation:fadeIn 1.2s var(--ease) .95s forwards;
+}
+.hero-motto{
+  margin-top:18px;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(1.15rem,2.2vw,1.62rem);color:var(--gold-lt);
+  opacity:0;animation:fadeIn 1.2s var(--ease) 1.05s forwards;
+}
+.hero-actions{margin-top:30px;display:flex;flex-wrap:wrap;justify-content:center;gap:15px;opacity:0;animation:fadeIn 1.2s var(--ease) 1.2s forwards}
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:17px 38px;border-radius:100px;text-decoration:none;
+  font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;
+  transition:all .55s var(--ease);position:relative;overflow:hidden;border:1px solid transparent;cursor:pointer;
+}
+.btn-solid{background:var(--gold);color:var(--ink)}
+.btn-solid:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(198,161,91,.28);background:var(--gold-lt)}
+.btn-ghost{border-color:var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(198,161,91,.07);transform:translateY(-3px)}
+.btn .arw{transition:transform .5s var(--ease)}
+.btn:hover .arw{transform:translateX(6px)}
+.scroll-hint{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+  font-size:.54rem;letter-spacing:.32em;text-transform:uppercase;color:var(--dim-2);
+  opacity:0;animation:fadeIn 1.2s ease 1.7s forwards;
+}
+.scroll-hint .bar{width:1px;height:52px;background:linear-gradient(180deg,var(--gold),transparent);position:relative;overflow:hidden}
+.scroll-hint .bar::after{
+  content:'';position:absolute;top:-52px;left:0;width:1px;height:52px;
+  background:linear-gradient(180deg,transparent,var(--gold-lt));animation:drop 2.4s ease-in-out infinite;
+}
+@keyframes drop{0%{top:-52px}60%,100%{top:52px}}
+@media (max-height:940px){.scroll-hint{display:none}}
 
-  .ig-stats{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    gap:12px;text-align:center;
-    padding:16px 0;
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    margin-bottom:18px;
-  }
-  .ig-stat strong{
-    display:block;font-family:'Fraunces',serif;
-    font-size:22px;font-weight:600;color:var(--ink);
-    line-height:1.1;
-  }
-  .ig-stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+/* ===================== MARQUEE ===================== */
+.marquee-wrap{padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2);overflow:hidden}
+.marquee{display:flex;gap:0;width:max-content;animation:slide 44s linear infinite}
+.marquee-wrap:hover .marquee{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.mq-item{
+  display:flex;align-items:center;gap:clamp(36px,6vw,70px);padding:24px clamp(18px,3vw,34px);
+  font-family:'Cormorant Garamond',serif;font-size:clamp(.86rem,1.2vw,1.05rem);
+  letter-spacing:.2em;text-transform:uppercase;color:var(--dim-2);
+  white-space:nowrap;transition:color .5s;
+}
+.mq-item:hover{color:var(--white)}
+.mq-item::after{content:'◆';font-size:.42rem;color:var(--gold);opacity:.6}
 
-  .ig-bio{
-    font-size:14.5px;line-height:1.55;
-    margin-bottom:18px;
-  }
-  .ig-bio strong{font-weight:600;display:block;margin-bottom:4px}
-  .ig-bio .line-italic{font-family:'Fraunces',serif;font-style:italic;color:var(--muted);font-size:14px;display:block;margin:4px 0}
-  .ig-bio .brands{margin-top:6px;font-weight:500}
+/* ===================== SOBRE ===================== */
+.about-grid{display:grid;grid-template-columns:1fr .85fr;gap:clamp(44px,7vw,90px);align-items:center}
+.about-txt h2{font-size:clamp(2.1rem,5vw,3.9rem);margin:20px 0 28px}
+.about-txt p{color:var(--dim);margin-bottom:19px;font-size:clamp(.97rem,1.3vw,1.06rem)}
+.about-txt p strong{color:var(--white);font-weight:500}
+.sign{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--gold-lt)}
+.sign small{display:block;font-family:'Instrument Sans',sans-serif;font-style:normal;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dim-2);margin-top:9px}
+.portrait{position:relative;aspect-ratio:4/5;border:1px solid var(--line);overflow:hidden;background:var(--ink-3)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;z-index:0}
+.portrait::before{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(3,6,15,.05) 0%,transparent 30%,rgba(3,6,15,.32) 62%,rgba(3,6,15,.9) 100%);
+}
+.portrait-cap{position:absolute;left:0;bottom:0;z-index:2;padding:24px 26px;width:100%}
+.portrait-cap b{display:block;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.35rem;letter-spacing:.05em;color:var(--white)}
+.portrait-cap span{display:block;font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:7px}
+.portrait-frame{position:absolute;inset:15px;border:1px solid rgba(255,255,255,.14);z-index:2;pointer-events:none}
+.portrait-frame::before,.portrait-frame::after{content:'';position:absolute;width:20px;height:20px;border:1px solid var(--gold);opacity:.8}
+.portrait-frame::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.portrait-frame::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
 
-  .ig-actions{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;margin-bottom:20px}
-  .ig-btn{
-    padding:9px 14px;border-radius:10px;
-    font-size:13px;font-weight:600;cursor:pointer;
-    border:none;text-decoration:none;
-    text-align:center;
-    transition:all .25s;
-    font-family:inherit;
-  }
-  .ig-btn.primary{background:#0095f6;color:#fff}
-  .ig-btn.primary:hover{background:#1877f2}
-  .ig-btn.secondary{background:#efefef;color:var(--ink)}
-  .ig-btn.secondary:hover{background:#e0e0e0}
-  .ig-btn.icon{width:38px;background:#efefef;color:var(--ink);padding:9px;display:grid;place-items:center}
-  .ig-btn.icon:hover{background:#e0e0e0}
+/* ===================== STATS ===================== */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:clamp(36px,5vw,58px) clamp(16px,2.4vw,28px);text-align:center;border-right:1px solid var(--line);position:relative}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.5rem,6vw,4.3rem);line-height:1}
+.stat span{display:block;margin-top:12px;font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dim-2)}
 
-  .ig-highlights{
-    display:flex;
-    gap:14px;
-    padding:6px 0 20px;
-    margin-bottom:18px;
-    border-bottom:1px solid var(--line);
-    overflow-x:auto;
-    scrollbar-width:none;
-  }
-  .ig-highlights::-webkit-scrollbar{display:none}
-  .ig-highlight{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:7px;
-    flex-shrink:0;
-    cursor:pointer;
-    transition:transform .25s;
-    text-decoration:none;
-    color:inherit;
-  }
-  .ig-highlight:hover{transform:translateY(-2px)}
-  .ig-highlight-circle{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    background:radial-gradient(circle at 30% 30%, #1a1208 0%, #050300 100%);
-    border:2px solid var(--gold-deep);
-    box-shadow:0 0 0 1px rgba(200,163,92,.15), 0 4px 12px rgba(0,0,0,.18);
-    display:grid;
-    place-items:center;
-    font-size:24px;
-    line-height:1;
-    position:relative;
-  }
-  .ig-highlight-circle::after{
-    content:'';
-    position:absolute;
-    inset:-4px;
-    border-radius:50%;
-    border:1px solid rgba(200,163,92,.18);
-    pointer-events:none;
-  }
-  .ig-highlight-label{
-    font-size:11px;
-    color:var(--ink-soft);
-    font-weight:500;
-    letter-spacing:.02em;
-  }
+/* ===================== PYRAXIS ===================== */
+.pyx{background:var(--ink-2);overflow:hidden}
+.pyx-bg{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:'Cormorant Garamond',serif;font-size:clamp(8rem,24vw,22rem);
+  color:rgba(198,161,91,.028);white-space:nowrap;pointer-events:none;
+  letter-spacing:.04em;z-index:0;will-change:transform;text-transform:uppercase;
+}
+.pyx .wrap{position:relative;z-index:1}
+.pyx-grid{display:grid;grid-template-columns:1fr .8fr;gap:clamp(44px,6vw,80px);align-items:center}
+.pyx-mark{display:block;width:clamp(108px,12.5vw,148px);height:auto;margin-bottom:24px;filter:drop-shadow(0 12px 32px rgba(198,161,91,.20))}
+.pyx-txt h2{font-size:clamp(2.1rem,5vw,3.9rem);margin:20px 0 26px}
+.pyx-txt p{color:var(--dim);margin-bottom:18px;font-size:clamp(.97rem,1.3vw,1.06rem)}
+.pyx-txt p strong{color:var(--white);font-weight:500}
+.plate{position:relative;aspect-ratio:4/5;border:1px solid var(--line);overflow:hidden;background:var(--ink-3)}
+.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;z-index:0;filter:saturate(.95) contrast(1.03)}
+.plate::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(1,29,87,.34) 0%,rgba(1,29,87,.12) 38%,rgba(3,6,15,.86) 100%)}
+.plate-cap{position:absolute;left:0;bottom:0;z-index:2;padding:24px 26px;width:100%;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.24rem;color:var(--gold-lt)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);margin-top:64px}
+.pillar{
+  border:1px solid var(--line);padding:clamp(26px,3.2vw,38px);
+  background:linear-gradient(160deg,rgba(1,29,87,.34),transparent 65%);
+  transition:all .6s var(--ease);position:relative;overflow:hidden;
+}
+.pillar::before{content:'';position:absolute;top:0;left:0;width:100%;height:1px;background:var(--gold-grad);transform:scaleX(0);transform-origin:left;transition:transform .75s var(--ease)}
+.pillar:hover{transform:translateY(-6px);border-color:rgba(198,161,91,.42)}
+.pillar:hover::before{transform:scaleX(1)}
+.pillar-icon{
+  width:46px;height:46px;border:1px solid var(--line);border-radius:50%;
+  display:grid;place-items:center;margin-bottom:22px;font-size:1rem;color:var(--gold);transition:all .6s var(--ease);
+}
+.pillar:hover .pillar-icon{border-color:var(--gold);transform:rotate(360deg)}
+.pillar h3{font-size:1.55rem;margin-bottom:12px;color:var(--white)}
+.pillar p{font-size:.92rem;color:var(--dim);line-height:1.7}
 
-  .ig-mini-grid{
-    display:grid;
-    grid-template-columns:repeat(6,1fr);
-    gap:3px;
-    border-radius:12px;
-    overflow:hidden;
-  }
-  .ig-mini-grid .cell{
-    aspect-ratio:1/1;
-    background-size:cover;background-position:center;
-    transition:transform .4s;
-  }
-  .ig-mini-grid .cell:nth-child(3n+1){background-color:#c8a35c}
-  .ig-mini-grid .cell:nth-child(3n+2){background-color:#2a2118}
-  .ig-mini-grid .cell:nth-child(3n+3){background-color:#e8d6a8}
-  .ig-mini-grid .cell:hover{transform:scale(1.06)}
+/* ===================== SERVICIOS ===================== */
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:56px}
+.svc-head h2{font-size:clamp(2.1rem,5vw,3.9rem);margin-top:20px}
+.svc-list{border-top:1px solid var(--line)}
+.svc{
+  display:grid;grid-template-columns:70px 1fr auto;gap:clamp(18px,3.2vw,42px);align-items:center;
+  padding:clamp(26px,3.2vw,38px) clamp(10px,1.6vw,22px);
+  border-bottom:1px solid var(--line);
+  position:relative;transition:all .6s var(--ease);cursor:default;overflow:hidden;
+}
+.svc::before{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(1,29,87,.55),transparent 72%);transform:translateX(-101%);transition:transform .7s var(--ease)}
+.svc:hover::before{transform:translateX(0)}
+.svc>*{position:relative;z-index:1}
+.svc-n{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--dim-2);letter-spacing:.1em;transition:color .5s}
+.svc:hover .svc-n{color:var(--gold)}
+.svc-body h3{font-size:clamp(1.4rem,3vw,2.24rem);color:var(--white);transition:transform .6s var(--ease);line-height:1.16}
+.svc:hover .svc-body h3{transform:translateX(11px)}
+.svc-body p{font-size:.92rem;color:var(--dim);margin-top:8px;max-width:58ch;transition:transform .6s var(--ease) .04s}
+.svc:hover .svc-body p{transform:translateX(11px)}
+.svc-mark{font-size:1.05rem;color:var(--dim-2);opacity:0;transform:translateX(-14px);transition:all .6s var(--ease)}
+.svc:hover .svc-mark{opacity:1;transform:none;color:var(--gold)}
+.svc-note{
+  margin-top:32px;font-size:.86rem;color:var(--dim);display:flex;align-items:flex-start;gap:12px;max-width:72ch;
+}
+.svc-note::before{content:'◆';color:var(--gold);opacity:.7;font-size:.5rem;margin-top:9px}
 
-  /* SECTION */
-  section{padding:120px 0;position:relative}
-  .section-tag{
-    display:inline-flex;align-items:center;gap:10px;
-    font-size:12px;font-weight:600;letter-spacing:.12em;
-    color:var(--gold-deep);text-transform:uppercase;
-    margin-bottom:18px;
-  }
-  .section-tag::before{content:'';width:30px;height:1px;background:var(--gold)}
-  .section-title{
-    font-family:'Fraunces',serif;
-    font-size:clamp(36px,5vw,58px);
-    font-weight:500;
-    line-height:1.05;
-    letter-spacing:-.02em;
-    margin-bottom:24px;
-    max-width:880px;
-  }
-  .section-title em{font-style:italic;font-weight:400;color:var(--gold-deep)}
-  .section-lead{
-    font-size:18px;color:var(--ink-soft);
-    max-width:680px;line-height:1.6;
-    margin-bottom:60px;
-  }
+/* ===================== TRABAJOS ===================== */
+.work{background:var(--ink-2);border-top:1px solid var(--line)}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(18px,2.4vw,28px);margin-top:56px}
+.card{
+  border:1px solid var(--line);overflow:hidden;background:var(--ink-3);
+  display:flex;flex-direction:column;transition:all .65s var(--ease);text-decoration:none;color:inherit;
+}
+.card:hover{transform:translateY(-8px);border-color:rgba(198,161,91,.42);box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.card-shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--ink)}
+.work-grid .card.feat{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;align-items:stretch}
+.work-grid .card.feat .card-shot{aspect-ratio:auto;min-height:clamp(280px,26vw,380px)}
+.work-grid .card.feat .card-body{justify-content:center}
+.card-shot img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform 1.2s var(--ease);display:block}
+.card:hover .card-shot img{transform:scale(1.05)}
+.card-shot::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,11,28,.85) 100%)}
+.card-tag{
+  position:absolute;left:18px;top:18px;z-index:2;
+  font-size:.54rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-lt);
+  background:rgba(3,6,15,.78);border:1px solid var(--line);border-radius:100px;padding:7px 14px;backdrop-filter:blur(8px);
+}
+.card-body{padding:clamp(24px,3vw,34px);flex:1;display:flex;flex-direction:column}
+.card-body .place{font-size:.56rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+.card-body h3{font-size:clamp(1.45rem,2.6vw,1.95rem);color:var(--white);margin-bottom:12px;line-height:1.16}
+.card-body p{font-size:.9rem;color:var(--dim);flex:1}
+.card-link{
+  margin-top:22px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt);
+  display:flex;align-items:center;gap:10px;transition:gap .5s var(--ease);
+}
+.card:hover .card-link{gap:18px}
+.card-link.soon{color:var(--dim-2)}
 
-  /* ABOUT */
-  .about{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .about-grid{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:80px;align-items:center;
-  }
-  .about-text p{margin-bottom:18px;font-size:17px;color:var(--ink-soft);line-height:1.7}
-  .about-text p:first-of-type::first-letter{
-    font-family:'Fraunces',serif;
-    font-size:64px;font-weight:500;
-    float:left;line-height:.9;
-    margin:6px 12px 0 0;
-    color:var(--gold-deep);
-  }
-  .expertise{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-  .pill{
-    padding:8px 16px;border-radius:999px;
-    background:#fff;border:1px solid var(--line);
-    font-size:13px;font-weight:500;
-    color:var(--ink-soft);
-    transition:all .25s;
-  }
-  .pill:hover{border-color:var(--gold);color:var(--gold-deep);transform:translateY(-2px)}
+/* ===================== TA-UMM ===================== */
+.origin{overflow:hidden}
+.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,76px);align-items:center}
+.origin-shot{position:relative;aspect-ratio:4/3;border:1px solid var(--line);overflow:hidden;background:var(--ink-3)}
+.origin-shot::after{content:'';position:absolute;inset:14px;border:1px solid rgba(255,255,255,.13);z-index:2;pointer-events:none}
+.origin-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.origin-shot::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(200deg,rgba(1,29,87,.28),transparent 45%,rgba(60,7,27,.42))}
+.origin-txt h2{font-size:clamp(2.1rem,5vw,3.9rem);margin:20px 0 26px}
+.origin-txt p{color:var(--dim);margin-bottom:18px;font-size:clamp(.97rem,1.3vw,1.06rem)}
+.origin-txt p strong{color:var(--white);font-weight:500}
+.origin-meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:10px}
+.chip{
+  font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-lt);
+  border:1px solid var(--line);border-radius:100px;padding:8px 16px;
+}
 
-  .about-photo-stack{
-    position:relative;
-    height:540px;
-  }
-  .about-photo-stack .ph{
-    position:absolute;border-radius:18px;
-    background-size:cover;background-position:center;
-    box-shadow:0 20px 50px -15px rgba(20,20,20,.25);
-    transition:transform .5s ease;
-  }
-  .about-photo-stack .ph-1{
-    width:62%;height:65%;top:0;left:0;
-    background-color:var(--gold);
-    background-image:url('assets/instagram/post-2.jpg'), linear-gradient(135deg, #c8a35c 0%, #a8842f 100%);
-    background-size:cover, cover;
-    background-position:center;
-  }
-  .about-photo-stack .ph-2{
-    width:55%;height:55%;bottom:0;right:0;
-    background-color:var(--ink);
-    background-image:url('assets/instagram/post-6.jpg'), linear-gradient(135deg, #2a2118 0%, #141414 100%);
-    background-size:cover, cover;
-    background-position:center;
-    border:6px solid var(--bg-soft);
-  }
-  .about-photo-stack .ph-3{
-    width:38%;height:38%;top:30%;right:0;
-    background-color:var(--cream);
-    background-image:url('assets/instagram/post-9.jpg'), linear-gradient(135deg, #f6efde 0%, #e8d6a8 100%);
-    background-size:cover, cover;
-    background-position:center;
-    border:6px solid var(--bg-soft);
-  }
-  .about-photo-stack:hover .ph-1{transform:translate(-8px,-8px)}
-  .about-photo-stack:hover .ph-2{transform:translate(8px,8px)}
+/* ===================== PROCESO ===================== */
+.process{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,2.6vw,34px);margin-top:56px}
+.proc{position:relative;padding-top:32px;border-top:1px solid var(--line)}
+.proc::before{content:'';position:absolute;top:-1px;left:0;width:0;height:1px;background:var(--gold-grad);transition:width 1.1s var(--ease)}
+.proc.in::before{width:100%}
+.proc b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.6rem;line-height:1;color:rgba(198,161,91,.26);margin-bottom:16px}
+.proc h3{font-size:1.3rem;color:var(--white);margin-bottom:10px}
+.proc p{font-size:.89rem;color:var(--dim);line-height:1.7}
 
-  /* SERVICES — PYRAXIS */
-  .services{background:var(--bg)}
-  .pyraxis-banner{
-    display:flex;align-items:center;gap:14px;
-    padding:16px 24px;border-radius:14px;
-    background:linear-gradient(135deg,#1a1a1a 0%,#2a2118 100%);
-    color:#fff;
-    margin-bottom:50px;
-    max-width:fit-content;
-  }
-  .pyraxis-mark{
-    width:40px;height:40px;border-radius:10px;
-    background:var(--accent-grad);
-    display:grid;place-items:center;
-    font-size:20px;
-  }
-  .pyraxis-banner div strong{font-family:'Fraunces',serif;font-size:18px;font-weight:600;display:block}
-  .pyraxis-banner div span{font-size:12px;color:#bdbdbd;letter-spacing:.05em}
+/* ===================== TESTIMONIOS ===================== */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);margin-top:56px}
+.tst{
+  border:1px solid var(--line);padding:clamp(26px,3.2vw,38px);
+  background:linear-gradient(160deg,rgba(60,7,27,.30),transparent 66%);
+  transition:all .6s var(--ease);position:relative;
+}
+.tst:hover{transform:translateY(-6px);border-color:rgba(198,161,91,.4)}
+.tst .q{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--gold);opacity:.45;line-height:.6;display:block;margin-bottom:18px}
+.tst p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--text);line-height:1.5}
+.tst .who{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.tst .who small{display:block;letter-spacing:.16em;color:var(--dim-2);margin-top:6px;text-transform:none;font-size:.7rem}
+.tst[data-todo] p{color:var(--gold-lt);opacity:.85}
 
-  .services-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:24px;
-  }
-  .service-card{
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:24px;
-    padding:36px 30px;
-    transition:all .4s cubic-bezier(.4,0,.2,1);
-    position:relative;
-    overflow:hidden;
-  }
-  .service-card::before{
-    content:'';position:absolute;top:0;left:0;right:0;height:0;
-    background:var(--accent-grad);
-    transition:height .35s ease;
-  }
-  .service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 50px -15px rgba(20,20,20,.18);
-    border-color:transparent;
-  }
-  .service-card:hover::before{height:4px}
-  .service-icon{
-    width:54px;height:54px;border-radius:14px;
-    background:rgba(200,163,92,.12);
-    display:grid;place-items:center;
-    margin-bottom:22px;
-    font-size:24px;
-    transition:all .3s;
-  }
-  .service-card:hover .service-icon{background:var(--accent-grad);transform:rotate(-6deg) scale(1.05)}
-  .service-card h3{
-    font-family:'Fraunces',serif;
-    font-size:22px;font-weight:600;
-    margin-bottom:12px;line-height:1.2;
-  }
-  .service-card p{font-size:15px;color:var(--ink-soft);line-height:1.6}
-  .service-tag{
-    display:inline-block;margin-top:18px;
-    font-size:12px;font-weight:600;color:var(--gold-deep);
-    letter-spacing:.06em;text-transform:uppercase;
-  }
+/* ===================== MANIFIESTO ===================== */
+.manifesto{text-align:center;overflow:hidden;padding:clamp(100px,13vw,180px) 0;background:var(--ink-2);border-top:1px solid var(--line)}
+.manifesto .glow{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(940px,132vw);height:min(560px,80vw);
+  background:radial-gradient(ellipse,rgba(1,29,87,.55),transparent 68%);z-index:0;will-change:transform;
+}
+.manifesto .wrap{position:relative;z-index:1}
+.manifesto blockquote{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:clamp(1.6rem,4.6vw,3.6rem);line-height:1.24;max-width:20ch;margin:30px auto 0;color:var(--white);
+}
+.manifesto .qmark{font-family:'Cormorant Garamond',serif;font-size:clamp(3.4rem,8vw,6rem);color:var(--gold);opacity:.45;line-height:.5;display:block}
+.manifesto cite{display:block;margin-top:40px;font-style:normal;font-size:.6rem;letter-spacing:.32em;text-transform:uppercase;color:var(--dim-2)}
 
-  /* TA-UMM CARD */
-  .taumm{
-    margin-top:50px;
-    padding:48px 44px;
-    background:linear-gradient(135deg,#3a1f0d 0%,#1a0f06 100%);
-    border-radius:28px;
-    color:#fff;
-    display:grid;
-    grid-template-columns:1fr auto;
-    gap:40px;align-items:center;
-    position:relative;overflow:hidden;
-  }
-  .taumm::before{
-    content:'👑';position:absolute;
-    bottom:-30px;right:30px;
-    font-size:200px;opacity:.06;
-    transform:rotate(-15deg);
-  }
-  .taumm-content{position:relative;z-index:1}
-  .taumm-tag{font-size:12px;font-weight:600;letter-spacing:.15em;color:var(--gold-soft);text-transform:uppercase;margin-bottom:14px;display:block}
-  .taumm h3{font-family:'Fraunces',serif;font-size:34px;font-weight:500;line-height:1.15;margin-bottom:14px}
-  .taumm h3 em{font-style:italic;color:var(--gold-soft)}
-  .taumm p{font-size:15.5px;color:#d4cdbf;line-height:1.6;max-width:560px;margin-bottom:22px}
-  .taumm-btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:12px 22px;border-radius:999px;
-    background:var(--accent-grad);
-    color:#1a0f06 !important;font-weight:700;font-size:13px;
-    text-decoration:none;
-    transition:transform .25s;
-  }
-  .taumm-btn:hover{transform:translateX(4px)}
+/* ===================== CONTACTO ===================== */
+.contact{border-top:1px solid var(--line)}
+.ct-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(44px,7vw,88px)}
+.ct-info h2{font-size:clamp(2.1rem,5vw,3.9rem);margin:20px 0 24px}
+.ct-lines{margin-top:40px;display:flex;flex-direction:column;gap:2px}
+.ct-line{display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:all .5s var(--ease)}
+.ct-line:first-child{border-top:1px solid var(--line)}
+.ct-line:hover{padding-left:12px}
+.ct-ico{width:40px;height:40px;flex-shrink:0;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--gold);transition:all .5s var(--ease)}
+.ct-line:hover .ct-ico{border-color:var(--gold);background:rgba(198,161,91,.1)}
+.ct-line div{min-width:0}
+.ct-line small{display:block;font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dim-2);margin-bottom:5px}
+.ct-line b{display:block;font-weight:500;font-size:1.02rem;color:var(--white);letter-spacing:.02em;word-break:break-word}
+.form-box{border:1px solid var(--line);padding:clamp(26px,3.4vw,44px);background:linear-gradient(165deg,rgba(1,29,87,.36),transparent 66%)}
+.form-box h3{font-size:1.7rem;color:var(--white);margin-bottom:8px}
+.form-box>p{font-size:.86rem;color:var(--dim);margin-bottom:28px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{margin-bottom:20px}
+.f label{display:block;font-size:.56rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dim-2);margin-bottom:9px}
+.f input,.f select,.f textarea{
+  width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);
+  padding:12px 0;color:var(--white);font-family:'Instrument Sans',sans-serif;font-size:.96rem;
+  transition:border-color .5s var(--ease);outline:none;border-radius:0;
+}
+.f textarea{resize:vertical;min-height:92px}
+.f select{cursor:pointer;-webkit-appearance:none;appearance:none;
+  background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);
+  background-position:calc(100% - 13px) center,calc(100% - 8px) center;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.f select option{background:var(--ink-3);color:var(--white)}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--gold)}
+.f input::placeholder,.f textarea::placeholder{color:var(--dim-2);opacity:.6}
+.f.err input,.f.err select,.f.err textarea{border-color:#c05a5a}
+.form-box button{
+  width:100%;margin-top:12px;padding:18px;border:0;border-radius:100px;
+  background:var(--gold);color:var(--ink);cursor:pointer;
+  font-family:'Instrument Sans',sans-serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.24em;text-transform:uppercase;transition:all .55s var(--ease);
+}
+.form-box button:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(198,161,91,.28);background:var(--gold-lt)}
+.form-alt{margin-top:16px;text-align:center;font-size:.78rem;color:var(--dim-2)}
+.form-alt a{color:var(--gold-lt);text-decoration:none;border-bottom:1px solid var(--line)}
+.form-alt a:hover{color:var(--white)}
+.form-note{margin-top:14px;font-size:.76rem;color:var(--dim-2);text-align:center;line-height:1.6}
+.form-note a{color:var(--gold-lt)}
+.form-box button[disabled]{opacity:.55;cursor:default;transform:none;box-shadow:none}
 
-  /* GALLERY */
-  .gallery{background:var(--bg-soft)}
-  .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:220px;
-    gap:14px;
-  }
-  .gallery-item{
-    position:relative;border-radius:18px;overflow:hidden;
-    cursor:pointer;
-    background:linear-gradient(135deg, #2a2118 0%, #141414 100%);
-  }
-  /* Variety of fallback tones using brand palette */
-  .gallery-item:nth-child(3n+1){background:linear-gradient(135deg, #c8a35c 0%, #a8842f 100%)}
-  .gallery-item:nth-child(3n+2){background:linear-gradient(135deg, #2a2118 0%, #141414 100%)}
-  .gallery-item:nth-child(3n+3){background:linear-gradient(135deg, #f6efde 0%, #e8d6a8 100%)}
-  /* Subtle "R" watermark when image is missing */
-  .gallery-item::before{
-    content:'R';
-    position:absolute;inset:0;
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Fraunces',serif;font-weight:600;
-    font-size:64px;color:rgba(255,255,255,.18);
-    z-index:0;pointer-events:none;
-  }
-  .gallery-item:nth-child(3n+3)::before{color:rgba(168,132,47,.25)}
-  .gallery-item img{
-    width:100%;height:100%;object-fit:cover;
-    transition:transform .8s cubic-bezier(.25,.46,.45,.94);
-    display:block;position:relative;z-index:1;
-  }
-  .gallery-item img.broken{display:none}
-  .gallery-item:hover img{transform:scale(1.08)}
-  .gallery-item::after{
-    content:'';position:absolute;inset:0;
-    background:linear-gradient(0deg,rgba(0,0,0,.55) 0%,transparent 50%);
-    opacity:0;transition:opacity .3s;
-  }
-  .gallery-item:hover::after{opacity:1}
-  .gallery-item .hover-icon{
-    position:absolute;bottom:18px;left:18px;
-    width:38px;height:38px;border-radius:50%;
-    background:rgba(255,255,255,.95);
-    display:grid;place-items:center;
-    opacity:0;transform:translateY(10px);
-    transition:all .35s;
-    z-index:2;
-  }
-  .gallery-item:hover .hover-icon{opacity:1;transform:translateY(0)}
-  .gallery-item.tall{grid-row:span 2}
-  .gallery-item.wide{grid-column:span 2}
+/* ===================== FOOTER ===================== */
+footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px solid var(--line)}
+.ft-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;padding-bottom:42px}
+.ft-mark{display:block;width:78px;height:auto;margin-bottom:20px}
+.ft-brand{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.05;display:block;text-transform:uppercase;letter-spacing:.04em;font-weight:300}
+.ft-brand .sub{display:block;font-family:'Instrument Sans',sans-serif;font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;color:var(--dim-2);margin-top:16px}
+.ft-nav{display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap}
+.ft-col b{display:block;font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
+.ft-col a{display:block;color:var(--dim);text-decoration:none;font-size:.86rem;margin-bottom:10px;transition:color .4s}
+.ft-col a:hover{color:var(--white)}
+.ft-bot{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.68rem;color:var(--dim-2);letter-spacing:.08em}
+.ft-bot .motto{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:.86rem;letter-spacing:.02em}
 
-  /* METRICS */
-  .metrics{background:var(--ink);color:#fff;text-align:center;padding:90px 0}
-  .metrics-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:40px;
-    max-width:1000px;margin:0 auto;
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:1180px){
+  .nav-links{gap:15px}
+  .nav-links a{font-size:.64rem;letter-spacing:.12em}
+}
+@media (max-width:1024px){
+  .about-grid,.ct-grid,.pyx-grid,.origin-grid{grid-template-columns:1fr}
+  .pillars,.proc-grid,.tst-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}
+  .portrait,.plate{max-width:440px;margin:0 auto}
+  .origin-shot{max-width:620px;margin:0 auto}
+}
+@media (max-width:768px){
+  .nav-links{
+    position:fixed;top:0;right:0;width:min(320px,84vw);height:100svh;
+    background:rgba(3,6,15,.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+    flex-direction:column;justify-content:center;gap:28px;
+    transform:translateX(101%);transition:transform .6s var(--ease);
+    border-left:1px solid var(--line);padding:40px;
   }
-  .metric strong{
-    font-family:'Fraunces',serif;
-    font-size:60px;font-weight:500;
-    background:var(--accent-grad);
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-    line-height:1;display:block;margin-bottom:10px;
-  }
-  .metric span{font-size:13px;color:#a8a8a8;text-transform:uppercase;letter-spacing:.12em;font-weight:500}
-  .metric-divider{display:none}
-
-  /* CONTACT */
-  .contact{background:var(--bg)}
-  .contact-grid{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:80px;align-items:start;
-  }
-  .contact h2{font-family:'Fraunces',serif;font-size:clamp(36px,5vw,56px);font-weight:500;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px}
-  .contact h2 em{font-style:italic;color:var(--gold-deep)}
-  .contact p{font-size:17px;color:var(--ink-soft);margin-bottom:30px;max-width:480px;line-height:1.6}
-  .contact-info-block{margin-bottom:24px}
-  .contact-info-block .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:6px;display:block}
-  .contact-info-block a{font-family:'Fraunces',serif;font-size:22px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .25s}
-  .contact-info-block a:hover{color:var(--gold-deep)}
-
-  .socials-row{display:flex;gap:12px;margin-top:30px}
-  .social-icon{
-    width:46px;height:46px;border-radius:50%;
-    background:#fff;border:1px solid var(--line);
-    display:grid;place-items:center;
-    color:var(--ink);text-decoration:none;
-    transition:all .3s;
-  }
-  .social-icon:hover{background:var(--ink);color:#fff;transform:translateY(-3px)}
-  .social-icon svg{width:18px;height:18px}
-
-  form{
-    background:#fff;
-    padding:36px;border-radius:24px;
-    border:1px solid var(--line);
-    box-shadow:0 14px 40px -15px rgba(20,20,20,.1);
-  }
-  .form-row{margin-bottom:18px}
-  .form-row label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink-soft)}
-  .form-row input,.form-row textarea,.form-row select{
-    width:100%;padding:14px 16px;
-    border:1px solid var(--line);border-radius:12px;
-    background:var(--bg);
-    font-family:inherit;font-size:14px;
-    transition:all .25s;
-    color:var(--ink);
-  }
-  .form-row input:focus,.form-row textarea:focus,.form-row select:focus{
-    outline:none;border-color:var(--gold);background:#fff;
-    box-shadow:0 0 0 3px rgba(200,163,92,.15);
-  }
-  .form-row textarea{resize:vertical;min-height:120px}
-  form .btn-primary{width:100%;justify-content:center;margin-top:8px}
-
-  /* FOOTER */
-  footer{
-    background:var(--ink);color:#9a9a9a;
-    padding:40px 0;text-align:center;
-    border-top:1px solid rgba(255,255,255,.05);
-  }
-  footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
-  footer .brand{color:#fff}
-  footer p{font-size:13px}
-  footer a{color:var(--gold-soft);text-decoration:none}
-
-  /* REVEAL */
-  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
-  .reveal.in{opacity:1;transform:translateY(0)}
-  .reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-  .reveal-stagger.in > *{opacity:1;transform:translateY(0)}
-  .reveal-stagger.in > *:nth-child(1){transition-delay:.05s}
-  .reveal-stagger.in > *:nth-child(2){transition-delay:.15s}
-  .reveal-stagger.in > *:nth-child(3){transition-delay:.25s}
-  .reveal-stagger.in > *:nth-child(4){transition-delay:.35s}
-  .reveal-stagger.in > *:nth-child(5){transition-delay:.45s}
-  .reveal-stagger.in > *:nth-child(6){transition-delay:.55s}
-  .reveal-stagger.in > *:nth-child(7){transition-delay:.65s}
-  .reveal-stagger.in > *:nth-child(8){transition-delay:.75s}
-
-  /* LANGUAGE TOGGLE */
-  .lang-toggle{
-    display:inline-flex;align-items:center;
-    gap:2px;
-    margin-left:24px;
-    padding:4px;
-    background:rgba(20,20,20,.04);
-    border:1px solid var(--line);
-    border-radius:999px;
-    transition:all .3s ease;
-  }
-  nav.scrolled .lang-toggle{
-    background:rgba(20,20,20,.05);
-  }
-  .lang-btn{
-    background:transparent;
-    border:none;
-    padding:6px 12px;
-    font-family:'Inter',sans-serif;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:.04em;
-    color:var(--muted);
-    cursor:pointer;
-    border-radius:999px;
-    transition:all .25s ease;
-  }
-  .lang-btn:hover{color:var(--ink)}
-  .lang-btn.active{
-    background:var(--ink);
-    color:var(--bg);
-    box-shadow:0 2px 8px rgba(20,20,20,.15);
-  }
-
-  /* RESPONSIVE */
-  @media (max-width: 980px){
-    .hero{padding:120px 0 60px}
-    .hero-grid{grid-template-columns:1fr;gap:50px}
-    .ig-card{max-width:480px;margin:0 auto}
-    .about-grid{grid-template-columns:1fr;gap:50px}
-    .about-photo-stack{height:420px;max-width:480px;margin:0 auto}
-    .contact-grid{grid-template-columns:1fr;gap:50px}
-    .gallery-grid{grid-template-columns:repeat(3,1fr);grid-auto-rows:180px}
-    .metrics-grid{grid-template-columns:repeat(2,1fr);gap:36px}
-    .taumm{grid-template-columns:1fr;text-align:center;padding:40px 30px}
-    .taumm p{margin:0 auto 22px}
-    section{padding:90px 0}
-  }
-  @media (max-width: 640px){
-    .container{padding:0 20px}
-    .nav-links{
-      position:fixed;top:64px;left:0;right:0;
-      background:rgba(250,250,247,.98);backdrop-filter:blur(20px);
-      flex-direction:column;padding:24px;gap:18px;
-      border-bottom:1px solid var(--line);
-      transform:translateY(-150%);transition:transform .35s;
-    }
-    .nav-links.open{transform:translateY(0)}
-    .menu-toggle{display:block}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
-    .gallery-item.wide{grid-column:span 1}
-    .gallery-item.tall{grid-row:span 1}
-    .ig-mini-grid{grid-template-columns:repeat(3,1fr)}
-    .ig-mini-grid .cell:nth-child(n+4){display:none}
-    .hero h1{font-size:42px}
-    form{padding:26px}
-    .pyraxis-banner{max-width:100%}
-    .lang-toggle{margin-left:auto;margin-right:12px}
-    .lang-btn{padding:5px 10px;font-size:11px}
-  }
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:.8rem;letter-spacing:.18em}
+  .burger{display:flex;z-index:1001}
+  .nav-right{gap:12px}
+  .work-grid,.pillars,.proc-grid,.tst-grid{grid-template-columns:1fr}
+  .work-grid .card.feat{grid-template-columns:1fr}
+  .work-grid .card.feat .card-shot{aspect-ratio:16/10;min-height:0}
+  .f-row{grid-template-columns:1fr}
+  .svc{grid-template-columns:42px 1fr;gap:16px}
+  .svc-mark{display:none}
+  .hero-sub{font-size:.58rem;letter-spacing:.22em;gap:8px 14px}
+  .hero-sub span{gap:14px}
+  .btn{padding:15px 28px;font-size:.64rem}
+  .scroll-hint{display:none}
+}
+@media (max-width:880px){
+  .stage{grid-template-columns:1fr;row-gap:6px}
+  .stage-name.l,.stage-name.r{justify-self:center;margin:0}
+  .stage-name.l{order:1}
+  .stage-photo{order:2;width:clamp(200px,50vw,300px);margin:4px 0}
+  .stage-name.r{order:3}
+  .stage-last{order:4;margin-top:clamp(-14px,-2vw,-4px)}
+  .stage-name,.stage-last{font-size:clamp(2.4rem,11vw,4.4rem)}
+}
+@media (max-width:520px){
+  .hero .eyebrow{letter-spacing:.2em;font-size:.6rem}
+  .hero .eyebrow::before{width:20px;margin-right:9px}
+}
+@media (max-width:480px){
+  .stats-grid{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:0}
+  .btn{width:100%;justify-content:center}
+  .brand-txt b{font-size:.86rem;letter-spacing:.1em}
+  .brand-txt span{font-size:.46rem}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ===================== NAV ===================== -->
 <nav id="nav">
-  <div class="container">
-    <a href="#" class="brand">
-      <span class="brand-mark">R</span>
-      <span>Raed · Constructor de marcas</span>
+  <div class="nav-in">
+    <a href="#top" class="brand">
+      <span class="brand-mark gold">R</span>
+      <span class="brand-txt">
+        <b>RAED HASSAN HAIDAR</b>
+        <span data-en="Brand builder · Pyraxis">Constructor de marcas · Pyraxis</span>
+      </span>
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
-      <li><a href="#services">Pyraxis</a></li>
-      <li><a href="#gallery" data-es="Contenido" data-en="Content">Contenido</a></li>
-      <li><a href="#contact" class="nav-cta" data-es="Trabaja conmigo" data-en="Work with me">Trabaja conmigo</a></li>
-    </ul>
-    <div class="lang-toggle" role="group" aria-label="Language selector">
-      <button type="button" class="lang-btn active" data-lang="es">ES</button>
-      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    <div class="nav-right">
+      <ul class="nav-links" id="menu">
+        <li><a href="#sobre" data-en="About">Sobre mí</a></li>
+        <li><a href="#pyraxis">Pyraxis</a></li>
+        <li><a href="#servicios" data-en="Services">Servicios</a></li>
+        <li><a href="#trabajos" data-en="Work">Trabajos</a></li>
+        <li><a href="#taumm">Ta-Umm</a></li>
+        <li><a href="#contacto" class="nav-cta" data-en="Start now">Empezar</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" id="btnEs" class="on">ES</button>
+        <button type="button" id="btnEn">EN</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
-    <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="reveal">
-        <span class="hero-tagline" data-es='<span class="dot"></span>Marca personal · Brand Strategist' data-en='<span class="dot"></span>Personal brand · Brand Strategist'><span class="dot"></span>Marca personal · Brand Strategist</span>
-        <h1 data-es="Lo que sientes <em>no es</em> un accidente." data-en="What you feel <em>isn't</em> an accident.">Lo que sientes <em>no es</em> un accidente.</h1>
-        <p class="hero-sub" data-es="Soy Raed. Construyo mi marca personal con contenido emocional y analítico — y ayudo a otras marcas a hacer lo mismo desde Pyraxis, mi agencia de marketing digital." data-en="I'm Raed. I build my personal brand with emotional, analytical content — and I help other brands do the same through Pyraxis, my digital marketing agency.">Soy Raed. Construyo mi marca personal con contenido emocional y analítico — y ayudo a otras marcas a hacer lo mismo desde Pyraxis, mi agencia de marketing digital.</p>
-        <p class="hero-quote" data-es='"What you feel is not an accident."' data-en='"Lo que sientes no es un accidente."'>"What you feel is not an accident."</p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn btn-primary" data-es="Trabaja conmigo →" data-en="Work with me →">Trabaja conmigo →</a>
-          <a href="#services" class="btn btn-ghost" data-es="Ver Pyraxis" data-en="See Pyraxis">Ver Pyraxis</a>
-        </div>
-        <div class="community-pill">
-          <span class="community-pill-num">281</span>
-          <div>
-            <div class="community-pill-label" data-es="Posts publicados" data-en="Published posts">Posts publicados</div>
-            <div style="font-size:13px;color:var(--ink-soft);margin-top:2px" data-es="Storytelling diario · 🇻🇪🇱🇧 Houston, TX" data-en="Daily storytelling · 🇻🇪🇱🇧 Houston, TX">Storytelling diario · 🇻🇪🇱🇧 Houston, TX</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="reveal ig-card">
-        <div class="ig-card-header">
-          <div class="ig-avatar-ring"><div class="ig-avatar-ring-inner"><div class="ig-avatar"></div></div></div>
-          <div class="ig-handle-block">
-            <div class="ig-handle">
-              <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">raedha</a>
-              <span class="verified" data-es-aria="Verificado" data-en-aria="Verified" aria-label="Verificado">
-                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-              </span>
-            </div>
-            <div class="ig-name">Raed Hassan Haidar</div>
-          </div>
-        </div>
-
-        <div class="ig-stats">
-          <div class="ig-stat"><strong>281</strong><span data-es="posts" data-en="posts">posts</span></div>
-          <div class="ig-stat"><strong>2.324</strong><span data-es="seguidores" data-en="followers">seguidores</span></div>
-          <div class="ig-stat"><strong>1.543</strong><span data-es="seguidos" data-en="following">seguidos</span></div>
-        </div>
-
-        <div class="ig-bio" data-es='<strong>🇻🇪🇱🇧 · Houston, TX</strong>
-          El fuego que ejecuta.
-          <span class="line-italic">Las marcas que recordamos se sienten.</span>
-          <span class="brands">Ta-Umm 👑 · 🐦‍🔥 Pyraxis</span>' data-en='<strong>🇻🇪🇱🇧 · Houston, TX</strong>
-          The fire that executes.
-          <span class="line-italic">The brands we remember are felt.</span>
-          <span class="brands">Ta-Umm 👑 · 🐦‍🔥 Pyraxis</span>'>
-          <strong>🇻🇪🇱🇧 · Houston, TX</strong>
-          El fuego que ejecuta.
-          <span class="line-italic">Las marcas que recordamos se sienten.</span>
-          <span class="brands">Ta-Umm 👑 · 🐦‍🔥 Pyraxis</span>
-        </div>
-
-        <div class="ig-actions">
-          <a href="#contact" class="ig-btn primary" data-es="Contactar" data-en="Contact">Contactar</a>
-          <a href="#services" class="ig-btn secondary" data-es="Servicios" data-en="Services">Servicios</a>
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-btn icon" data-es-aria="Abrir Instagram" data-en-aria="Open Instagram" aria-label="Abrir Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-          </a>
-        </div>
-
-        <div class="ig-highlights" role="list" aria-label="Instagram highlights">
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-highlight" role="listitem" aria-label="Vision highlight">
-            <div class="ig-highlight-circle">👁️</div>
-            <div class="ig-highlight-label">Vision</div>
-          </a>
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-highlight" role="listitem" aria-label="Pyraxis highlight">
-            <div class="ig-highlight-circle">🐦‍🔥</div>
-            <div class="ig-highlight-label">Pyraxis</div>
-          </a>
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-highlight" role="listitem" aria-label="Ta-Umm highlight">
-            <div class="ig-highlight-circle">👑</div>
-            <div class="ig-highlight-label">Ta-Umm</div>
-          </a>
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="ig-highlight" role="listitem" aria-label="My Story highlight">
-            <div class="ig-highlight-circle">🪶</div>
-            <div class="ig-highlight-label" data-es="My Story" data-en="My Story">My Story</div>
-          </a>
-        </div>
-
-        <div class="ig-mini-grid">
-          <div class="cell" style="background-image:url('assets/instagram/post-1.jpg')"></div>
-          <div class="cell" style="background-image:url('assets/instagram/post-2.jpg')"></div>
-          <div class="cell" style="background-image:url('assets/instagram/post-3.jpg')"></div>
-          <div class="cell" style="background-image:url('assets/instagram/post-4.jpg')"></div>
-          <div class="cell" style="background-image:url('assets/instagram/post-5.jpg')"></div>
-          <div class="cell" style="background-image:url('assets/instagram/post-6.jpg')"></div>
-        </div>
-      </div>
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="hero-bg"><div class="orbit"></div></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow" data-en="Katy, Texas &nbsp;·&nbsp; Houston area">Katy, Texas &nbsp;·&nbsp; Área de Houston</span>
+    <h1 class="stage">
+      <span class="stage-name l gold">Raed</span>
+      <span class="stage-photo"><img src="assets/hero-raed.webp" alt="Raed Hassan Haidar, fundador de Pyraxis, en Katy, Texas" width="840" height="1120" fetchpriority="high"></span>
+      <span class="stage-name r gold">Hassan</span>
+      <span class="stage-last gold">Haidar</span>
+    </h1>
+    <div class="hero-sub">
+      <span data-en="Brand builder">Constructor de marcas</span>
+      <span data-en="Founder of Pyraxis">Fundador de Pyraxis</span>
+      <span>Ta-Umm Mediterranean Food</span>
+    </div>
+    <p class="hero-tag" data-en="I don't sell pretty pages. I build brands with purpose — where you can see who is behind them, why they do what they do, and why they deserve to be chosen.">
+      No vendo páginas bonitas. Construyo marcas con propósito: donde se vea quién está
+      detrás, por qué hace lo que hace y por qué merece que lo elijan.
+    </p>
+    <p class="hero-motto" data-en="&ldquo;The fire that executes.&rdquo;">«El fuego que ejecuta.»</p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn btn-solid" data-en="Start my project <span class=&quot;arw&quot;>→</span>">Empezar mi proyecto <span class="arw">→</span></a>
+      <a href="#trabajos" class="btn btn-ghost" data-en="See the work">Ver trabajos</a>
     </div>
   </div>
+  <div class="scroll-hint"><span>Scroll</span><span class="bar"></span></div>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="reveal">
-        <span class="section-tag" data-es="Sobre mí" data-en="About">Sobre mí</span>
-        <h2 class="section-title" data-es="Construyo marca personal con <em>contenido emocional</em> y analítico." data-en="I build personal brand with <em>emotional, analytical</em> content.">Construyo marca personal con <em>contenido emocional</em> y analítico.</h2>
-        <div class="about-text">
-          <p data-es="Soy Raed Hassan Haidar. Venezolano-libanés viviendo en Houston, Texas. Mi día a día gira en torno a una idea: las marcas que ganan no son las que más venden, son las que más se sienten." data-en="I'm Raed Hassan Haidar. Venezuelan-Lebanese, living in Houston, Texas. My everyday life revolves around one idea: the brands that win aren't the ones that sell the most — they're the ones that are felt the most.">Soy Raed Hassan Haidar. Venezolano-libanés viviendo en Houston, Texas. Mi día a día gira en torno a una idea: las marcas que ganan no son las que más venden, son las que más se sienten.</p>
-          <p data-es="Por eso creé <strong>Pyraxis</strong> — mi agencia de marketing digital donde ayudo a otras marcas a sonar como ellas mismas, no como cualquiera. Auditorías, estrategia, web y contenido viral, con storytelling en el centro." data-en="That's why I created <strong>Pyraxis</strong> — my digital marketing agency, where I help other brands sound like themselves, not like anyone else. Audits, strategy, web and viral content, with storytelling at the center.">Por eso creé <strong>Pyraxis</strong> — mi agencia de marketing digital donde ayudo a otras marcas a sonar como ellas mismas, no como cualquiera. Auditorías, estrategia, web y contenido viral, con storytelling en el centro.</p>
-          <p data-es="Aparte de mi marca personal, también soy <strong>co-fundador de Ta-Umm</strong>, el proyecto familiar de mi familia. Es un capítulo aparte de lo que comparto aquí: el contenido de esta web y de mi cuenta personal está dedicado a marca, estrategia y storytelling." data-en="I'm also <strong>co-founder of Ta-Umm</strong>, my family's project. That's a separate chapter from what I share here: this website and my personal account are dedicated to brand, strategy and storytelling.">Aparte de mi marca personal, también soy <strong>co-fundador de Ta-Umm</strong>, el proyecto familiar de mi familia. Es un capítulo aparte de lo que comparto aquí: el contenido de esta web y de mi cuenta personal está dedicado a marca, estrategia y storytelling.</p>
-        </div>
-        <div class="expertise reveal-stagger">
-          <span class="pill">Brand Strategy</span>
-          <span class="pill">Storytelling</span>
-          <span class="pill" data-es="Marca Personal" data-en="Personal Branding">Marca Personal</span>
-          <span class="pill" data-es="Contenido Viral" data-en="Viral Content">Contenido Viral</span>
-          <span class="pill" data-es="Auditorías de Marca" data-en="Brand Audits">Auditorías de Marca</span>
-          <span class="pill" data-es="Estrategia Digital" data-en="Digital Strategy">Estrategia Digital</span>
-          <span class="pill" data-es="Calendarios Editoriales" data-en="Editorial Calendars">Calendarios Editoriales</span>
-        </div>
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span class="mq-item">Ta-Umm Mediterranean Food</span>
+    <span class="mq-item">A &amp; H General Solutions</span>
+    <span class="mq-item">Panna Cottas Anto's</span>
+    <span class="mq-item">Pyraxis</span>
+    <span class="mq-item">Katy · Houston, Texas</span>
+    <span class="mq-item">Ta-Umm Mediterranean Food</span>
+    <span class="mq-item">A &amp; H General Solutions</span>
+    <span class="mq-item">Panna Cottas Anto's</span>
+    <span class="mq-item">Pyraxis</span>
+    <span class="mq-item">Katy · Houston, Texas</span>
+  </div>
+</div>
+
+<!-- ===================== SOBRE ===================== -->
+<section id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-txt rv-l">
+      <span class="eyebrow" data-en="Who is behind it">Quién está detrás</span>
+      <h2 data-en="I don't build websites.<br><em class=&quot;gold&quot;>I build brands that are felt.</em>">No construyo webs.<br><em class="gold">Construyo marcas que se sienten.</em></h2>
+      <p data-en="I'm Raed Hassan Haidar. A civil engineer by training and a designer since I was twelve, when I opened Photoshop for the first time without knowing it would become the craft of my life.">
+        Soy Raed Hassan Haidar. Ingeniero civil de formación y diseñador desde los doce años,
+        cuando abrí Photoshop por primera vez sin saber que ese sería el oficio de mi vida.
+      </p>
+      <p data-en="In Katy, Texas, my family and I built <strong>Ta-Umm</strong>, a Mediterranean food truck born from the recipe my family has been cooking for 28 years, with my father Saad running the kitchen. I made all of it: the logo, the menus, the trailer design, the website, the DoorDash, Uber Eats and Grubhub integrations. Everything Ta-Umm is today went through my hands first.">
+        En Katy, Texas, mi familia y yo levantamos <strong>Ta-Umm</strong>, el food truck de comida
+        mediterránea que nació de la receta que llevamos 28 años cocinando, con mi papá Saad al
+        frente de la cocina. Yo hice todo: el logo, los menús, el diseño del tráiler, la página
+        web, las integraciones con DoorDash, Uber Eats y Grubhub. Todo lo que hoy es Ta-Umm
+        pasó primero por mis manos.
+      </p>
+      <p data-en="One day I thought: if I can do this for my own brand, why not do it for others? That is how <strong>Pyraxis</strong> was born. Then came Claude and Claude Code, and a whole world opened up — today I can design, analyze and build in days what used to take months.">
+        Un día pensé: si puedo hacer esto por mi propia marca, ¿por qué no hacerlo por los demás?
+        Así nació <strong>Pyraxis</strong>. Después llegó Claude y Claude Code, y se abrió un mundo
+        entero de posibilidades: hoy puedo diseñar, analizar y construir en días lo que antes
+        tomaba meses.
+      </p>
+      <div class="sign">
+        Raed Hassan Haidar
+        <small data-en="Founder of Pyraxis · Ta-Umm Mediterranean Food">Fundador de Pyraxis · Ta-Umm Mediterranean Food</small>
       </div>
-      <div class="reveal about-photo-stack">
-        <div class="ph ph-1"></div>
-        <div class="ph ph-2"></div>
-        <div class="ph ph-3"></div>
+    </div>
+
+    <div class="rv-r">
+      <figure class="portrait">
+        <img src="assets/raed-portrait.webp" alt="Raed Hassan, constructor de marcas y fundador de Pyraxis, en Katy, Texas" loading="lazy" width="1000" height="1250">
+        <div class="portrait-frame"></div>
+        <figcaption class="portrait-cap">
+          <b>Raed Hassan Haidar</b>
+          <span>Katy · Texas</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats" style="padding:0">
+  <div class="stats-grid">
+    <div class="stat rv">
+      <b class="gold"><span class="count" data-to="15">0</span></b>
+      <span data-en="Brands worked with">Marcas acompañadas</span>
+    </div>
+    <div class="stat rv">
+      <b class="gold"><span class="count" data-to="3">0</span></b>
+      <span data-en="Websites live">Webs publicadas</span>
+    </div>
+    <div class="stat rv">
+      <b class="gold"><span class="count" data-to="2">0</span></b>
+      <span data-en="Languages: EN &amp; ES">Idiomas: inglés y español</span>
+    </div>
+    <div class="stat rv">
+      <b class="gold"><span class="count" data-to="0">0</span></b>
+      <span data-en="Templates used">Plantillas usadas</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PYRAXIS ===================== -->
+<section class="pyx" id="pyraxis">
+  <div class="pyx-bg" id="pyxBg">PYRAXIS</div>
+  <div class="wrap">
+    <div class="pyx-grid">
+      <div class="pyx-txt rv-l">
+        <img class="pyx-mark" src="assets/pyraxis-mark.webp" alt="Pyraxis" width="440" height="449" loading="lazy">
+        <span class="eyebrow" data-en="The company">La empresa</span>
+        <h2 data-en="Pyraxis.<br><em class=&quot;gold&quot;>The fire that executes.</em>">Pyraxis.<br><em class="gold">El fuego que ejecuta.</em></h2>
+        <p data-en="There are agencies that build brands to sell a product cold. <strong>Pyraxis builds brands with purpose and emotion</strong> — brands that reflect what is behind them, who is behind them and why they do what they do. Brands that sell with love.">
+          Hay agencias que crean marcas para vender un producto en frío.
+          <strong>Pyraxis crea marcas con propósito y emoción</strong>: marcas que reflejan lo que hay
+          detrás, quién está detrás y por qué hace lo que hace. Marcas que venden con amor.
+        </p>
+        <p data-en="Everything is made by hand and to measure: no themes, no recycled templates, no pages that look like everyone else's. And everything is delivered finished — published, working and yours.">
+          Todo se hace a mano y a la medida: sin themes, sin plantillas recicladas, sin páginas que
+          se parezcan a las de todo el mundo. Y todo se entrega terminado: publicado, funcionando
+          y tuyo.
+        </p>
+        <p data-en="Design, brand audits, positioning and sales analysis, automation and AI — built with Claude Code, the same toolkit I use every day on my own businesses.">
+          Diseño, auditorías de marca, posicionamiento, estudio de ventas, automatización e
+          inteligencia artificial — construidos con Claude Code, las mismas herramientas que uso
+          cada día en mis propios negocios.
+        </p>
+      </div>
+      <div class="rv-r">
+        <figure class="plate">
+          <img src="assets/raed-pyraxis.webp" alt="Raed Hassan, fundador de Pyraxis" loading="lazy" width="900" height="1125">
+          <figcaption class="plate-cap" data-en="&ldquo;Brands with purpose. Brands that sell with love.&rdquo;">«Marcas con propósito. Marcas que venden con amor.»</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar rv" data-stagger>
+        <div class="pillar-icon">◆</div>
+        <h3 data-en="Purpose">Propósito</h3>
+        <p data-en="Before the logo, the reason. If we don't know why your brand exists, no design will save it.">
+          Antes del logo, la razón. Si no sabemos por qué existe tu marca, no hay diseño que la salve.
+        </p>
+      </article>
+      <article class="pillar rv" data-stagger>
+        <div class="pillar-icon">✦</div>
+        <h3 data-en="Emotion">Emoción</h3>
+        <p data-en="People don't remember what you sell. They remember how you made them feel when they tried it.">
+          La gente no recuerda lo que vendes. Recuerda cómo la hiciste sentir cuando lo probó.
+        </p>
+      </article>
+      <article class="pillar rv" data-stagger>
+        <div class="pillar-icon">▲</div>
+        <h3 data-en="Execution">Ejecución</h3>
+        <p data-en="A strategy that stays inside a PDF is worth nothing. Here it ships: built, published and running.">
+          Una estrategia que se queda en un PDF no sirve de nada. Aquí se entrega hecha, publicada
+          y funcionando.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="svc-head">
+      <div class="rv" style="max-width:56ch">
+        <span class="eyebrow" data-en="What I do">Lo que hago</span>
+        <h2 data-en="Everything your brand needs<br><em class=&quot;gold&quot;>to be taken seriously.</em>">Todo lo que tu marca necesita<br><em class="gold">para que la tomen en serio.</em></h2>
+      </div>
+      <p class="lede rv" style="max-width:34ch;font-size:.94rem"
+         data-en="You can take one service or the whole system. I tell you what you actually need — not what is most expensive.">
+        Puedes tomar un solo servicio o el sistema completo. Yo te digo qué necesitas de verdad,
+        no lo que más cuesta.
+      </p>
+    </div>
+
+    <div class="svc-list">
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">01</span>
+        <div class="svc-body">
+          <h3 data-en="Websites">Páginas web</h3>
+          <p data-en="A premium one-page site, bilingual English/Spanish, with animations, a contact form and direct orders through WhatsApp. Handmade, never a template.">Sitio one-page premium, bilingüe inglés/español, con animaciones, formulario y pedidos directos por WhatsApp. Hecho a mano, nunca una plantilla.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">02</span>
+        <div class="svc-body">
+          <h3 data-en="Digital brand audit">Auditoría digital de marca</h3>
+          <p data-en="Where you stand today: website, social media, offer, pricing, reviews and competitors. A 0–100 score, the real findings, and what to fix first.">Dónde estás hoy: web, redes, oferta, precios, reseñas y competencia. Puntuación 0–100, los hallazgos reales y qué mover primero.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">03</span>
+        <div class="svc-body">
+          <h3 data-en="Logo &amp; visual identity">Logo e identidad visual</h3>
+          <p data-en="Logo, color palette, typography and usage manual. A brand that looks just as good on a sign, on packaging and on a phone screen.">Logo, paleta de color, tipografías y manual de uso. Una marca que se ve igual de bien en un letrero, en un empaque y en un teléfono.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">04</span>
+        <div class="svc-body">
+          <h3 data-en="Full branding">Branding completo</h3>
+          <p data-en="The whole system: identity, voice, messaging and applications. The finished brand — not a loose file you have to figure out.">El sistema entero: identidad, voz, mensajes y aplicaciones. La marca terminada, no un archivo suelto que tú tienes que descifrar.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">05</span>
+        <div class="svc-body">
+          <h3 data-en="Content &amp; positioning">Contenido y posicionamiento</h3>
+          <p data-en="Editorial calendar, scripts and a publishing system so your brand shows up every week without improvising.">Calendario editorial, guiones y sistema de publicación para que tu marca aparezca cada semana sin improvisar.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">06</span>
+        <div class="svc-body">
+          <h3 data-en="Automation &amp; AI">Automatización e inteligencia artificial</h3>
+          <p data-en="Assistants that answer your customers, calculators, integrations and sales analysis — built with Claude Code.">Asistentes que responden a tus clientes, calculadoras, integraciones y análisis de ventas, construidos con Claude Code.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+    </div>
+
+    <p class="svc-note rv" data-en="Projects run from $50 to $500 depending on scope. You get the price before we start, never after.">
+      Proyectos desde $50 hasta $500 según el alcance. El precio te lo digo antes de empezar,
+      nunca después.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== TRABAJOS ===================== -->
+<section class="work" id="trabajos">
+  <div class="wrap">
+    <div class="rv" style="max-width:60ch">
+      <span class="eyebrow" data-en="Live work">Trabajos en vivo</span>
+      <h2 class="sec-title" data-en="Websites you can<br><em class=&quot;gold&quot;>open right now.</em>">Páginas que puedes<br><em class="gold">abrir ahora mismo.</em></h2>
+      <p class="lede" data-en="Every one of these was built from zero: strategy, design, copy, images and code.">
+        Cada una fue construida desde cero: estrategia, diseño, textos, imágenes y código.
+      </p>
+    </div>
+
+    <div class="work-grid">
+      <a class="card feat rv" data-stagger href="https://taummrestaurant.com" target="_blank" rel="noopener">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Brand + Web + Delivery">Marca + Web + Delivery</span>
+          <img src="assets/work-taumm.webp" alt="Sitio web de Ta-Umm Mediterranean Food" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Katy, Texas</span>
+          <h3>Ta-Umm Mediterranean Food</h3>
+          <p data-en="The complete brand: logo, menus, trailer design, a bilingual site with online ordering and integrations with DoorDash, Uber Eats and Grubhub.">
+            La marca completa: logo, menús, diseño del tráiler, web bilingüe con pedido en línea e
+            integraciones con DoorDash, Uber Eats y Grubhub.
+          </p>
+          <span class="card-link" data-en="taummrestaurant.com →">taummrestaurant.com →</span>
+        </div>
+      </a>
+
+      <a class="card rv" data-stagger href="https://ah-general-solutions.vercel.app" target="_blank" rel="noopener">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Web + AI">Web + IA</span>
+          <img src="assets/work-ahgeneral.webp" alt="Sitio web de A &amp; H General Home and Business Solutions" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Houston, Texas</span>
+          <h3>A &amp; H General Solutions</h3>
+          <p data-en="A bilingual site with an AI assistant and a solar savings calculator: the visitor uploads their electric bill and gets an estimate on screen.">
+            Web bilingüe con asistente de inteligencia artificial y calculadora de ahorro solar:
+            el visitante sube su factura de luz y recibe su estimación en pantalla.
+          </p>
+          <span class="card-link">ah-general-solutions.vercel.app →</span>
+        </div>
+      </a>
+
+      <a class="card rv" data-stagger href="https://pannacottas-antos.vercel.app" target="_blank" rel="noopener">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Rebranding + Web">Rebranding + Web</span>
+          <img src="assets/work-panna.webp" alt="Sitio web de Panna Cottas Anto's" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Katy, Texas</span>
+          <h3>Panna Cottas Anto's</h3>
+          <p data-en="Rebranding and website for an artisan dessert business: new identity, menu, weekly booth schedule and WhatsApp ordering.">
+            Rebranding y web de una marca de postres artesanales: nueva identidad, menú, agenda
+            semanal de booths y pedidos por WhatsApp.
+          </p>
+          <span class="card-link">pannacottas-antos.vercel.app →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TA-UMM ===================== -->
+<section class="origin" id="taumm">
+  <div class="wrap origin-grid">
+    <div class="rv-l">
+      <figure class="origin-shot">
+        <img src="assets/taumm-trailer.webp" alt="El tráiler de Ta-Umm Mediterranean Food en Katy, Texas" loading="lazy">
+      </figure>
+    </div>
+    <div class="origin-txt rv-r">
+      <span class="eyebrow" data-en="Where it all started">Donde empezó todo</span>
+      <h2 data-en="Ta-Umm.<br><em class=&quot;gold&quot;>28 years of one recipe.</em>">Ta-Umm.<br><em class="gold">28 años de una receta.</em></h2>
+      <p data-en="Ta-Umm is a Mediterranean food truck in Katy, Texas, built on a family recipe we have been cooking for 28 years. My father Saad runs the kitchen. I built everything around him.">
+        Ta-Umm es el food truck de comida mediterránea de Katy, Texas, levantado sobre una receta
+        familiar que llevamos 28 años cocinando. Mi papá Saad lleva la cocina.
+        Yo construí todo lo demás alrededor de él.
+      </p>
+      <p data-en="It is also my laboratory. Everything I test there — the menu, the photos, the delivery apps, the website, the ads — is what I later bring to my clients. <strong>I don't recommend anything I haven't tried on my own business first.</strong>">
+        También es mi laboratorio. Todo lo que pruebo ahí —el menú, las fotos, las apps de
+        delivery, la web, los anuncios— es lo que después llevo a mis clientes.
+        <strong>No recomiendo nada que no haya probado antes en mi propio negocio.</strong>
+      </p>
+      <div class="origin-meta">
+        <span class="chip" data-en="Logo &amp; identity">Logo e identidad</span>
+        <span class="chip" data-en="Menus">Menús</span>
+        <span class="chip" data-en="Trailer design">Diseño del tráiler</span>
+        <span class="chip" data-en="Website">Página web</span>
+        <span class="chip">DoorDash</span>
+        <span class="chip">Uber Eats</span>
+        <span class="chip">Grubhub</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="services">
-  <div class="container">
-    <div class="reveal">
-      <span class="section-tag" data-es="Servicios · Pyraxis" data-en="Services · Pyraxis">Servicios · Pyraxis</span>
-      <h2 class="section-title" data-es="Marketing digital con <em>alma</em> y método." data-en="Digital marketing with <em>soul</em> and method.">Marketing digital con <em>alma</em> y método.</h2>
-      <p class="section-lead" data-es="Pyraxis es la agencia donde traduzco la estrategia de marca emocional a piezas concretas que tu negocio puede ejecutar mañana mismo." data-en="Pyraxis is the agency where I translate emotional brand strategy into concrete pieces your business can execute tomorrow.">Pyraxis es la agencia donde traduzco la estrategia de marca emocional a piezas concretas que tu negocio puede ejecutar mañana mismo.</p>
+<!-- ===================== PROCESO ===================== -->
+<section class="process">
+  <div class="wrap">
+    <div class="rv" style="max-width:60ch">
+      <span class="eyebrow" data-en="How we work">Cómo trabajamos</span>
+      <h2 class="sec-title" data-en="Four steps.<br><em class=&quot;gold&quot;>No endless meetings.</em>">Cuatro pasos.<br><em class="gold">Sin reuniones eternas.</em></h2>
     </div>
-
-    <div class="pyraxis-banner reveal">
-      <div class="pyraxis-mark">🐦‍🔥</div>
-      <div>
-        <strong>Pyraxis</strong>
-        <span data-es="Agencia de marketing digital" data-en="Digital marketing agency">Agencia de marketing digital</span>
+    <div class="proc-grid">
+      <div class="proc">
+        <b>01</b>
+        <h3 data-en="Tell me">Cuéntame</h3>
+        <p data-en="You fill in the form below and tell me what you do and where you want to get to. Five minutes.">Llenas el formulario de abajo y me dices qué haces y a dónde quieres llegar. Cinco minutos.</p>
       </div>
-    </div>
-
-    <div class="services-grid reveal-stagger">
-      <div class="service-card">
-        <div class="service-icon">🔍</div>
-        <h3 data-es="Auditorías de marca" data-en="Brand audits">Auditorías de marca</h3>
-        <p data-es="Diagnóstico completo de tu presencia digital, posicionamiento, voz y narrativa. Encontramos los huecos antes de cubrirlos." data-en="Full diagnosis of your digital presence, positioning, voice and narrative. We find the gaps before we close them.">Diagnóstico completo de tu presencia digital, posicionamiento, voz y narrativa. Encontramos los huecos antes de cubrirlos.</p>
-        <span class="service-tag" data-es="Punto de partida" data-en="Starting point">Punto de partida</span>
+      <div class="proc">
+        <b>02</b>
+        <h3 data-en="I study your case">Estudio tu caso</h3>
+        <p data-en="I review your brand, your competitors and your market before proposing anything. Then I send you the plan and the price.">Reviso tu marca, tu competencia y tu mercado antes de proponerte nada. Después te envío el plan y el precio.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">💻</div>
-        <h3 data-es="Páginas web" data-en="Websites">Páginas web</h3>
-        <p data-es="Webs que cuentan tu historia y convierten. Diseñadas para que el visitante sienta antes de pensar." data-en="Websites that tell your story and convert. Designed so visitors feel before they think.">Webs que cuentan tu historia y convierten. Diseñadas para que el visitante sienta antes de pensar.</p>
-        <span class="service-tag" data-es="Diseño + estrategia" data-en="Design + strategy">Diseño + estrategia</span>
+      <div class="proc">
+        <b>03</b>
+        <h3 data-en="I build it">Lo construyo</h3>
+        <p data-en="Design, copy, images and code. You see it in progress and you tell me what to change while it is being built.">Diseño, textos, imágenes y código. Lo ves en progreso y me dices qué cambiar mientras se construye.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">🎯</div>
-        <h3 data-es="Estrategia de marca" data-en="Brand strategy">Estrategia de marca</h3>
-        <p data-es="Definimos el porqué, el cómo y el qué. Posicionamiento, voz, audiencia y la promesa que hace única a tu marca." data-en="We define the why, how and what. Positioning, voice, audience and the promise that makes your brand unique.">Definimos el porqué, el cómo y el qué. Posicionamiento, voz, audiencia y la promesa que hace única a tu marca.</p>
-        <span class="service-tag" data-es="Lo que sostiene todo" data-en="The foundation">Lo que sostiene todo</span>
+      <div class="proc">
+        <b>04</b>
+        <h3 data-en="We launch">Lanzamos</h3>
+        <p data-en="I hand it over published and working, and I show you how to use it. If something breaks, I fix it.">Te lo entrego publicado y funcionando, y te enseño a usarlo. Si algo falla, lo arreglo.</p>
       </div>
-
-      <div class="service-card">
-        <div class="service-icon">📅</div>
-        <h3 data-es="Calendarios de contenido" data-en="Content calendars">Calendarios de contenido</h3>
-        <p data-es="Calendarios editoriales con guiones en formato viral, listos para grabar. Storytelling estructurado, mes a mes." data-en="Editorial calendars with viral-format scripts, ready to record. Structured storytelling, month by month.">Calendarios editoriales con guiones en formato viral, listos para grabar. Storytelling estructurado, mes a mes.</p>
-        <span class="service-tag" data-es="Guiones incluidos" data-en="Scripts included">Guiones incluidos</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="gallery">
-  <div class="container">
-    <div class="reveal">
-      <span class="section-tag" data-es="Contenido" data-en="Content">Contenido</span>
-      <h2 class="section-title" data-es="Storytelling <em>diario.</em>" data-en="Daily <em>storytelling.</em>">Storytelling <em>diario.</em></h2>
-      <p class="section-lead" data-es="Una mirada al contenido que publico en mi cuenta personal. Historias propias, marca personal y los aprendizajes que voy compartiendo a diario." data-en="A glimpse at the content I publish on my personal account. Personal stories, personal branding and the lessons I share day by day.">Una mirada al contenido que publico en mi cuenta personal. Historias propias, marca personal y los aprendizajes que voy compartiendo a diario.</p>
-    </div>
-
-    <div class="gallery-grid reveal-stagger">
-      <div class="gallery-item tall"><img src="assets/instagram/post-1.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-2.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item wide"><img src="assets/instagram/post-3.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-4.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-5.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item tall"><img src="assets/instagram/post-6.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-7.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-8.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item wide"><img src="assets/instagram/post-9.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-10.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-11.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
-      <div class="gallery-item"><img src="assets/instagram/post-12.jpg" alt="Post de Raed Hassan" loading="lazy" onerror="this.classList.add(&apos;broken&apos;)"><span class="hover-icon">↗</span></div>
     </div>
   </div>
 </section>
 
-<!-- METRICS -->
-<section class="metrics">
-  <div class="container">
-    <div class="metrics-grid reveal-stagger">
-      <div class="metric"><strong data-count="281">0</strong><span data-es="Posts de storytelling" data-en="Storytelling posts">Posts de storytelling</span></div>
-      <div class="metric"><strong data-count="2324">0</strong><span data-es="Seguidores en Instagram" data-en="Instagram followers">Seguidores en Instagram</span></div>
-      <div class="metric"><strong data-count="4">0</strong><span data-es="Servicios Pyraxis" data-en="Pyraxis services">Servicios Pyraxis</span></div>
+<!-- ===================== TESTIMONIOS ===================== -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="rv" style="max-width:60ch">
+      <span class="eyebrow" data-en="What they say">Lo que dicen</span>
+      <h2 class="sec-title" data-en="The brands<br><em class=&quot;gold&quot;>that trusted me.</em>">Las marcas<br><em class="gold">que confiaron.</em></h2>
+    </div>
+    <div class="tst-grid">
+      <!-- PENDIENTE: sustituir por testimonios reales (texto + nombre + negocio) -->
+      <article class="tst rv" data-stagger data-todo>
+        <span class="q">“</span>
+        <p data-en="[PENDING — real quote from the Ta-Umm customer or partner]">[PENDIENTE — testimonio real del cliente]</p>
+        <div class="who">Ta-Umm Mediterranean Food<small data-en="Katy, Texas">Katy, Texas</small></div>
+      </article>
+      <article class="tst rv" data-stagger data-todo>
+        <span class="q">“</span>
+        <p data-en="[PENDING — real quote from A &amp; H General Solutions]">[PENDIENTE — testimonio real de A &amp; H General Solutions]</p>
+        <div class="who">A &amp; H General Solutions<small data-en="Houston, Texas">Houston, Texas</small></div>
+      </article>
+      <article class="tst rv" data-stagger data-todo>
+        <span class="q">“</span>
+        <p data-en="[PENDING — real quote from Panna Cottas Anto's]">[PENDIENTE — testimonio real de Panna Cottas Anto's]</p>
+        <div class="who">Panna Cottas Anto's<small data-en="Katy, Texas">Katy, Texas</small></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="reveal">
-        <span class="section-tag" data-es="Trabaja conmigo" data-en="Work with me">Trabaja conmigo</span>
-        <h2 data-es="¿Tienes una marca <em>que merece</em> ser sentida?" data-en="Do you have a brand <em>that deserves</em> to be felt?">¿Tienes una marca <em>que merece</em> ser sentida?</h2>
-        <p data-es="Cuéntame qué estás construyendo. Si encaja con lo que hago, te respondo en menos de 48h." data-en="Tell me what you're building. If it fits what I do, I'll get back to you in less than 48h.">Cuéntame qué estás construyendo. Si encaja con lo que hago, te respondo en menos de 48h.</p>
+<!-- ===================== MANIFIESTO ===================== -->
+<section class="manifesto">
+  <div class="glow" id="glow"></div>
+  <div class="wrap">
+    <span class="qmark">“</span>
+    <blockquote data-en="The brands we remember are not built. They are felt.">
+      Las marcas que recordamos no se construyen. Se sienten.
+    </blockquote>
+    <cite data-en="Raed Hassan Haidar · Pyraxis">Raed Hassan Haidar · Pyraxis</cite>
+  </div>
+</section>
 
-        <div class="contact-info-block">
-          <span class="label" data-es="Email directo" data-en="Direct email">Email directo</span>
-          <a href="mailto:raedhassan15@gmail.com">raedhassan15@gmail.com</a>
-        </div>
-
-        <div class="contact-info-block">
-          <span class="label" data-es="Ubicación" data-en="Location">Ubicación</span>
-          <a href="#" style="border:none;cursor:default">Houston, TX · 🇻🇪🇱🇧</a>
-        </div>
-
-        <div class="socials-row">
-          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener" class="social-icon" data-es-aria="Instagram personal" data-en-aria="Personal Instagram" aria-label="Instagram personal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@raedhnhr" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.62a8.16 8.16 0 0 0 4.77 1.52V6.69a4.85 4.85 0 0 1-1.84 0z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/raed-hassan-haidar/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17.34V10.5H6.17v6.84h2.17zM7.25 9.5a1.26 1.26 0 1 0 0-2.5 1.26 1.26 0 0 0 0 2.5zm10.09 7.84v-3.83c0-2.06-1.1-3.02-2.57-3.02-1.18 0-1.71.65-2 1.1v-.94h-2.17c.03.61 0 6.84 0 6.84h2.17v-3.82c0-.2.01-.39.07-.53.16-.39.51-.79 1.1-.79.78 0 1.09.59 1.09 1.46v3.68h2.31z"/></svg>
-          </a>
-          <a href="https://www.threads.com/@raedha" target="_blank" rel="noopener" class="social-icon" aria-label="Threads">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.7 11.3c-.1 0-.2-.1-.3-.1-.1-2.5-1.5-3.9-3.7-4-1 0-1.9.4-2.5 1.2l1 .7c.4-.6 1-.9 1.5-.9 1.4 0 2.2.8 2.4 2.5-.7-.1-1.4-.2-2.2-.1-2.2.1-3.6 1.4-3.5 3.1.1 1.7 1.5 2.8 3.4 2.7 1.7-.1 2.9-.9 3.4-2.4.4.3 1 .7 1.4 1.4-.7 1.5-2.2 2.4-4.4 2.6-2.4.1-4.6-1.5-4.7-4.7C9 10.1 11 8.4 13.4 8.3c1.4-.1 2.5.4 3.2 1.2.5.6.7 1.3.8 2 .5.2.7.4.7.6 0-.1-.1.2-.2.3z"/></svg>
-          </a>
+<!-- ===================== CONTACTO ===================== -->
+<section class="contact" id="contacto">
+  <div class="wrap ct-grid">
+    <div class="ct-info rv-l">
+      <span class="eyebrow" data-en="Let's start">Empecemos</span>
+      <h2 data-en="Your brand deserves<br><em class=&quot;gold&quot;>better than a template.</em>">Tu marca merece<br><em class="gold">algo mejor que una plantilla.</em></h2>
+      <p class="lede" data-en="Pick the service you need, tell me your case, and I'll come back with a concrete proposal: what I would do, what it costs and when it would be ready.">
+        Elige el servicio que necesitas, cuéntame tu caso y te respondo con una propuesta concreta:
+        qué haría, cuánto cuesta y cuándo estaría listo.
+      </p>
+      <div class="ct-lines">
+        <a class="ct-line" href="mailto:pyraxisai@gmail.com">
+          <span class="ct-ico">✉</span>
+          <div><small data-en="Email">Correo</small><b>pyraxisai@gmail.com</b></div>
+        </a>
+        <a class="ct-line" href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">
+          <span class="ct-ico">◎</span>
+          <div><small>Instagram</small><b>@raedha</b></div>
+        </a>
+        <a class="ct-line" href="https://www.facebook.com/people/Pyraxis/61570810865327/" target="_blank" rel="noopener">
+          <span class="ct-ico">f</span>
+          <div><small>Facebook</small><b>Pyraxis</b></div>
+        </a>
+        <div class="ct-line">
+          <span class="ct-ico">⌖</span>
+          <div><small data-en="Based in">Base</small><b data-en="Katy, Texas · working online with any city">Katy, Texas · trabajo en línea con cualquier ciudad</b></div>
         </div>
       </div>
+    </div>
 
-      <form class="reveal" id="contactForm">
-        <div class="form-row">
-          <label for="name" data-es="Nombre" data-en="Name">Nombre</label>
-          <input type="text" id="name" required placeholder="Tu nombre completo" data-es-ph="Tu nombre completo" data-en-ph="Your full name">
-        </div>
-        <div class="form-row">
-          <label for="email" data-es="Email" data-en="Email">Email</label>
-          <input type="email" id="email" required placeholder="tu@email.com" data-es-ph="tu@email.com" data-en-ph="your@email.com">
-        </div>
-        <div class="form-row">
-          <label for="topic" data-es="Qué necesitas" data-en="What you need">Qué necesitas</label>
-          <select id="topic" required>
-            <option value="" data-es="Elige una opción" data-en="Choose an option">Elige una opción</option>
-            <option data-es="Auditoría de marca" data-en="Brand audit">Auditoría de marca</option>
-            <option data-es="Página web" data-en="Website">Página web</option>
-            <option data-es="Estrategia de marca" data-en="Brand strategy">Estrategia de marca</option>
-            <option data-es="Calendario de contenidos" data-en="Content calendar">Calendario de contenidos</option>
-            <option data-es="Otra cosa" data-en="Something else">Otra cosa</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="msg" data-es="Cuéntame tu proyecto" data-en="Tell me about your project">Cuéntame tu proyecto</label>
-          <textarea id="msg" required placeholder="Háblame de tu marca, dónde estás y a dónde quieres llegar..." data-es-ph="Háblame de tu marca, dónde estás y a dónde quieres llegar..." data-en-ph="Tell me about your brand, where you are and where you want to go..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" data-es="Enviar mensaje →" data-en="Send message →">Enviar mensaje →</button>
-      </form>
+    <div class="rv-r">
+      <div class="form-box">
+        <h3 data-en="Tell me about your project">Cuéntame tu proyecto</h3>
+        <p data-en="Reply within 24 hours.">Respuesta en menos de 24 horas.</p>
+        <form id="form" novalidate>
+          <div class="f-row">
+            <div class="f">
+              <label for="n" data-en="Name">Nombre</label>
+              <input type="text" id="n" name="nombre" placeholder="Tu nombre completo" data-en-ph="Your full name" required>
+            </div>
+            <div class="f">
+              <label for="t" data-en="WhatsApp / Phone">WhatsApp / Teléfono</label>
+              <input type="tel" id="t" name="telefono" placeholder="(000) 000 0000" data-en-ph="(000) 000 0000" required>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f">
+              <label for="e" data-en="Email">Correo</label>
+              <input type="email" id="e" name="email" placeholder="tucorreo@ejemplo.com" data-en-ph="youremail@example.com">
+            </div>
+            <div class="f">
+              <label for="mk" data-en="Brand / business">Marca o negocio</label>
+              <input type="text" id="mk" name="marca" placeholder="Nombre de tu negocio" data-en-ph="Your business name">
+            </div>
+          </div>
+          <div class="f">
+            <label for="sv" data-en="What do you need?">¿Qué necesitas?</label>
+            <select id="sv" name="servicio" required>
+              <option value="" data-en="Select…">Selecciona…</option>
+              <option data-en="Website">Página web</option>
+              <option data-en="Digital brand audit">Auditoría digital de marca</option>
+              <option data-en="Logo &amp; visual identity">Logo e identidad visual</option>
+              <option data-en="Full branding">Branding completo</option>
+              <option data-en="Content &amp; positioning">Contenido y posicionamiento</option>
+              <option data-en="Automation &amp; AI">Automatización e inteligencia artificial</option>
+              <option data-en="I'm not sure yet">Todavía no lo sé</option>
+            </select>
+          </div>
+          <div class="f">
+            <label for="bd" data-en="Budget in mind">Presupuesto que tienes en mente</label>
+            <select id="bd" name="presupuesto">
+              <option value="" data-en="Select…">Selecciona…</option>
+              <option>$50 – $150</option>
+              <option>$150 – $300</option>
+              <option>$300 – $500</option>
+              <option data-en="More than $500">Más de $500</option>
+              <option data-en="To be defined">Por definir</option>
+            </select>
+          </div>
+          <div class="f">
+            <label for="m" data-en="Tell me about your brand">Cuéntame de tu marca</label>
+            <textarea id="m" name="mensaje" placeholder="¿Qué vendes y qué quieres lograr?" data-en-ph="What do you sell and what do you want to achieve?"></textarea>
+          </div>
+          <button type="submit" data-en="Send request">Enviar solicitud</button>
+          <p class="form-alt" data-en="Your request goes straight to Raed's inbox. Prefer to write yourself? &lt;a href=&quot;mailto:pyraxisai@gmail.com&quot;&gt;pyraxisai@gmail.com&lt;/a&gt;">
+            Tu solicitud llega directo al correo de Raed. ¿Prefieres escribir tú?
+            <a href="mailto:pyraxisai@gmail.com">pyraxisai@gmail.com</a>
+          </p>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ===================== FOOTER ===================== -->
 <footer>
-  <div class="container">
-    <a href="#" class="brand">
-      <span class="brand-mark">R</span>
-      <span>Raed · Constructor de marcas</span>
-    </a>
-    <p data-es='© 2026 Raed Hassan Haidar · Constructor de marcas emocionales · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>' data-en='© 2026 Raed Hassan Haidar · Builder of emotional brands · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>'>© 2026 Raed Hassan Haidar · Constructor de marcas emocionales · <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a></p>
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <img class="ft-mark" src="assets/pyraxis-mark.webp" alt="" loading="lazy" width="440" height="449">
+        <span class="gold">Raed Hassan Haidar</span>
+        <span class="sub" data-en="Brand builder · Pyraxis · Katy, TX">Constructor de marcas · Pyraxis · Katy, TX</span>
+      </div>
+      <div class="ft-nav">
+        <div class="ft-col">
+          <b data-en="Navigate">Navegar</b>
+          <a href="#sobre" data-en="About">Sobre mí</a>
+          <a href="#pyraxis">Pyraxis</a>
+          <a href="#servicios" data-en="Services">Servicios</a>
+          <a href="#trabajos" data-en="Work">Trabajos</a>
+          <a href="#taumm">Ta-Umm</a>
+        </div>
+        <div class="ft-col">
+          <b data-en="Services">Servicios</b>
+          <a href="#servicios" data-en="Websites">Páginas web</a>
+          <a href="#servicios" data-en="Brand audits">Auditorías de marca</a>
+          <a href="#servicios" data-en="Logo &amp; identity">Logo e identidad</a>
+          <a href="#servicios" data-en="Full branding">Branding completo</a>
+        </div>
+        <div class="ft-col">
+          <b data-en="Contact">Contacto</b>
+          <a href="mailto:pyraxisai@gmail.com">pyraxisai@gmail.com</a>
+          <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>
+          <a href="https://www.facebook.com/people/Pyraxis/61570810865327/" target="_blank" rel="noopener">Facebook · Pyraxis</a>
+          <a href="#contacto" data-en="Start a project">Empezar un proyecto</a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span data-en="© <span id=&quot;yr&quot;>2026</span> Raed Hassan Haidar · Pyraxis">© <span id="yr">2026</span> Raed Hassan Haidar · Pyraxis</span>
+      <span class="motto" data-en="The fire that executes">El fuego que ejecuta</span>
+      <span>Katy, Texas</span>
+    </div>
   </div>
 </footer>
 
 <script>
-  // ============ LANGUAGE / i18n ============
-  const LANG_KEY = 'raedha_lang';
-  function getInitialLang(){
-    try{
-      const saved = localStorage.getItem(LANG_KEY);
-      if (saved === 'es' || saved === 'en') return saved;
-    }catch(e){}
-    const browser = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-    return browser.startsWith('es') ? 'es' : 'en';
-  }
+(function(){
+  'use strict';
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MAIL = 'pyraxisai@gmail.com';
+  /* Las solicitudes llegan al correo. Para cambiar de servicio, sustituye esta
+     única línea (Formspree: https://formspree.io/f/XXXXXXX). */
+  var ENDPOINT = 'https://formsubmit.co/ajax/' + MAIL;
+
+  /* ---------- Bilingüe ES / EN ---------- */
+  var META = {
+    es: {
+      title: 'Raed Hassan Haidar | Constructor de marcas — Pyraxis · Katy, TX',
+      desc: 'Raed Hassan Haidar, constructor de marcas en Katy, Texas. Fundador de Pyraxis y de Ta-Umm Mediterranean Food. Páginas web, auditorías de marca, logos y branding con propósito.'
+    },
+    en: {
+      title: 'Raed Hassan Haidar | Brand builder — Pyraxis · Katy, TX',
+      desc: 'Raed Hassan Haidar, brand builder in Katy, Texas. Founder of Pyraxis and Ta-Umm Mediterranean Food. Websites, brand audits, logos and branding with purpose.'
+    }
+  };
+
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    el.setAttribute('data-es', el.innerHTML);
+  });
+  document.querySelectorAll('[data-en-ph]').forEach(function(el){
+    el.setAttribute('data-es-ph', el.getAttribute('placeholder') || '');
+  });
+
+  var btnEs = document.getElementById('btnEs'), btnEn = document.getElementById('btnEn');
+
   function setLang(lang){
-    if (lang !== 'es' && lang !== 'en') lang = 'es';
-    document.documentElement.lang = lang;
-
-    // innerHTML
-    document.querySelectorAll('[data-es][data-en]').forEach(el => {
-      const val = el.dataset[lang];
-      if (val !== undefined) el.innerHTML = val;
+    var en = (lang === 'en');
+    document.documentElement.lang = en ? 'en' : 'es';
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      el.innerHTML = el.getAttribute(en ? 'data-en' : 'data-es');
     });
-    // placeholder
-    document.querySelectorAll('[data-es-ph][data-en-ph]').forEach(el => {
-      const val = el.dataset[lang === 'es' ? 'esPh' : 'enPh'];
-      if (val !== undefined) el.placeholder = val;
+    document.querySelectorAll('[data-en-ph]').forEach(function(el){
+      el.placeholder = el.getAttribute(en ? 'data-en-ph' : 'data-es-ph');
     });
-    // aria-label
-    document.querySelectorAll('[data-es-aria][data-en-aria]').forEach(el => {
-      const val = el.dataset[lang === 'es' ? 'esAria' : 'enAria'];
-      if (val !== undefined) el.setAttribute('aria-label', val);
-    });
-    // <title> and meta description
-    const titleEl = document.querySelector('title[data-es][data-en]');
-    if (titleEl) document.title = titleEl.dataset[lang];
-    const descEl = document.querySelector('meta[name="description"][data-es][data-en]');
-    if (descEl) descEl.setAttribute('content', descEl.dataset[lang]);
-
-    // Toggle visual state
-    document.querySelectorAll('.lang-btn').forEach(b => {
-      b.classList.toggle('active', b.dataset.lang === lang);
-    });
-
-    // Number formatting locale for counters
-    window.__numLocale = lang === 'es' ? 'es-ES' : 'en-US';
-
-    try{ localStorage.setItem(LANG_KEY, lang); }catch(e){}
+    document.title = META[en ? 'en' : 'es'].title;
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute('content', META[en ? 'en' : 'es'].desc);
+    btnEn.classList.toggle('on', en);
+    btnEs.classList.toggle('on', !en);
+    var yr = document.getElementById('yr');
+    if (yr) yr.textContent = new Date().getFullYear();
+    try { localStorage.setItem('raed-lang', en ? 'en' : 'es'); } catch(e){}
   }
-  // Apply BEFORE other scripts to avoid flash
-  setLang(getInitialLang());
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => setLang(btn.dataset.lang));
+
+  btnEs.addEventListener('click', function(){ setLang('es'); });
+  btnEn.addEventListener('click', function(){ setLang('en'); });
+
+  var saved = null;
+  try { saved = localStorage.getItem('raed-lang'); } catch(e){}
+  if (!saved) saved = (navigator.language || 'es').toLowerCase().indexOf('es') === 0 ? 'es' : 'en';
+  setLang(saved);
+
+  /* ---------- Nav ---------- */
+  var nav = document.getElementById('nav');
+  function onScrollNav(){ nav.classList.toggle('stuck', window.scrollY > 40); }
+  onScrollNav();
+
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    menu.classList.toggle('open');
+    burger.classList.toggle('x');
+  });
+  menu.addEventListener('click', function(e){
+    if (e.target.tagName === 'A'){ menu.classList.remove('open'); burger.classList.remove('x'); }
   });
 
-  // ============ CONTACT FORM ============
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const lang = document.documentElement.lang === 'en' ? 'en' : 'es';
-    const msg = lang === 'es'
-      ? '¡Gracias! Te respondo pronto a tu email.'
-      : 'Thanks! I\'ll get back to you soon by email.';
-    alert(msg);
-    this.reset();
-  });
-
-  // Nav scroll
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 30);
-  });
-
-  // Mobile menu
-  document.getElementById('menuToggle').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
-  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  }));
-
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
+  /* ---------- Reveal ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var el = en.target;
+      if (el.hasAttribute('data-stagger')){
+        var sibs = Array.prototype.slice.call(el.parentNode.querySelectorAll('[data-stagger]'));
+        el.style.transitionDelay = (sibs.indexOf(el) * 90) + 'ms';
       }
+      el.classList.add('in');
+      io.unobserve(el);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.rv,.rv-l,.rv-r,.proc').forEach(function(el){ io.observe(el); });
 
-  // Counter
-  const counters = document.querySelectorAll('[data-count]');
-  const cIo = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const el = e.target;
-        const target = parseInt(el.dataset.count, 10);
-        const duration = 1800;
-        const start = performance.now();
-        const fmt = (n) => target >= 1000 ? n.toLocaleString(window.__numLocale || 'es-ES') : n.toString();
-        const tick = (now) => {
-          const p = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          el.textContent = fmt(Math.floor(eased * target));
-          if (p < 1) requestAnimationFrame(tick);
-          else el.textContent = fmt(target);
-        };
-        requestAnimationFrame(tick);
-        cIo.unobserve(el);
+  /* ---------- Contadores ---------- */
+  var cio = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var el = en.target, to = parseInt(el.dataset.to, 10), t0 = null, dur = 1800;
+      if (reduced || to === 0){ el.textContent = to; cio.unobserve(el); return; }
+      function step(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.round(to * eased);
+        if (p < 1) requestAnimationFrame(step);
       }
+      requestAnimationFrame(step);
+      cio.unobserve(el);
     });
   }, { threshold: 0.5 });
-  counters.forEach(c => cIo.observe(c));
+  document.querySelectorAll('.count').forEach(function(el){ cio.observe(el); });
 
-  // Parallax sutil en photo stack
-  const stack = document.querySelector('.about-photo-stack');
-  if (stack) {
-    window.addEventListener('scroll', () => {
-      const rect = stack.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        const offset = (window.innerHeight - rect.top) * 0.04;
-        stack.querySelector('.ph-1').style.transform = `translateY(${-offset}px)`;
-        stack.querySelector('.ph-2').style.transform = `translateY(${offset * 0.6}px)`;
+  /* ---------- Parallax ---------- */
+  var pyxBg = document.getElementById('pyxBg');
+  var glow = document.getElementById('glow');
+  var orbit = document.querySelector('.orbit');
+  var ticking = false;
+
+  function parallax(){
+    var y = window.scrollY, vh = window.innerHeight;
+    if (orbit) orbit.style.transform = 'translate(-50%,-50%) rotate(' + (y * 0.03) + 'deg)';
+    if (pyxBg){
+      var r = pyxBg.parentNode.getBoundingClientRect();
+      if (r.top < vh && r.bottom > 0){
+        var prog = (vh - r.top) / (vh + r.height);
+        pyxBg.style.transform = 'translate(-50%,-50%) translateX(' + ((prog - 0.5) * -240) + 'px)';
       }
-    }, { passive: true });
+    }
+    if (glow){
+      var g = glow.parentNode.getBoundingClientRect();
+      if (g.top < vh && g.bottom > 0){
+        var gp = (vh - g.top) / (vh + g.height);
+        glow.style.transform = 'translate(-50%,-50%) translateY(' + ((gp - 0.5) * 80) + 'px) scale(' + (1 + gp * 0.14) + ')';
+      }
+    }
+    ticking = false;
   }
-</script>
 
+  window.addEventListener('scroll', function(){
+    onScrollNav();
+    if (!reduced && !ticking){ requestAnimationFrame(parallax); ticking = true; }
+  }, { passive: true });
+  if (!reduced) parallax();
+
+  /* ---------- Formulario → correo ---------- */
+  var form = document.getElementById('form'),
+      note = document.getElementById('formNote'),
+      btn  = form.querySelector('button[type="submit"]');
+
+  function val(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+  function isEn(){ return document.documentElement.lang === 'en'; }
+
+  function fields(){
+    var en = isEn();
+    return [
+      [en ? 'Name' : 'Nombre', val('n')],
+      [en ? 'Phone / WhatsApp' : 'Teléfono / WhatsApp', val('t')],
+      [en ? 'Email' : 'Correo', val('e')],
+      [en ? 'Brand' : 'Marca', val('mk')],
+      [en ? 'Service' : 'Servicio', val('sv')],
+      [en ? 'Budget' : 'Presupuesto', val('bd')],
+      [en ? 'About the brand' : 'Sobre la marca', val('m')]
+    ];
+  }
+
+  function subject(){
+    return (isEn() ? 'New project request — ' : 'Nueva solicitud de proyecto — ') + (val('mk') || val('n'));
+  }
+
+  function asText(){
+    return fields().filter(function(f){ return f[1]; })
+                   .map(function(f){ return f[0] + ': ' + f[1]; }).join('\n');
+  }
+
+  function payload(){
+    var data = { _subject: subject(), _template: 'table', _captcha: 'false' };
+    fields().forEach(function(f){ if (f[1]) data[f[0]] = f[1]; });
+    data[isEn() ? 'Language' : 'Idioma'] = isEn() ? 'EN' : 'ES';
+    return data;
+  }
+
+  function validate(){
+    var ok = true;
+    ['n','t','sv'].forEach(function(id){
+      var el = document.getElementById(id), box = el.parentNode;
+      if (!el.value.trim()){ box.classList.add('err'); ok = false; }
+      else box.classList.remove('err');
+    });
+    return ok;
+  }
+
+  function say(msg, color){ note.textContent = msg; note.style.color = color || '#98a3ba'; }
+
+  function warn(){
+    say(isEn() ? 'Please fill in your name, your phone and the service you need.'
+               : 'Completa tu nombre, tu teléfono y el servicio que necesitas.', '#E4C88C');
+  }
+
+  function sent(){
+    btn.disabled = false;
+    form.reset();
+    say(isEn() ? 'Sent. Your request is in Raed\'s inbox — you will hear back within 24 hours.'
+               : 'Enviado. Tu solicitud ya está en el correo de Raed — te responde en menos de 24 horas.', '#E4C88C');
+  }
+
+  function fallback(){
+    btn.disabled = false;
+    var href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent(subject()) + '&body=' + encodeURIComponent(asText());
+    note.style.color = '#E4C88C';
+    note.innerHTML = (isEn()
+      ? 'We could not send it automatically. '
+      : 'No se pudo enviar automáticamente. ')
+      + '<a href="' + href + '">' + (isEn() ? 'Send it by email' : 'Enviarlo por correo') + '</a>';
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!validate()){ warn(); return; }
+    btn.disabled = true;
+    say(isEn() ? 'Sending…' : 'Enviando…');
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload())
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d && (d.success === true || d.success === 'true')) sent();
+      else fallback();
+    })
+    .catch(fallback);
+  });
+})();
+</script>
 </body>
 </html>
