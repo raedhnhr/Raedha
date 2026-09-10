@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raedha.vercel.app/sitemap.xml
