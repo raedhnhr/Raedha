@@ -486,6 +486,17 @@ nav.stuck{
 .card:hover .card-link{gap:18px}
 .card-link.soon{color:var(--dim-2)}
 
+/* ===================== APPS PROPIAS ===================== */
+.apps{border-top:1px solid var(--line)}
+.apps .work-grid .card-shot img{object-position:0 0}
+.apps-cta{
+  margin-top:clamp(40px,5vw,64px);padding:clamp(28px,4vw,48px);border:1px solid rgba(198,161,91,.35);
+  background:linear-gradient(135deg,rgba(198,161,91,.08),rgba(1,29,87,.25));display:grid;gap:22px;align-items:center;
+}
+@media (min-width:900px){.apps-cta{grid-template-columns:1fr auto;gap:48px}}
+.apps-cta h3{font-size:clamp(1.5rem,2.8vw,2.1rem);color:var(--white);margin-bottom:10px;line-height:1.16}
+.apps-cta p{color:var(--dim);max-width:60ch}
+
 /* ===================== TA-UMM ===================== */
 .origin{overflow:hidden}
 .origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,76px);align-items:center}
@@ -729,6 +740,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
         <li><a href="#pyraxis">Pyraxis</a></li>
         <li><a href="#servicios" data-en="Services">Servicios</a></li>
         <li><a href="#trabajos" data-en="Work">Trabajos</a></li>
+        <li><a href="#apps">Apps</a></li>
         <li><a href="#taumm">Ta-Umm</a></li>
         <li><a href="#contacto" class="nav-cta" data-en="Start now">Empezar</a></li>
       </ul>
@@ -783,11 +795,15 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
     <span class="mq-item">A &amp; H General Solutions</span>
     <span class="mq-item">Panna Cottas Anto's</span>
     <span class="mq-item">Pyraxis</span>
+    <span class="mq-item">Sapphire</span>
+    <span class="mq-item">Ruby</span>
     <span class="mq-item">Katy · Houston, Texas</span>
     <span class="mq-item">Ta-Umm Mediterranean Food</span>
     <span class="mq-item">A &amp; H General Solutions</span>
     <span class="mq-item">Panna Cottas Anto's</span>
     <span class="mq-item">Pyraxis</span>
+    <span class="mq-item">Sapphire</span>
+    <span class="mq-item">Ruby</span>
     <span class="mq-item">Katy · Houston, Texas</span>
   </div>
 </div>
@@ -1054,6 +1070,66 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
   </div>
 </section>
 
+<!-- ===================== APPS PROPIAS ===================== -->
+<section class="apps" id="apps">
+  <div class="wrap">
+    <div class="rv" style="max-width:62ch">
+      <span class="eyebrow" data-en="Our own apps">Apps propias</span>
+      <h2 class="sec-title" data-en="Software born<br><em class=&quot;gold&quot;>from everyday business.</em>">Software que nace<br><em class="gold">del día a día.</em></h2>
+      <p class="lede" data-en="Sapphire and Ruby solve two needs we saw again and again in the businesses we work with: answering every customer, and knowing what everything you sell really costs.">
+        Sapphire y Ruby resuelven dos necesidades que vimos una y otra vez en los negocios con los que
+        trabajamos: responder a cada cliente y saber cuánto cuesta de verdad lo que se vende.
+      </p>
+    </div>
+
+    <div class="work-grid">
+      <a class="card rv" data-stagger href="https://pyraxis-resenas.vercel.app" target="_blank" rel="noopener">
+        <div class="card-shot">
+          <span class="card-tag" data-en="App · AI reviews">App · Reseñas con IA</span>
+          <img src="assets/work-sapphire.webp" alt="Portada de Sapphire, la app de reseñas de Pyraxis" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Sapphire by Pyraxis</span>
+          <h3>Sapphire</h3>
+          <p data-en="Answers Google, DoorDash, Uber Eats, Grubhub and Yelp reviews in each restaurant's own voice. Positive ones go out automatically; sensitive ones wait for the owner's approval on their phone.">
+            Responde las reseñas de Google, DoorDash, Uber Eats, Grubhub y Yelp con la voz de cada
+            restaurante. Las positivas salen solas; las delicadas esperan la aprobación del dueño desde su celular.
+          </p>
+          <span class="card-link">pyraxis-resenas.vercel.app →</span>
+        </div>
+      </a>
+
+      <a class="card rv" data-stagger href="https://ruby-pyraxis.vercel.app" target="_blank" rel="noopener">
+        <div class="card-shot">
+          <span class="card-tag" data-en="App · AI costing &amp; pricing">App · Costos y precios con IA</span>
+          <img src="assets/work-ruby.webp" alt="Portada de Ruby, la app de costos y precios de Pyraxis" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Ruby by Pyraxis</span>
+          <h3>Ruby</h3>
+          <p data-en="The owner tells Ruby about their day —typing, with a voice note or a photo of a receipt— and Ruby works out the real cost of each product, the right price and what they actually keep each month.">
+            El dueño le cuenta su día —escribiendo, con una nota de voz o con la foto de un ticket— y Ruby
+            calcula el costo real de cada producto, el precio justo y lo que de verdad le queda cada mes.
+          </p>
+          <span class="card-link">ruby-pyraxis.vercel.app →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="apps-cta rv">
+      <div>
+        <h3 data-en="Does your business have a need like this?">¿Tu empresa tiene una necesidad así?</h3>
+        <p data-en="These tools were born from real, everyday problems. If your business has a task that eats your time, a calculation you still do by hand or a process that keeps slipping away, tell us about it: we'll gladly build the app you need.">
+          Estas herramientas nacieron de problemas reales del día a día. Si en tu negocio hay una tarea que te
+          quita tiempo, un cálculo que todavía haces a mano o un proceso que se te escapa, cuéntanoslo: con
+          gusto desarrollamos la app que necesitas.
+        </p>
+      </div>
+      <a href="#contacto" class="btn btn-solid"><span data-en="Tell us your idea">Cuéntanos tu idea</span> <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== TA-UMM ===================== -->
 <section class="origin" id="taumm">
   <div class="wrap origin-grid">
@@ -1227,6 +1303,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
               <option data-en="Full branding">Branding completo</option>
               <option data-en="Content &amp; positioning">Contenido y posicionamiento</option>
               <option data-en="Automation &amp; AI">Automatización e inteligencia artificial</option>
+              <option data-en="Custom app for my business">App a la medida de mi negocio</option>
               <option data-en="I'm not sure yet">Todavía no lo sé</option>
             </select>
           </div>
