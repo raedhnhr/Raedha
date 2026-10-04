@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raed Hassan Haidar | Constructor de marcas — Pyraxis · Katy, TX</title>
-<meta name="description" content="Raed Hassan Haidar, constructor de marcas en Katy, Texas. Fundador de Pyraxis y de Ta-Umm Mediterranean Food. Páginas web, auditorías de marca, logos y branding con propósito.">
+<meta name="description" content="Raed Hassan Haidar, constructor de marcas en Katy, Texas. Fundador de Pyraxis y de Ta-Umm Mediterranean Food. Páginas web, branding, anuncios y apps con inteligencia artificial: Sapphire, Ruby y Emerald.">
 <meta name="author" content="Raed Hassan Haidar · Pyraxis">
 <meta property="og:title" content="Raed Hassan Haidar | Constructor de marcas — Pyraxis">
 <meta property="og:description" content="Marcas con propósito y emoción. Páginas web, auditorías de marca, logos y branding desde Katy, Texas.">
@@ -489,6 +489,7 @@ nav.stuck{
 
 /* ===================== APPS PROPIAS ===================== */
 .apps{border-top:1px solid var(--line)}
+.apps .work-grid{grid-template-columns:repeat(3,1fr)}
 .apps .work-grid .card-shot img{object-position:0 0}
 .apps-cta{
   margin-top:clamp(40px,5vw,64px);padding:clamp(28px,4vw,48px);border:1px solid rgba(198,161,91,.35);
@@ -525,7 +526,7 @@ nav.stuck{
 .proc p{font-size:.89rem;color:var(--dim);line-height:1.7}
 
 /* ===================== TESTIMONIOS ===================== */
-.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,26px);margin-top:56px}
+.tst-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.2vw,26px);margin-top:56px}
 .tst{
   border:1px solid var(--line);padding:clamp(26px,3.2vw,38px);
   background:linear-gradient(160deg,rgba(60,7,27,.30),transparent 66%);
@@ -536,7 +537,7 @@ nav.stuck{
 .tst p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--text);line-height:1.5}
 .tst .who{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
 .tst .who small{display:block;letter-spacing:.16em;color:var(--dim-2);margin-top:6px;text-transform:none;font-size:.7rem}
-.tst[data-todo] p{color:var(--gold-lt);opacity:.85}
+.tst[data-todo]{display:none}
 
 /* ===================== MANIFIESTO ===================== */
 .manifesto{text-align:center;overflow:hidden;padding:clamp(100px,13vw,180px) 0;background:var(--ink-2);border-top:1px solid var(--line)}
@@ -638,7 +639,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
   .nav-links a{font-size:.8rem;letter-spacing:.18em}
   .burger{display:flex;z-index:1001}
   .nav-right{gap:12px}
-  .work-grid,.pillars,.proc-grid,.tst-grid{grid-template-columns:1fr}
+  .work-grid,.apps .work-grid,.pillars,.proc-grid,.tst-grid{grid-template-columns:1fr}
   .work-grid .card.feat{grid-template-columns:1fr}
   .work-grid .card.feat .card-shot{aspect-ratio:16/10;min-height:0}
   .f-row{grid-template-columns:1fr}
@@ -687,6 +688,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
       "knowsLanguage": ["es", "en"],
       "sameAs": [
         "https://www.instagram.com/raedha/",
+        "https://www.linkedin.com/in/raed-hassan-haidar",
         "https://www.facebook.com/people/Pyraxis/61570810865327/"
       ],
       "worksFor": { "@id": "https://raedha.vercel.app/#pyraxis" }
@@ -696,7 +698,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
       "@id": "https://raedha.vercel.app/#pyraxis",
       "name": "Pyraxis",
       "slogan": "El fuego que ejecuta",
-      "description": "Construcción de marcas con propósito: páginas web, auditorías digitales de marca, logos, branding, contenido y automatización con inteligencia artificial.",
+      "description": "Construcción de marcas con propósito: páginas web, auditorías digitales de marca, logos, branding, contenido, anuncios con medición y apps a la medida con inteligencia artificial.",
       "url": "https://raedha.vercel.app/",
       "logo": "https://raedha.vercel.app/assets/pyraxis-og.png",
       "image": "https://raedha.vercel.app/assets/pyraxis-og.png",
@@ -715,7 +717,9 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Logo e identidad visual" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding completo" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Contenido y posicionamiento" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatizacion e inteligencia artificial" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatizacion e inteligencia artificial" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Apps a la medida" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Anuncios y medicion" } }
         ]
       }
     }
@@ -798,6 +802,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
     <span class="mq-item">Pyraxis</span>
     <span class="mq-item">Sapphire</span>
     <span class="mq-item">Ruby</span>
+    <span class="mq-item">Emerald</span>
     <span class="mq-item">Katy · Houston, Texas</span>
     <span class="mq-item">Ta-Umm Mediterranean Food</span>
     <span class="mq-item">A &amp; H General Solutions</span>
@@ -805,6 +810,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
     <span class="mq-item">Pyraxis</span>
     <span class="mq-item">Sapphire</span>
     <span class="mq-item">Ruby</span>
+    <span class="mq-item">Emerald</span>
     <span class="mq-item">Katy · Houston, Texas</span>
   </div>
 </div>
@@ -864,8 +870,8 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
       <span data-en="Websites live">Webs publicadas</span>
     </div>
     <div class="stat rv">
-      <b class="gold"><span class="count" data-to="2">0</span></b>
-      <span data-en="Languages: EN &amp; ES">Idiomas: inglés y español</span>
+      <b class="gold"><span class="count" data-to="3">0</span></b>
+      <span data-en="Own apps in production">Apps propias en producción</span>
     </div>
     <div class="stat rv">
       <b class="gold"><span class="count" data-to="0">0</span></b>
@@ -998,6 +1004,22 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
         </div>
         <span class="svc-mark">→</span>
       </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">07</span>
+        <div class="svc-body">
+          <h3 data-en="Custom apps">Apps a la medida</h3>
+          <p data-en="Web apps you can install on your phone, with accounts, subscription payments and built-in AI. The same foundation behind Sapphire, Ruby and Emerald.">Aplicaciones web instalables en el celular, con cuentas de usuario, cobros por suscripción e inteligencia artificial integrada. La misma base con la que construí Sapphire, Ruby y Emerald.</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
+      <article class="svc rv" data-stagger>
+        <span class="svc-n">08</span>
+        <div class="svc-body">
+          <h3 data-en="Ads &amp; tracking">Anuncios y medición</h3>
+          <p data-en="Meta and Google campaigns with real tracking: pixel and Conversions API connected to your sales, so the ads optimize for purchases, not for likes.">Campañas en Meta y Google con medición real: píxel y API de Conversiones conectados a tus ventas, para que los anuncios se optimicen por compras y no por «me gusta».</p>
+        </div>
+        <span class="svc-mark">→</span>
+      </article>
     </div>
 
     <p class="svc-note rv" data-en="Every project is quoted on its own, according to what your brand actually needs. We agree on it before starting — never after.">
@@ -1077,9 +1099,10 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
     <div class="rv" style="max-width:62ch">
       <span class="eyebrow" data-en="Our own apps">Apps propias</span>
       <h2 class="sec-title" data-en="Software born<br><em class=&quot;gold&quot;>from everyday business.</em>">Software que nace<br><em class="gold">del día a día.</em></h2>
-      <p class="lede" data-en="Sapphire and Ruby solve two needs we saw again and again in the businesses we work with: answering every customer, and knowing what everything you sell really costs.">
-        Sapphire y Ruby resuelven dos necesidades que vimos una y otra vez en los negocios con los que
-        trabajamos: responder a cada cliente y saber cuánto cuesta de verdad lo que se vende.
+      <p class="lede" data-en="Sapphire, Ruby and Emerald solve needs we saw again and again in the businesses we work with: answering every customer, knowing what everything you sell really costs, and keeping a medical practice in order.">
+        Sapphire, Ruby y Emerald resuelven necesidades que vimos una y otra vez en los negocios con los que
+        trabajamos: responder a cada cliente, saber cuánto cuesta de verdad lo que se vende y llevar una
+        consulta médica en orden.
       </p>
     </div>
 
@@ -1113,6 +1136,22 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
             calcula el costo real de cada producto, el precio justo y lo que de verdad le queda cada mes.
           </p>
           <span class="card-link">ruby-pyraxis.vercel.app →</span>
+        </div>
+      </a>
+
+      <a class="card rv" data-stagger href="https://emerald-pyraxis.vercel.app" target="_blank" rel="noopener">
+        <div class="card-shot">
+          <span class="card-tag" data-en="App · Medical records with AI">App · Historia médica con IA</span>
+          <img src="assets/work-emerald.webp" alt="Pantalla de Emerald, la app de historia médica digital de Pyraxis" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Emerald by Pyraxis</span>
+          <h3>Emerald</h3>
+          <p data-en="A digital medical record for doctors: the visit fills itself in from dictation, AI reads lab results and flags what is urgent, and the patient sees their history and books appointments from their phone.">
+            Historia médica digital para médicos: la consulta se llena sola con el dictado, la IA lee los
+            exámenes y señala lo urgente, y el paciente ve su historia y pide cita desde el celular.
+          </p>
+          <span class="card-link">emerald-pyraxis.vercel.app →</span>
         </div>
       </a>
     </div>
@@ -1258,6 +1297,10 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
           <span class="ct-ico">◎</span>
           <div><small>Instagram</small><b>@raedha</b></div>
         </a>
+        <a class="ct-line" href="https://www.linkedin.com/in/raed-hassan-haidar" target="_blank" rel="noopener">
+          <span class="ct-ico">in</span>
+          <div><small>LinkedIn</small><b>Raed Hassan Haidar</b></div>
+        </a>
         <a class="ct-line" href="https://www.facebook.com/people/Pyraxis/61570810865327/" target="_blank" rel="noopener">
           <span class="ct-ico">f</span>
           <div><small>Facebook</small><b>Pyraxis</b></div>
@@ -1305,6 +1348,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
               <option data-en="Content &amp; positioning">Contenido y posicionamiento</option>
               <option data-en="Automation &amp; AI">Automatización e inteligencia artificial</option>
               <option data-en="Custom app for my business">App a la medida de mi negocio</option>
+              <option data-en="Meta &amp; Google ads">Anuncios en Meta y Google</option>
               <option data-en="I'm not sure yet">Todavía no lo sé</option>
             </select>
           </div>
@@ -1340,6 +1384,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
           <a href="#pyraxis">Pyraxis</a>
           <a href="#servicios" data-en="Services">Servicios</a>
           <a href="#trabajos" data-en="Work">Trabajos</a>
+          <a href="#apps">Apps</a>
           <a href="#taumm">Ta-Umm</a>
         </div>
         <div class="ft-col">
@@ -1348,11 +1393,14 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
           <a href="#servicios" data-en="Brand audits">Auditorías de marca</a>
           <a href="#servicios" data-en="Logo &amp; identity">Logo e identidad</a>
           <a href="#servicios" data-en="Full branding">Branding completo</a>
+          <a href="#servicios" data-en="Custom apps">Apps a la medida</a>
+          <a href="#servicios" data-en="Ads &amp; tracking">Anuncios y medición</a>
         </div>
         <div class="ft-col">
           <b data-en="Contact">Contacto</b>
           <a href="mailto:pyraxisai@gmail.com">pyraxisai@gmail.com</a>
           <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>
+          <a href="https://www.linkedin.com/in/raed-hassan-haidar" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.facebook.com/people/Pyraxis/61570810865327/" target="_blank" rel="noopener">Facebook · Pyraxis</a>
           <a href="#contacto" data-en="Start a project">Empezar un proyecto</a>
         </div>
