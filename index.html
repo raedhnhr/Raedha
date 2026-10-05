@@ -673,6 +673,44 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
   .brand-txt b{font-size:.86rem;letter-spacing:.1em}
   .brand-txt span{font-size:.46rem}
 }
+
+/* ===================== PÁGINAS ===================== */
+html.pg [data-page]:not(.pg-on){display:none!important}
+html.pg .pg-on{animation:pgIn .8s var(--ease) both}
+@keyframes pgIn{from{opacity:0}to{opacity:1}}
+html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
+.nav-links a.active{color:var(--white)}
+.nav-links a.active::after{width:100%}
+@media (prefers-reduced-motion:reduce){html.pg .pg-on{animation:none}}
+
+/* ===================== COMPOSICIÓN: centrado y justificado ===================== */
+.head-c{margin-inline:auto;text-align:center}
+.head-c .lede{margin-inline:auto}
+.svc-head{display:block;text-align:center}
+.svc-head>*{margin-inline:auto}
+.svc-head .lede{margin-top:22px;max-width:52ch!important}
+.head-c .eyebrow::after,.svc-head .eyebrow::after{
+  content:'';display:inline-block;width:36px;height:1px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  vertical-align:middle;margin-left:14px;
+}
+.head-c h2::after,.svc-head h2::after{
+  content:'';display:block;width:132px;height:9px;margin:26px auto 0;
+  background:linear-gradient(90deg,transparent,var(--gold)) left center/54px 1px no-repeat,
+             linear-gradient(90deg,var(--gold),transparent) right center/54px 1px no-repeat,
+             radial-gradient(circle,var(--gold) 0 2.4px,transparent 3px) center/9px 9px no-repeat;
+}
+.lede,.about-txt p,.pyx-txt p,.origin-txt p,.apps-cta p,.card-body p,.svc-body p,.tst p{
+  text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:9 4 4;
+}
+.head-c .lede,.svc-head .lede{text-align-last:center}
+.pillar,.proc{text-align:center}
+.pillar-icon{margin-inline:auto}
+.pillar p,.proc p{text-wrap:balance}
+.svc-note{margin-inline:auto;justify-content:center;text-align:center}
+.sign{text-align:center}
+.tst .who{text-align:center}
+.tst .q{text-align:center}
 </style>
 <script type="application/ld+json">
 {
@@ -730,6 +768,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </script>
 </head>
 <body>
+<script>document.documentElement.classList.add("pg");</script>
 
 <!-- ===================== NAV ===================== -->
 <nav id="nav">
@@ -743,12 +782,11 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
     </a>
     <div class="nav-right">
       <ul class="nav-links" id="menu">
-        <li><a href="#sobre" data-en="About">Sobre mí</a></li>
+        <li><a href="#top" data-en="Home">Inicio</a></li>
         <li><a href="#pyraxis">Pyraxis</a></li>
-        <li><a href="#servicios" data-en="Services">Servicios</a></li>
-        <li><a href="#trabajos" data-en="Work">Trabajos</a></li>
-        <li><a href="#apps">Apps</a></li>
         <li><a href="#taumm">Ta-Umm</a></li>
+        <li><a href="#trabajos" data-en="Portfolio">Portafolio</a></li>
+        <li><a href="#sobre" data-en="About">Sobre mí</a></li>
         <li><a href="#contacto" class="nav-cta" data-en="Start now">Empezar</a></li>
       </ul>
       <div class="lang" role="group" aria-label="Idioma / Language">
@@ -761,7 +799,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </nav>
 
 <!-- ===================== HERO ===================== -->
-<header class="hero" id="top">
+<header class="hero" id="top" data-page="inicio">
   <div class="hero-bg"><div class="orbit"></div><canvas id="hero-smoke" class="hero-smoke" aria-hidden="true"></canvas></div>
   <div class="wrap hero-in">
     <span class="eyebrow" data-en="Katy, Texas &nbsp;·&nbsp; Houston area">Katy, Texas &nbsp;·&nbsp; Área de Houston</span>
@@ -789,14 +827,14 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
     </p>
     <div class="hero-actions">
       <a href="#contacto" class="btn btn-solid" data-en="Start my project <span class=&quot;arw&quot;>→</span>">Empezar mi proyecto <span class="arw">→</span></a>
-      <a href="#trabajos" class="btn btn-ghost" data-en="See the work">Ver trabajos</a>
+      <a href="#trabajos" class="btn btn-ghost" data-en="See the portfolio">Ver portafolio</a>
     </div>
   </div>
   <div class="scroll-hint"><span>Scroll</span><span class="bar"></span></div>
 </header>
 
 <!-- ===================== MARQUEE ===================== -->
-<div class="marquee-wrap">
+<div class="marquee-wrap" data-page="inicio">
   <div class="marquee">
     <span class="mq-item">Ta-Umm Mediterranean Food</span>
     <span class="mq-item">A &amp; H General Solutions</span>
@@ -818,7 +856,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </div>
 
 <!-- ===================== SOBRE ===================== -->
-<section id="sobre">
+<section id="sobre" data-page="sobre">
   <div class="wrap about-grid">
     <div class="about-txt rv-l">
       <span class="eyebrow" data-en="Who is behind it">Quién está detrás</span>
@@ -861,7 +899,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== STATS ===================== -->
-<section class="stats" style="padding:0">
+<section class="stats" style="padding:0" data-page="inicio">
   <div class="stats-grid">
     <div class="stat rv">
       <b class="gold"><span class="count" data-to="15">0</span></b>
@@ -883,7 +921,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== PYRAXIS ===================== -->
-<section class="pyx" id="pyraxis">
+<section class="pyx" id="pyraxis" data-page="pyraxis">
   <div class="pyx-bg" id="pyxBg">PYRAXIS</div>
   <div class="wrap">
     <div class="pyx-grid">
@@ -943,7 +981,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== SERVICIOS ===================== -->
-<section id="servicios">
+<section id="servicios" data-page="pyraxis">
   <div class="wrap">
     <div class="svc-head">
       <div class="rv" style="max-width:56ch">
@@ -1032,10 +1070,10 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== TRABAJOS ===================== -->
-<section class="work" id="trabajos">
+<section class="work" id="trabajos" data-page="inicio">
   <div class="wrap">
-    <div class="rv" style="max-width:60ch">
-      <span class="eyebrow" data-en="Live work">Trabajos en vivo</span>
+    <div class="rv head-c" style="max-width:60ch">
+      <span class="eyebrow" data-en="Portfolio">Portafolio</span>
       <h2 class="sec-title" data-en="Websites you can<br><em class=&quot;gold&quot;>open right now.</em>">Páginas que puedes<br><em class="gold">abrir ahora mismo.</em></h2>
       <p class="lede" data-en="Every one of these was built from zero: strategy, design, copy, images and code.">
         Cada una fue construida desde cero: estrategia, diseño, textos, imágenes y código.
@@ -1096,9 +1134,9 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== APPS PROPIAS ===================== -->
-<section class="apps" id="apps">
+<section class="apps" id="apps" data-page="inicio">
   <div class="wrap">
-    <div class="rv" style="max-width:62ch">
+    <div class="rv head-c" style="max-width:62ch">
       <span class="eyebrow" data-en="Our own apps">Apps propias</span>
       <h2 class="sec-title" data-en="Software born<br><em class=&quot;gold&quot;>from everyday business.</em>">Software que nace<br><em class="gold">del día a día.</em></h2>
       <p class="lede" data-en="Sapphire, Ruby and Emerald solve needs we saw again and again in the businesses we work with: answering every customer, knowing what everything you sell really costs, and keeping a medical practice in order.">
@@ -1173,7 +1211,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== TA-UMM ===================== -->
-<section class="origin" id="taumm">
+<section class="origin" id="taumm" data-page="taumm">
   <div class="wrap origin-grid">
     <div class="rv-l">
       <figure class="origin-shot">
@@ -1207,9 +1245,9 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== PROCESO ===================== -->
-<section class="process">
+<section class="process" data-page="pyraxis">
   <div class="wrap">
-    <div class="rv" style="max-width:60ch">
+    <div class="rv head-c" style="max-width:60ch">
       <span class="eyebrow" data-en="How we work">Cómo trabajamos</span>
       <h2 class="sec-title" data-en="Four steps.<br><em class=&quot;gold&quot;>No endless meetings.</em>">Cuatro pasos.<br><em class="gold">Sin reuniones eternas.</em></h2>
     </div>
@@ -1217,7 +1255,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
       <div class="proc">
         <b>01</b>
         <h3 data-en="Tell me">Cuéntame</h3>
-        <p data-en="You fill in the form below and tell me what you do and where you want to get to. Five minutes.">Llenas el formulario de abajo y me dices qué haces y a dónde quieres llegar. Cinco minutos.</p>
+        <p data-en="You fill in the contact form and tell me what you do and where you want to get to. Five minutes.">Llenas el formulario de contacto y me dices qué haces y a dónde quieres llegar. Cinco minutos.</p>
       </div>
       <div class="proc">
         <b>02</b>
@@ -1239,9 +1277,9 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== TESTIMONIOS ===================== -->
-<section id="testimonios">
+<section id="testimonios" data-page="inicio">
   <div class="wrap">
-    <div class="rv" style="max-width:60ch">
+    <div class="rv head-c" style="max-width:60ch">
       <span class="eyebrow" data-en="What they say">Lo que dicen</span>
       <h2 class="sec-title" data-en="The brands<br><em class=&quot;gold&quot;>that trusted me.</em>">Las marcas<br><em class="gold">que confiaron.</em></h2>
     </div>
@@ -1269,7 +1307,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== MANIFIESTO ===================== -->
-<section class="manifesto">
+<section class="manifesto" data-page="inicio">
   <div class="glow" id="glow"></div>
   <div class="wrap">
     <span class="qmark">“</span>
@@ -1281,7 +1319,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
 </section>
 
 <!-- ===================== CONTACTO ===================== -->
-<section class="contact" id="contacto">
+<section class="contact" id="contacto" data-page="contacto">
   <div class="wrap ct-grid">
     <div class="ct-info rv-l">
       <span class="eyebrow" data-en="Let's start">Empecemos</span>
@@ -1382,12 +1420,11 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
       <div class="ft-nav">
         <div class="ft-col">
           <b data-en="Navigate">Navegar</b>
-          <a href="#sobre" data-en="About">Sobre mí</a>
+          <a href="#top" data-en="Home">Inicio</a>
           <a href="#pyraxis">Pyraxis</a>
-          <a href="#servicios" data-en="Services">Servicios</a>
-          <a href="#trabajos" data-en="Work">Trabajos</a>
-          <a href="#apps">Apps</a>
           <a href="#taumm">Ta-Umm</a>
+          <a href="#trabajos" data-en="Portfolio">Portafolio</a>
+          <a href="#sobre" data-en="About">Sobre mí</a>
         </div>
         <div class="ft-col">
           <b data-en="Services">Servicios</b>
@@ -1489,6 +1526,49 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
   menu.addEventListener('click', function(e){
     if (e.target.tagName === 'A'){ menu.classList.remove('open'); burger.classList.remove('x'); }
   });
+
+  /* ---------- Páginas: cada enlace del menú muestra su página ---------- */
+  var pgEls = Array.prototype.slice.call(document.querySelectorAll('[data-page]')), curPg = null;
+  var pgLinks = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]'));
+  function pgFirst(name){ return document.querySelector('[data-page="' + name + '"]'); }
+  function pgResolve(hash){
+    var el = null;
+    try { if (hash && hash.length > 1) el = document.getElementById(decodeURIComponent(hash.slice(1))); } catch(e){}
+    var holder = el && el.closest('[data-page]');
+    var name = holder ? holder.getAttribute('data-page') : 'inicio';
+    return { name: name, el: (holder && holder !== pgFirst(name)) ? el : null };
+  }
+  function pgShow(r, smooth){
+    var changed = (r.name !== curPg);
+    if (changed){
+      pgEls.forEach(function(el){
+        el.classList.remove('pg-on'); el.classList.remove('pg-first');
+        if (el.getAttribute('data-page') === r.name){ void el.offsetWidth; el.classList.add('pg-on'); }
+      });
+      var first = pgFirst(r.name);
+      if (first && first.tagName === 'SECTION' && !first.classList.contains('stats')) first.classList.add('pg-first');
+      curPg = r.name;
+    }
+    var hash = location.hash || '#top', exact = null, primary = null;
+    pgLinks.forEach(function(a){
+      var h = a.getAttribute('href'), t = pgResolve(h);
+      if (h === hash) exact = a;
+      if (t.name === r.name && !t.el && !primary) primary = a;
+    });
+    pgLinks.forEach(function(a){ a.classList.toggle('active', a === (exact || primary)); });
+    var how = (smooth && !reduced) ? 'smooth' : 'instant';
+    if (r.el) r.el.scrollIntoView({ behavior: how, block: 'start' });
+    else window.scrollTo({ top: 0, behavior: how });
+    if (changed){ window.dispatchEvent(new Event('resize')); onScrollNav(); }
+  }
+  function pgRoute(){ var r = pgResolve(location.hash); pgShow(r, r.name === curPg); }
+  window.addEventListener('hashchange', pgRoute);
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (a && a.getAttribute('href') === (location.hash || '#top')) pgRoute();
+  });
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch(e){}
+  pgRoute();
 
   /* ---------- Reveal ---------- */
   var io = new IntersectionObserver(function(entries){
