@@ -1,5 +1,9 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/impulsatumarca", "destination": "https://pyraxis-impulsa.vercel.app/" },
+    { "source": "/impulsatumarca/:path*", "destination": "https://pyraxis-impulsa.vercel.app/:path*" }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
