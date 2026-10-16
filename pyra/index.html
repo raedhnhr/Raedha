@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Pyra · Encuentra tu servicio ideal · Pyraxis</title>
+<meta name="description" content="Pyra te ayuda a elegir el servicio de marketing que tu negocio necesita, con precios claros y formas de pago, en 2 minutos." />
+<meta name="theme-color" content="#0B1B33" />
+<meta property="og:title" content="Pyra · Encuentra tu servicio ideal" />
+<meta property="og:description" content="Precios claros y formas de pago, en 2 minutos." />
+<link rel="canonical" href="https://pyraxisagency.com/pyra" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2 L20 7 V17 L12 22 L4 17 V7 Z' fill='%2314294D' stroke='%23C6A15B' stroke-width='1.6'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0B1B33; --navy:#14294D; --navy2:#20396A; --gold:#C6A15B; --gold2:#E4CE9A; --coral:#FF7A59; --ok:#2F8F62;
+    --card:#FFFDF8; --card2:#F6F1E6; --line:#E8E0CF; --text:#16213A; --muted:#6B7488; --field:#FBF8F1;
+    --on-bg:#14294D; --on-fg:#fff; --bg1:#20396A; --bg2:#14294D; --bg3:#0B1B33;
+    --r:18px; --shadow:0 2px 4px rgba(0,0,0,.06),0 24px 60px -24px rgba(0,0,0,.45);
+    --ease:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--card:#111C30;--card2:#16233B;--line:#26385A;--text:#E8ECF4;--muted:#9AA6BD;--field:#0D1729;--on-bg:#C6A15B;--on-fg:#0B1B33}}
+  :root[data-theme="dark"]{--card:#111C30;--card2:#16233B;--line:#26385A;--text:#E8ECF4;--muted:#9AA6BD;--field:#0D1729;--on-bg:#C6A15B;--on-fg:#0B1B33}
+  /* Web de la alianza: vinotinto de Impulsa Tu Marca + navy + dorado */
+  html.itm{--bg1:#7A1F38;--bg2:#5C1528;--bg3:#1E0A12}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:"Inter",system-ui,sans-serif;color:var(--text);line-height:1.5;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+    background:radial-gradient(120% 90% at 85% -10%,var(--bg1) 0%,var(--bg2) 38%,var(--bg3) 78%) fixed var(--bg3)}
+  html.embed body{min-height:100%}
+  button{font-family:inherit}
+  [hidden]{display:none!important}
+  .grid-bg{position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:linear-gradient(#C6A15B 1px,transparent 1px),linear-gradient(90deg,#C6A15B 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:radial-gradient(90% 70% at 70% 0%,#000,transparent 70%);mask-image:radial-gradient(90% 70% at 70% 0%,#000,transparent 70%)}
+
+  .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:12px 16px;background:rgba(11,27,51,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(198,161,91,.18);color:#fff}
+  html.itm .top{background:rgba(40,8,18,.55)}
+  .brand{font-family:"Fraunces",serif;font-weight:600;letter-spacing:.05em;font-size:15px;display:flex;align-items:center;gap:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dots{flex:1;display:flex;justify-content:center;gap:6px}
+  .dots i{width:8px;height:8px;border-radius:99px;background:rgba(255,255,255,.2);transition:all .4s var(--spring)}
+  .dots i.on{width:24px;background:var(--gold)}
+  .dots i.done{background:var(--gold2)}
+  .x{background:rgba(255,255,255,.1);border:0;color:#fff;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer;flex:none}
+  .x:hover{background:rgba(255,255,255,.2)}
+  .cat-btn{background:none;border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:99px;padding:7px 12px;font-size:13px;cursor:pointer;white-space:nowrap}
+  .cat-btn:hover{border-color:var(--gold)}
+
+  .wrap{position:relative;max-width:760px;margin:0 auto;padding:22px 16px 40px}
+  .scr{display:none}
+  .scr.on{display:block;animation:inR .5s var(--ease) both}
+  .scr.back{animation-name:inL}
+  @keyframes inR{from{opacity:0;transform:translateX(36px)}to{opacity:1;transform:none}}
+  @keyframes inL{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.12)}100%{transform:scale(1)}}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  @keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+  @keyframes count{from{opacity:.2;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+  /* Pyra y su globo */
+  .guide{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;color:#fff}
+  .guide .pyra{width:64px;height:64px;flex:none;animation:float 4s ease-in-out infinite}
+  .guide .pyra.wig{animation:wiggle .5s ease 2}
+  .say{position:relative;background:var(--card);color:var(--text);border-radius:16px;padding:12px 15px;font-size:15px;box-shadow:var(--shadow);max-width:560px}
+  .say::before{content:"";position:absolute;left:-7px;top:18px;width:14px;height:14px;background:var(--card);transform:rotate(45deg)}
+  .say.bump{animation:pop .45s var(--spring)}
+  .say b{color:var(--text)}
+  h1,h2{font-family:"Fraunces",serif;font-weight:500;letter-spacing:-.01em;color:#fff;margin:0 0 6px}
+  h1{font-size:clamp(30px,6vw,46px);line-height:1.06}
+  h1 em{color:var(--gold2);font-style:italic}
+  h2{font-size:clamp(23px,4.4vw,30px);line-height:1.15}
+  .sub{color:#D2DAEA;margin:0 0 18px;font-size:15.5px}
+
+  .hello{text-align:center;color:#fff;padding-top:8px}
+  .hello .pyra{width:120px;height:120px;display:block;margin:0 auto 4px;animation:float 4s ease-in-out infinite}
+  .hello .sub{max-width:50ch;margin:10px auto 22px}
+  .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:22px}
+  .pill{font-size:13px;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#E4E9F2}
+  .box{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:18px;text-align:left;color:var(--text);max-width:440px;margin:0 auto}
+  .box label{font-weight:600;display:block;margin-bottom:8px}
+  .row{display:flex;gap:10px}
+  .row input{flex:1}
+  input[type=text]{width:100%;font:inherit;font-size:16px;color:var(--text);background:var(--field);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px}
+  input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px rgba(198,161,91,.18)}
+  .link{background:none;border:0;color:#C8D1E2;text-decoration:underline;cursor:pointer;font-size:14px;padding:8px;margin-top:10px}
+  .link:hover{color:var(--gold2)}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+  .tile{position:relative;text-align:left;border:1.5px solid var(--line);background:var(--card);border-radius:16px;padding:14px;cursor:pointer;color:var(--text);transition:all .2s var(--ease);display:flex;flex-direction:column;gap:5px;font-size:14.5px;font-weight:600;line-height:1.3;animation:fadeUp .45s var(--ease) both;animation-delay:calc(var(--i,0)*35ms)}
+  .tile .em{font-size:28px;line-height:1;transition:transform .3s var(--spring)}
+  .tile small{font-weight:400;color:var(--muted);font-size:12.5px}
+  .tile:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 14px 28px -18px rgba(0,0,0,.6)}
+  .tile:hover .em{transform:scale(1.15) rotate(-6deg)}
+  .tile.on{border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,.35);background:linear-gradient(160deg,rgba(198,161,91,.18),var(--card) 70%)}
+  .tile.on::after{content:"✓";position:absolute;top:10px;right:10px;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#0B1B33;font-weight:800;font-size:12px;display:grid;place-items:center;animation:pop .35s var(--spring)}
+  .tile.nope{animation:wiggle .35s ease}
+  .tiles.big{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+  .count{color:#C8D1E2;font-size:13px;margin:12px 2px 0}
+
+  .fine{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:16px 18px;margin-bottom:12px;animation:fadeUp .45s var(--ease) both}
+  .fine h3{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:8px}
+  .opts{display:flex;flex-direction:column;gap:8px}
+  .opt{display:flex;align-items:center;gap:10px;text-align:left;border:1.5px solid var(--line);background:var(--field);border-radius:12px;padding:11px 13px;cursor:pointer;color:var(--text);font-size:14.5px;transition:all .18s var(--ease)}
+  .opt:hover{border-color:var(--gold)}
+  .opt .rad{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center;transition:.2s}
+  .opt.on{border-color:var(--gold);background:rgba(198,161,91,.12)}
+  .opt.on .rad{border-color:var(--gold);background:var(--gold);box-shadow:inset 0 0 0 3px var(--card)}
+  .opt .lv{margin-left:auto;font-family:"Space Mono",monospace;font-size:11.5px;color:var(--muted);white-space:nowrap}
+
+  .pay{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+  .pay .tile{font-size:15px}
+  .pay .tile small{font-size:13px;line-height:1.45}
+
+  /* resultado */
+  .plan{display:flex;flex-direction:column;gap:12px}
+  .svc{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;animation:fadeUp .5s var(--ease) both;animation-delay:calc(var(--i,0)*90ms)}
+  .svc-h{display:flex;align-items:flex-start;gap:12px;padding:16px 18px 10px}
+  .svc-h .em{font-size:28px;line-height:1}
+  .svc-h h3{margin:0;font-size:17.5px;font-family:"Fraunces",serif;font-weight:600}
+  .svc-h p{margin:2px 0 0;color:var(--muted);font-size:13.5px}
+  .svc-h .rm{margin-left:auto;background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer;line-height:1;padding:2px 4px}
+  .svc-h .rm:hover{color:var(--coral)}
+  .seg{display:flex;margin:4px 18px 0;background:var(--field);border:1px solid var(--line);border-radius:12px;padding:3px;position:relative}
+  .seg button{flex:1;border:0;background:transparent;padding:8px 6px;border-radius:9px;font-weight:600;font-size:13.5px;color:var(--muted);cursor:pointer;position:relative;z-index:1;transition:color .25s}
+  .seg button.on{color:var(--on-fg)}
+  .seg .knob{position:absolute;top:3px;bottom:3px;border-radius:9px;background:var(--on-bg);transition:left .35s var(--spring),width .35s var(--spring)}
+  .seg button .rec{position:absolute;top:-8px;right:4px;font-size:9.5px;background:var(--gold);color:#0B1B33;border-radius:99px;padding:1px 6px;font-weight:800}
+  .svc-b{padding:12px 18px 16px;display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+  .price{font-family:"Fraunces",serif;font-size:32px;font-weight:600;line-height:1}
+  .price.anim{animation:count .4s var(--ease)}
+  .price small{font-family:"Inter";font-size:13px;color:var(--muted);font-weight:500;margin-left:4px}
+  .incl{flex:1;min-width:200px;color:var(--text);font-size:13.5px;margin:0}
+  .note{font-size:12.5px;color:var(--muted);padding:0 18px 14px;margin:-4px 0 0}
+  .sum{background:linear-gradient(150deg,var(--navy),var(--ink));color:#fff;border:1px solid rgba(198,161,91,.35);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+  html.itm .sum{background:linear-gradient(150deg,#5C1528,#2A0A14)}
+  .sum-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.14)}
+  .sum-row:last-of-type{border-bottom:0}
+  .sum-row span{color:#C8D1E2;font-size:14px}
+  .sum-row b{font-family:"Fraunces",serif;font-size:24px;font-weight:600}
+  .sum-pay{margin-top:12px;background:rgba(255,255,255,.07);border-radius:12px;padding:12px 14px;font-size:14px;color:#E4E9F2}
+  .sum-pay strong{color:var(--gold2)}
+  .addons{margin-top:4px}
+  .addons p{color:#C8D1E2;font-size:13.5px;margin:6px 2px 8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:13.5px;padding:8px 13px;border-radius:99px;border:1.5px dashed rgba(198,161,91,.6);background:rgba(255,255,255,.06);color:#fff;cursor:pointer;transition:.2s var(--ease)}
+  .chip:hover{background:rgba(198,161,91,.2);transform:translateY(-2px)}
+  .nego{display:flex;gap:12px;align-items:flex-start;margin-top:12px;background:var(--card);color:var(--text);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);border-left:4px solid var(--gold);font-size:14px;animation:fadeUp .5s var(--ease) both}
+  .nego .em{font-size:26px;line-height:1}
+  .nego b{display:block;font-size:15px;margin-bottom:2px}
+  .ctas{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+  .btn{font-weight:700;font-size:15px;border-radius:14px;padding:13px 20px;cursor:pointer;border:1.5px solid transparent;transition:all .2s var(--ease);display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none}
+  .btn:active{transform:scale(.97)}
+  .btn-gold{background:var(--gold);color:#0B1B33}
+  .btn-gold:hover{background:var(--gold2)}
+  .btn-wa{background:#25D366;color:#073B1E;font-size:16.5px;padding:15px 20px}
+  .btn-wa:hover{background:#3BE07A;transform:translateY(-2px);box-shadow:0 14px 30px -14px #25D366}
+  .btn-ghost{background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.22)}
+  .btn-ghost:hover{border-color:var(--gold)}
+  .legal{color:#AEB9CF;font-size:12px;margin:14px 2px 0;line-height:1.5}
+
+  /* catálogo */
+  .cat{display:flex;flex-direction:column;gap:10px}
+  .cat details{background:var(--card);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+  .cat summary{list-style:none;cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:12px}
+  .cat summary::-webkit-details-marker{display:none}
+  .cat summary .em{font-size:24px}
+  .cat summary b{font-size:15.5px}
+  .cat summary small{display:block;color:var(--muted);font-weight:400;font-size:13px}
+  .cat summary .from{margin-left:auto;font-family:"Space Mono",monospace;font-size:12.5px;color:var(--muted);white-space:nowrap;text-align:right}
+  .cat summary .from b{display:block;font-family:"Fraunces",serif;font-size:19px;color:var(--text)}
+  .cat details[open] summary{border-bottom:1px solid var(--line)}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 18px 16px}
+  .tier{border:1px solid var(--line);border-radius:12px;padding:11px;background:var(--field);font-size:13px}
+  .tier b{display:block;font-size:13px;color:var(--muted);font-weight:600}
+  .tier .p{font-family:"Fraunces",serif;font-size:21px;font-weight:600;margin:2px 0 6px;color:var(--text)}
+  .tier ul,.esp ul{margin:0;padding-left:16px;color:var(--text)}
+  .esp{padding:14px 18px 16px;font-size:13.5px}
+  @media(max-width:560px){.tiers{grid-template-columns:1fr}.top .brand span{display:none}}
+
+  .nav{display:flex;gap:10px;justify-content:space-between;margin-top:20px}
+  .nav .btn-next{margin-left:auto}
+  .btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#fff;color:#0B1B33;padding:11px 18px;border-radius:99px;font-size:14px;font-weight:600;box-shadow:0 14px 40px -10px rgba(0,0,0,.5);opacity:0;pointer-events:none;transition:all .35s var(--spring);z-index:95;white-space:nowrap}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+  #confetti{position:fixed;inset:0;pointer-events:none;z-index:99}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<script>
+  // Antes de pintar: marca (alianza) y modo incrustado, para evitar un parpadeo de colores.
+  (function(){ var q=new URLSearchParams(location.search); if(q.get("marca")==="itm") document.documentElement.classList.add("itm"); if(q.get("embed")==="1") document.documentElement.classList.add("embed"); })();
+</script>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<header class="top">
+  <div class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 L20 7 V17 L12 22 L4 17 V7 Z" stroke="#C6A15B" stroke-width="1.5"/></svg><span id="brandName">PYRAXIS</span></div>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <button class="cat-btn" id="toCat">💲 Precios</button>
+  <button class="x" id="close" aria-label="Cerrar" hidden>×</button>
+</header>
+
+<main class="wrap">
+  <!-- 0 · hola -->
+  <section class="scr on" data-s="hola">
+    <div class="hello">
+      <svg class="pyra" aria-hidden="true"></svg>
+      <h1>¡Hola! Soy <em>Pyra</em> 👋</h1>
+      <p class="sub">Te ayudo a descubrir qué necesita tu negocio para crecer en internet, cuánto cuesta y cómo puedes pagarlo. Sin compromiso y en 2 minutos.</p>
+      <div class="pills"><span class="pill">⏱ 2 minutos</span><span class="pill">💲 Precios claros</span><span class="pill">💳 Formas de pago flexibles</span></div>
+      <div class="box">
+        <label for="nombre">¿Cómo te llamas? <small style="font-weight:400;color:var(--muted)">(opcional)</small></label>
+        <div class="row"><input id="nombre" type="text" placeholder="Tu nombre" autocomplete="given-name" /><button class="btn btn-gold" id="start">¡Vamos! →</button></div>
+      </div>
+      <button class="link" id="skipCat">Ya sé lo que quiero: ver todos los precios</button>
+    </div>
+  </section>
+
+  <!-- 1 · metas -->
+  <section class="scr" data-s="metas">
+    <div class="guide"><svg class="pyra" aria-hidden="true"></svg><div class="say" id="say-metas"></div></div>
+    <h2>¿Qué quieres lograr?</h2>
+    <p class="sub">Elige hasta 3. Si no estás seguro, elige «No sé por dónde empezar».</p>
+    <div class="tiles" id="metas"></div>
+    <p class="count" id="metasCount"></p>
+    <div class="nav"><button class="btn btn-ghost" data-back>← Atrás</button><button class="btn btn-gold btn-next" id="metasNext" disabled>Siguiente →</button></div>
+  </section>
+
+  <!-- 2 · etapa -->
+  <section class="scr" data-s="etapa">
+    <div class="guide"><svg class="pyra" aria-hidden="true"></svg><div class="say" id="say-etapa"></div></div>
+    <h2>¿En qué momento está tu negocio?</h2>
+    <p class="sub">Así te recomiendo el nivel justo, sin pagar de más.</p>
+    <div class="tiles big" id="etapas"></div>
+    <div class="nav"><button class="btn btn-ghost" data-back>← Atrás</button></div>
+  </section>
+
+  <!-- 3 · afinar -->
+  <section class="scr" data-s="afinar">
+    <div class="guide"><svg class="pyra" aria-hidden="true"></svg><div class="say" id="say-afinar"></div></div>
+    <h2>Afinemos un poquito</h2>
+    <p class="sub">Toca la frase que más se parece a lo que buscas.</p>
+    <div id="afinar"></div>
+    <div class="nav"><button class="btn btn-ghost" data-back>← Atrás</button><button class="btn btn-gold btn-next" id="afinarNext">Siguiente →</button></div>
+  </section>
+
+  <!-- 4 · pago -->
+  <section class="scr" data-s="pago">
+    <div class="guide"><svg class="pyra" aria-hidden="true"></svg><div class="say" id="say-pago"></div></div>
+    <h2>¿Cómo te gustaría pagar?</h2>
+    <p class="sub">Tenemos varias opciones. Puedes cambiarla después.</p>
+    <div class="pay" id="pagos"></div>
+    <div class="nav"><button class="btn btn-ghost" data-back>← Atrás</button></div>
+  </section>
+
+  <!-- 5 · resultado -->
+  <section class="scr" data-s="plan">
+    <div class="guide"><svg class="pyra" aria-hidden="true"></svg><div class="say" id="say-plan"></div></div>
+    <h2 id="planTitle">Tu plan recomendado</h2>
+    <p class="sub">Cambia el nivel de cada servicio y mira cómo se ajusta el precio.</p>
+    <div class="plan" id="plan"></div>
+    <div class="addons" id="addons"></div>
+    <div class="sum" id="sum" style="margin-top:14px"></div>
+    <div class="nego" id="nego"><span class="em">🤝</span><div><b>¿El presupuesto no cuadra? Hablemos.</b>Estos precios son una guía y se pueden conversar. Cuéntanos cuánto puedes invertir y armamos un plan a tu medida, por etapas o combinando servicios.</div></div>
+    <div class="ctas" style="margin-top:14px">
+      <a class="btn btn-wa" id="wa" href="#" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg> ¡Lo quiero! Hablar por WhatsApp</a>
+      <a class="btn btn-ghost" id="brief" href="https://brief.pyraxisagency.com" target="_blank" rel="noopener" hidden>📝 Adelantar el brief de mi web</a>
+      <div class="row" style="gap:8px"><button class="btn btn-ghost" style="flex:1" id="again">↺ Empezar de nuevo</button><button class="btn btn-ghost" style="flex:1" id="planCat">💲 Ver todos los precios</button></div>
+    </div>
+    <p class="legal" id="legal"></p>
+  </section>
+
+  <!-- catálogo -->
+  <section class="scr" data-s="cat">
+    <div class="guide"><svg class="pyra" aria-hidden="true"></svg><div class="say" id="say-cat"></div></div>
+    <h2>Todos nuestros precios</h2>
+    <p class="sub">Precios en dólares. Toca un servicio para ver qué incluye cada nivel.</p>
+    <div class="cat" id="cat"></div>
+    <p class="legal" id="catLegal"></p>
+    <div class="nav"><button class="btn btn-ghost" id="catBack">← Volver</button><button class="btn btn-gold btn-next" id="catQuiz">Ayúdame a elegir →</button></div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+<canvas id="confetti"></canvas>
+
+<script src="datos.js"></script>
+<script>
+(function(){
+  "use strict";
+  const D = window.PYRA_DATOS;
+  const WA = "13464020312"; // WhatsApp Business de Pyraxis: (346) 402-0312
+  const Q = new URLSearchParams(location.search);
+  const ITM = Q.get("marca")==="itm", EMBED = Q.get("embed")==="1";
+  // Idioma: ?lang=en|es (el botón flotante pasa el de la página), si no, el del navegador.
+  const L = String(Q.get("lang")||navigator.language||"es").toLowerCase().startsWith("en")?"en":"es";
+  document.documentElement.lang = L;
+  const EN = Object.assign({}, D.en, {
+    "Básico":"Basic","Pro":"Pro","Premium":"Premium","al mes":"per month","pago único":"one-time",
+    "Tener mi página web":"Get a website","Vender o recibir reservas en línea":"Sell or take bookings online","Que me encuentren en Google":"Get found on Google",
+    "Más reseñas y mi ficha de Google":"More reviews and a great Google profile","Más clientes con anuncios":"More customers with ads","Redes activas sin esfuerzo":"Active social media, effortlessly",
+    "Videos y reels que enganchen":"Videos and reels that hook","Un logo y una marca profesional":"A logo and a professional brand","Ahorrar tiempo con IA":"Save time with AI",
+    "Correos que traigan clientes de vuelta":"Emails that bring customers back","Más pedidos en apps de delivery":"More orders on delivery apps","Un préstamo o inversionistas":"A loan or investors",
+    "Una app hecha a mi medida":"A custom-built app","Videos con avatar o IA":"Avatar or AI videos","Producción para mi evento":"Production for my event","No sé por dónde empezar":"I don't know where to start",
+    "Estoy empezando":"I'm just starting","Negocio nuevo o con poca presencia en internet.":"A new business or one with little online presence.",
+    "Ya vendo y quiero crecer":"I already sell and want to grow","Tengo clientes y quiero más, de forma constante.":"I have customers and want more, consistently.",
+    "Quiero liderar mi sector":"I want to lead my industry","Busco el sistema completo y entregas rápidas.":"I want the full system and fast delivery.",
+    "Con tarjeta":"By card","Pagas en línea, seguro con Stripe. Lo mensual se cobra solo cada mes.":"Pay online, securely with Stripe. Monthly services are charged automatically.",
+    "50% ahora y 50% al entregar":"50% now, 50% on delivery","Para proyectos de pago único: empiezas con la mitad y el resto cuando esté listo.":"For one-time projects: start with half, pay the rest when it's ready.",
+    "En cuotas":"In installments","Paga en 4 cuotas con Klarna o Afterpay, sujeto a su aprobación. Tú eliges al pagar.":"Pay in 4 with Klarna or Afterpay, subject to approval. You choose at checkout.",
+    "Zelle o transferencia":"Zelle or bank transfer","Escríbenos por WhatsApp y Raed te pasa los datos.":"Message us on WhatsApp and Raed will send you the details."
+  });
+  const t = x => L==="en" ? (EN[x]||x) : x;
+  const tt = (es,en) => L==="en" ? en : es;
+  const $=(s,e=document)=>e.querySelector(s), $$=(s,e=document)=>Array.from(e.querySelectorAll(s));
+  const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const usd=n=>"$"+Math.round(n).toLocaleString("en-US");
+  const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const NIV=["Básico","Pro","Premium"];
+  const EMO={web:"🌐",video:"🎬",ia:"🤖",redes:"📱",ads:"📣",google:"⭐",seo:"🔎",email:"✉️",delivery:"🛵",marca:"🎨",estrategia:"🧭",plan:"🏦",app:"📲",videoia:"🧑‍🎤",eventos:"🎉"};
+  const SVC=Object.fromEntries(D.servicios.map(s=>[s.id,s])), ESP=Object.fromEntries(D.especiales.map(s=>[s.id,s]));
+
+  if(ITM) $("#brandName").textContent="PYRAXIS × IMPULSA TU MARCA";
+  if(L==="en"){
+    const FIJOS={
+      "#toCat":"💲 Prices", "#close@aria-label":"Close",
+      '[data-s="hola"] h1':"Hi! I'm <em>Pyra</em> 👋",
+      '[data-s="hola"] .sub':"I'll help you figure out what your business needs to grow online, what it costs and how you can pay for it. No commitment, in 2 minutes.",
+      '[data-s="hola"] .pills':'<span class="pill">⏱ 2 minutes</span><span class="pill">💲 Clear prices</span><span class="pill">💳 Flexible payment options</span>',
+      'label[for="nombre"]':'What\'s your name? <small style="font-weight:400;color:var(--muted)">(optional)</small>',
+      "#nombre@placeholder":"Your name", "#start":"Let's go! →", "#skipCat":"I know what I want: see all prices",
+      '[data-s="metas"] h2':"What do you want to achieve?", '[data-s="metas"] .sub':"Pick up to 3. If you're not sure, choose “I don't know where to start”.",
+      '[data-s="etapa"] h2':"Where is your business right now?", '[data-s="etapa"] .sub':"So I can recommend the right tier, without overpaying.",
+      '[data-s="afinar"] h2':"Let's fine-tune a little", '[data-s="afinar"] .sub':"Tap the phrase that best matches what you're looking for.",
+      '[data-s="pago"] h2':"How would you like to pay?", '[data-s="pago"] .sub':"We have several options. You can change it later.",
+      '[data-s="plan"] .sub':"Change each service's tier and watch the price adjust.",
+      "#nego div":"<b>Budget doesn't fit? Let's talk.</b>These prices are a guide and open to conversation. Tell us how much you can invest and we'll build a plan that fits you, in stages or combining services.",
+      "#brief":"📝 Get a head start on my website brief", "#again":"↺ Start over", "#planCat":"💲 See all prices",
+      '[data-s="cat"] h2':"All our prices", '[data-s="cat"] .sub':"Prices in US dollars. Tap a service to see what each tier includes.",
+      "#catBack":"← Back", "#catQuiz":"Help me choose →"
+    };
+    Object.entries(FIJOS).forEach(([k,v])=>{ const [sel,attr]=k.split("@"); const el=$(sel); if(!el) return; if(attr) el.setAttribute(attr,v); else el.innerHTML=v; });
+    $$("[data-back]").forEach(b=>b.textContent="← Back"); $$("#metasNext,#afinarNext").forEach(b=>b.textContent="Next →");
+    const wa=$("#wa"); wa.lastChild.textContent=" I want it! Chat on WhatsApp";
+    document.title="Pyra · Find your ideal service · Pyraxis";
+  }
+  if(EMBED){ $("#close").hidden=false; $("#close").addEventListener("click",()=>parent.postMessage("pyra:cerrar","*")); }
+
+  // metas → servicio (y nivel sugerido si la meta lo define)
+  const METAS=[
+    {v:"Tener mi página web",e:"🌐",s:"web"},
+    {v:"Vender o recibir reservas en línea",e:"🛒",s:"web",n:"Premium"},
+    {v:"Que me encuentren en Google",e:"🔎",s:"seo"},
+    {v:"Más reseñas y mi ficha de Google",e:"⭐",s:"google"},
+    {v:"Más clientes con anuncios",e:"📣",s:"ads"},
+    {v:"Redes activas sin esfuerzo",e:"📱",s:"redes"},
+    {v:"Videos y reels que enganchen",e:"🎬",s:"video"},
+    {v:"Un logo y una marca profesional",e:"🎨",s:"marca"},
+    {v:"Ahorrar tiempo con IA",e:"🤖",s:"ia"},
+    {v:"Correos que traigan clientes de vuelta",e:"✉️",s:"email"},
+    {v:"Más pedidos en apps de delivery",e:"🛵",s:"delivery"},
+    {v:"Un préstamo o inversionistas",e:"🏦",s:"plan"},
+    {v:"Una app hecha a mi medida",e:"📲",s:"app"},
+    {v:"Videos con avatar o IA",e:"🧑‍🎤",s:"videoia"},
+    {v:"Producción para mi evento",e:"🎉",s:"eventos"},
+    {v:"No sé por dónde empezar",e:"🧭",s:"estrategia",n:"Básico"}
+  ];
+  const ETAPAS=[
+    {v:"Estoy empezando",e:"🌱",d:"Negocio nuevo o con poca presencia en internet.",n:"Básico"},
+    {v:"Ya vendo y quiero crecer",e:"📈",d:"Tengo clientes y quiero más, de forma constante.",n:"Pro"},
+    {v:"Quiero liderar mi sector",e:"🏆",d:"Busco el sistema completo y entregas rápidas.",n:"Premium"}
+  ];
+  const PAGOS=[
+    {v:"tarjeta",e:"💳",t:"Con tarjeta",d:"Pagas en línea, seguro con Stripe. Lo mensual se cobra solo cada mes."},
+    {v:"mitad",e:"🌓",t:"50% ahora y 50% al entregar",d:"Para proyectos de pago único: empiezas con la mitad y el resto cuando esté listo."},
+    {v:"cuotas",e:"🧩",t:"En cuotas",d:"Paga en 4 cuotas con Klarna o Afterpay, sujeto a su aprobación. Tú eliges al pagar."},
+    {v:"zelle",e:"🏦",t:"Zelle o transferencia",d:"Escríbenos por WhatsApp y Raed te pasa los datos."}
+  ];
+
+  const S={nombre:"",metas:[],etapa:null,afinar:{},pago:null,plan:[],step:0,from:"hola"};
+  const ORDEN=["hola","metas","etapa","afinar","pago","plan"];
+
+  /* ---------- Pyra ---------- */
+  const PYRA=`<defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#20396A"/><stop offset="1" stop-color="#0B1B33"/></linearGradient></defs>
+    <path d="M60 8 L104 33 V87 L60 112 L16 87 V33 Z" fill="url(#pg)" stroke="#C6A15B" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M60 18 C 52 28, 50 34, 56 40 C 60 34, 66 32, 64 22 Z" fill="#E4CE9A" opacity=".9"/>
+    <g class="eye" data-cx="44" data-cy="62"><ellipse cx="44" cy="62" rx="10" ry="11" fill="#fff"/><circle class="pu" cx="44" cy="62" r="5" fill="#0B1B33"/><circle class="pu" cx="46" cy="59.5" r="1.6" fill="#fff"/></g>
+    <g class="eye" data-cx="76" data-cy="62"><ellipse cx="76" cy="62" rx="10" ry="11" fill="#fff"/><circle class="pu" cx="76" cy="62" r="5" fill="#0B1B33"/><circle class="pu" cx="78" cy="59.5" r="1.6" fill="#fff"/></g>
+    <rect class="lid" x="30" y="49" width="60" height="0" fill="#162C52"/>
+    <path d="M50 84 Q60 92 70 84" stroke="#E4CE9A" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="33" cy="80" rx="5" ry="3" fill="#FF7A59" opacity=".45"/><ellipse cx="87" cy="80" rx="5" ry="3" fill="#FF7A59" opacity=".45"/>`;
+  $$("svg.pyra").forEach(s=>{ s.setAttribute("viewBox","0 0 120 120"); s.innerHTML=PYRA; });
+  let px=innerWidth/2,py=innerHeight/2;
+  addEventListener("pointermove",e=>{px=e.clientX;py=e.clientY;look();},{passive:true});
+  function look(){ $$("svg.pyra").forEach(svg=>{ const r=svg.getBoundingClientRect(); if(!r.width) return; const k=r.width/120;
+    $$(".eye",svg).forEach(g=>{ const cx=r.left+g.dataset.cx*k, cy=r.top+g.dataset.cy*k, a=Math.atan2(py-cy,px-cx), d=Math.min(4,Math.hypot(px-cx,py-cy)/40);
+      $$(".pu",g).forEach(c=>c.setAttribute("transform",`translate(${(Math.cos(a)*d).toFixed(2)} ${(Math.sin(a)*d).toFixed(2)})`)); }); }); }
+  setInterval(()=>{ if(reduced) return; $$("svg.pyra .lid").forEach(l=>{ l.setAttribute("height","26"); setTimeout(()=>l.setAttribute("height","0"),120); }); },3600);
+  function say(id,html){ const b=$("#say-"+id); if(!b) return; b.innerHTML=html; b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump");
+    const p=b.parentElement.querySelector(".pyra"); if(p){ p.classList.remove("wig"); void p.getBoundingClientRect(); p.classList.add("wig"); } }
+  const hola=()=>S.nombre?`, ${esc(S.nombre)}`:"";
+
+  /* ---------- navegación ---------- */
+  function show(name,back){
+    $$(".scr").forEach(s=>s.classList.remove("on","back"));
+    const el=$(`.scr[data-s="${name}"]`); el.classList.add("on"); if(back) el.classList.add("back");
+    const i=ORDEN.indexOf(name); if(i>=0) S.step=i;
+    $("#dots").innerHTML=ORDEN.slice(1).map((n,k)=>`<i class="${k+1===i?"on":k+1<i?"done":""}"></i>`).join("");
+    $("#toCat").hidden=name==="cat";
+    if(enter[name]) enter[name]();
+    scrollTo({top:0,behavior:reduced?"auto":"smooth"}); setTimeout(look,50);
+  }
+  $$("[data-back]").forEach(b=>b.addEventListener("click",()=>show(ORDEN[Math.max(0,S.step-1)],true)));
+  const goCat=()=>{ S.from=$(".scr.on").dataset.s; show("cat"); };
+  $("#toCat").addEventListener("click",goCat); $("#skipCat").addEventListener("click",goCat); $("#planCat").addEventListener("click",goCat);
+  $("#catBack").addEventListener("click",()=>show(S.from==="cat"?"hola":S.from,true));
+  $("#catQuiz").addEventListener("click",()=>show("metas"));
+  const start=()=>{ S.nombre=$("#nombre").value.trim().split(" ")[0]; show("metas"); };
+  $("#start").addEventListener("click",start); $("#nombre").addEventListener("keydown",e=>{ if(e.key==="Enter") start(); });
+
+  /* ---------- pasos ---------- */
+  const enter={
+    metas(){
+      say("metas",tt(`¡Encantada${hola()}! Cuéntame qué te gustaría lograr y yo me encargo de traducirlo a servicios 🪄`,`Nice to meet you${hola()}! Tell me what you'd like to achieve and I'll turn it into services 🪄`));
+      const box=$("#metas"); box.innerHTML="";
+      METAS.forEach((m,i)=>{ const b=document.createElement("button"); b.type="button"; b.className="tile"+(S.metas.includes(m.v)?" on":""); b.style.setProperty("--i",i);
+        b.innerHTML=`<span class="em">${m.e}</span>${esc(t(m.v))}`; b.setAttribute("aria-pressed",S.metas.includes(m.v));
+        b.addEventListener("click",()=>{ const k=S.metas.indexOf(m.v);
+          if(k>=0) S.metas.splice(k,1); else { if(S.metas.length>=3){ b.classList.remove("nope"); void b.offsetWidth; b.classList.add("nope"); toast(tt("Máximo 3: quita uno para elegir otro","Up to 3: remove one to pick another")); return; } S.metas.push(m.v);
+            say("metas",(L==="en"?["Great choice! 🙌","That adds a lot! ✨","I like how you think! 💛"]:["¡Buena elección! 🙌","¡Eso suma mucho! ✨","¡Me gusta cómo piensas! 💛"])[S.metas.length-1]); }
+          b.classList.toggle("on",S.metas.includes(m.v)); b.setAttribute("aria-pressed",S.metas.includes(m.v)); syncMetas(); });
+        box.appendChild(b); });
+      syncMetas();
+    },
+    etapa(){
+      say("etapa",tt("Esto me ayuda a no recomendarte de más… ni de menos 😉","This helps me recommend not too much… and not too little 😉"));
+      const box=$("#etapas"); box.innerHTML="";
+      ETAPAS.forEach((x,i)=>{ const b=document.createElement("button"); b.type="button"; b.className="tile"+(S.etapa===x.n?" on":""); b.style.setProperty("--i",i);
+        b.innerHTML=`<span class="em">${x.e}</span>${esc(t(x.v))}<small>${esc(t(x.d))}</small>`;
+        b.addEventListener("click",()=>{ S.etapa=x.n; $$(".tile",box).forEach(t=>t.classList.remove("on")); b.classList.add("on"); setTimeout(()=>show(necesitaAfinar()?"afinar":"pago"),380); });
+        box.appendChild(b); });
+    },
+    afinar(){
+      say("afinar",tt("Una preguntita por servicio y te digo el nivel ideal 🎯","One quick question per service and I'll tell you the right tier 🎯"));
+      const box=$("#afinar"); box.innerHTML="";
+      elegidos().filter(id=>SVC[id]&&SVC[id].recomienda.length).forEach((id,i)=>{
+        const s=SVC[id], c=document.createElement("div"); c.className="fine"; c.style.animationDelay=(i*80)+"ms";
+        c.innerHTML=`<h3><span>${EMO[id]}</span>${esc(t(s.nombre))}</h3><div class="opts"></div>`;
+        s.recomienda.forEach(r=>{ const b=document.createElement("button"); b.type="button"; b.className="opt"+(S.afinar[id]===r.nivel?" on":"");
+          b.innerHTML=`<span class="rad"></span><span>${esc(t(r.texto))}</span><span class="lv">${esc(t(r.nivel))}</span>`;
+          b.addEventListener("click",()=>{ S.afinar[id]=r.nivel; $$(".opt",c).forEach(o=>o.classList.remove("on")); b.classList.add("on"); });
+          $(".opts",c).appendChild(b); });
+        box.appendChild(c); });
+    },
+    pago(){
+      say("pago",tt("Aquí nadie se queda fuera por el pago: elige la forma que te quede más cómoda 💳","Nobody gets left out over payment: pick whatever works best for you 💳"));
+      const box=$("#pagos"); box.innerHTML="";
+      PAGOS.forEach((p,i)=>{ const b=document.createElement("button"); b.type="button"; b.className="tile"+(S.pago===p.v?" on":""); b.style.setProperty("--i",i);
+        b.innerHTML=`<span class="em">${p.e}</span>${esc(t(p.t))}<small>${esc(t(p.d))}</small>`;
+        b.addEventListener("click",()=>{ S.pago=p.v; $$(".tile",box).forEach(t=>t.classList.remove("on")); b.classList.add("on"); armarPlan(); setTimeout(()=>show("plan"),380); });
+        box.appendChild(b); });
+    },
+    plan(){ renderPlan(true); },
+    cat(){ say("cat",tt("Estos son todos nuestros precios. Si te cuesta decidir, ¡yo te ayudo! 😊","Here are all our prices. If you can't decide, I'll help you! 😊")); renderCat(); }
+  };
+  function syncMetas(){
+    const n=S.metas.length; $("#metasNext").disabled=!n;
+    $("#metasCount").textContent=n?tt(`${n} de 3 elegido${n>1?"s":""}`,`${n} of 3 selected`):"";
+  }
+  $("#metasNext").addEventListener("click",()=>show("etapa"));
+  $("#afinarNext").addEventListener("click",()=>show("pago"));
+  function elegidos(){ return Array.from(new Set(S.metas.map(v=>METAS.find(m=>m.v===v).s))); }
+  const necesitaAfinar=()=>elegidos().some(id=>SVC[id]&&SVC[id].recomienda.length);
+
+  function armarPlan(){
+    S.plan=elegidos().map(id=>{ const meta=METAS.find(m=>m.s===id&&S.metas.includes(m.v)&&m.n); return {id,nivel:S.afinar[id]||(meta&&meta.n)||S.etapa||"Básico"}; });
+    S.plan.forEach(p=>p.rec=p.nivel);
+  }
+
+  /* ---------- resultado ---------- */
+  function precio(p){ const s=SVC[p.id]; if(s) return (s.niveles.find(x=>x.n===p.nivel)||s.niveles[0]).precio; return (ESP[p.id]&&ESP[p.id].desde)||0; }
+  const mensual=p=>SVC[p.id]&&SVC[p.id].unidad==="al mes";
+  function totales(){ let unico=0,mes=0,desde=false,cotiza=false;
+    S.plan.forEach(p=>{ if(ESP[p.id]){ if(ESP[p.id].desde){ unico+=ESP[p.id].desde; desde=true; } else cotiza=true; } else if(mensual(p)) mes+=precio(p); else unico+=precio(p); });
+    return {unico,mes,desde,cotiza}; }
+
+  function renderPlan(first){
+    const box=$("#plan"); box.innerHTML="";
+    if(!S.plan.length){ box.innerHTML=`<div class="fine">${tt("Tu plan está vacío. Agrega un servicio de abajo o empieza de nuevo.","Your plan is empty. Add a service below or start over.")}</div>`; }
+    S.plan.forEach((p,i)=>{
+      const s=SVC[p.id], e=ESP[p.id], c=document.createElement("div"); c.className="svc"; c.style.setProperty("--i",first?i:0);
+      if(s){
+        const nv=s.niveles.find(x=>x.n===p.nivel)||s.niveles[0];
+        c.innerHTML=`<div class="svc-h"><span class="em">${EMO[p.id]}</span><div><h3>${esc(t(s.nombre))}</h3><p>${esc(t(s.resumen))}</p></div><button class="rm" aria-label="${tt("Quitar","Remove")} ${esc(t(s.nombre))}">×</button></div>
+          <div class="seg" role="radiogroup" aria-label="${tt("Nivel","Tier")}">${s.niveles.map(x=>`<button type="button" role="radio" aria-checked="${x.n===p.nivel}" class="${x.n===p.nivel?"on":""}" data-n="${esc(x.n)}">${esc(t(x.n))}${x.n===p.rec?`<span class="rec">${tt("Para ti","For you")}</span>`:""}</button>`).join("")}<span class="knob"></span></div>
+          <div class="svc-b"><div class="price">${usd(nv.precio)}<small>${unidadCorta(s)}</small></div><p class="incl">${esc(t(nv.detalle))}</p></div>
+          ${p.id==="ads"?`<p class="note">${NOTA_ADS()}</p>`:""}
+          ${p.id==="web"?`<p class="note">${tt("Mantenimiento opcional","Optional maintenance")}: ${esc(t(D.sueltos.find(x=>x.servicio==="web").precio))} ${tt("(hosting, copias y cambios menores).","(hosting, backups and minor changes).")}</p>`:""}
+          ${p.id==="video"?`<p class="note">${tt("¿Solo uno? Video suelto","Just one? Single video")}: ${esc(D.sueltos.find(x=>x.servicio==="video").precio)}.</p>`:""}`;
+        $$(".seg button",c).forEach(b=>b.addEventListener("click",()=>{ if(b.dataset.n===p.nivel) return; p.nivel=b.dataset.n; updateCard(c,p); renderSum(); }));
+        requestAnimationFrame(()=>knob(c));
+      } else {
+        c.innerHTML=`<div class="svc-h"><span class="em">${EMO[p.id]}</span><div><h3>${esc(t(e.nombre))}</h3><p>${esc(t(e.resumen))}</p></div><button class="rm" aria-label="${tt("Quitar","Remove")} ${esc(t(e.nombre))}">×</button></div>
+          <div class="svc-b"><div class="price">${e.desde?`<small style="margin:0 6px 0 0">${tt("desde","from")}</small>${usd(e.desde)}`:tt("A medida","Custom")}<small>${esc(t(e.unidad))}</small></div><p class="incl">${e.detalle.map(x=>esc(t(x))).join(" · ")}</p></div>
+          ${!e.desde?`<p class="note">${tt("Se cotiza según el evento: cuéntanos fecha, lugar y cuántos patrocinadores.","Quoted per event: tell us the date, venue and number of sponsors.")}</p>`:""}`;
+      }
+      $(".rm",c).addEventListener("click",()=>{ c.style.transition="all .3s"; c.style.opacity="0"; c.style.transform="scale(.95)"; setTimeout(()=>{ S.plan=S.plan.filter(x=>x!==p); renderPlan(); },260); });
+      box.appendChild(c);
+    });
+    renderAddons(); renderSum();
+    const n=S.plan.length;
+    $("#planTitle").textContent=S.nombre?tt(`${S.nombre}, este es tu plan`,`${S.nombre}, here's your plan`):tt("Tu plan recomendado","Your recommended plan");
+    if(first){ say("plan",tt(`¡Listo${hola()}! Esto es lo que te recomiendo. Puedes subir o bajar el nivel de cada servicio cuando quieras 🎉`,`All set${hola()}! Here's what I recommend. You can move each service up or down a tier anytime 🎉`)); confetti(140); }
+    $("#brief").hidden=!S.plan.some(p=>p.id==="web");
+  }
+  // En inglés «I» va siempre en mayúscula: solo se pasa a minúsculas en español.
+  const minus=x=>L==="en"?x:x.toLowerCase();
+  function unidadCorta(s){ return s.unidad==="al mes"?tt("/ mes","/ month"):tt("pago único","one-time"); }
+  const NOTA_ADS=()=>tt("La inversión en anuncios se paga aparte, directo a Meta o Google.","Ad spend is paid separately, directly to Meta or Google.");
+  function knob(c){ const seg=$(".seg",c); if(!seg) return; const on=$("button.on",seg), k=$(".knob",seg); if(on){ k.style.left=on.offsetLeft+"px"; k.style.width=on.offsetWidth+"px"; } }
+  function updateCard(c,p){
+    const s=SVC[p.id], nv=s.niveles.find(x=>x.n===p.nivel);
+    $$(".seg button",c).forEach(b=>{ const on=b.dataset.n===p.nivel; b.classList.toggle("on",on); b.setAttribute("aria-checked",on); }); knob(c);
+    const pr=$(".price",c); pr.innerHTML=`${usd(nv.precio)}<small>${unidadCorta(s)}</small>`; pr.classList.remove("anim"); void pr.offsetWidth; pr.classList.add("anim");
+    $(".incl",c).textContent=t(nv.detalle);
+    if(p.nivel==="Premium") say("plan",tt("¡Premium! Vas con todo 🚀","Premium! Going all in 🚀")); else if(p.nivel!==p.rec) say("plan",tt(`Perfecto, ${esc(p.nivel)} también es buena opción 👍 Y recuerda: si el presupuesto no cuadra, lo conversamos.`,`Perfect, ${esc(t(p.nivel))} is a good option too 👍 And remember: if the budget doesn't fit, let's talk.`));
+  }
+  addEventListener("resize",()=>$$(".svc").forEach(knob));
+
+  function renderAddons(){
+    const ya=new Set(S.plan.map(p=>p.id));
+    const ideas=Array.from(new Set(S.plan.flatMap(p=>(SVC[p.id]&&SVC[p.id].sigue)||[]))).filter(id=>!ya.has(id)&&SVC[id]).slice(0,3);
+    const box=$("#addons");
+    if(!ideas.length){ box.innerHTML=""; return; }
+    box.innerHTML=`<p>✨ ${tt("Combina bien con tu plan:","Goes well with your plan:")}</p><div class="chips">${ideas.map(id=>`<button type="button" class="chip" data-add="${id}">+ ${EMO[id]} ${esc(t(SVC[id].nombre))}</button>`).join("")}</div>`;
+    $$("[data-add]",box).forEach(b=>b.addEventListener("click",()=>{ const id=b.dataset.add; S.plan.push({id,nivel:S.etapa||"Básico",rec:S.etapa||"Básico"}); renderPlan(); say("plan",tt(`¡Agregado ${EMO[id]}! Mira cómo cambió tu total 👇`,`Added ${EMO[id]}! See how your total changed 👇`));
+      const last=$$(".svc").pop(); if(last) last.scrollIntoView({behavior:reduced?"auto":"smooth",block:"center"}); }));
+  }
+  function renderSum(){
+    const T=totales(), box=$("#sum"), adel=D.adelanto;
+    let rows="";
+    if(T.unico) rows+=`<div class="sum-row"><span>${tt("Pago único","One-time")}${T.desde?tt(" (desde)"," (from)"):""}</span><b>${usd(T.unico)}</b></div>`;
+    if(T.mes) rows+=`<div class="sum-row"><span>${tt("Mensual","Monthly")}</span><b>${usd(T.mes)}<small style="font-size:13px;color:#C8D1E2"> ${tt("/ mes","/ month")}</small></b></div>`;
+    if(T.cotiza) rows+=`<div class="sum-row"><span>${tt("Evento","Event")}</span><b style="font-size:17px">${tt("Se cotiza","Quoted")}</b></div>`;
+    if(!rows) rows=`<div class="sum-row"><span>${tt("Agrega un servicio para ver tu total","Add a service to see your total")}</span><b>—</b></div>`;
+    let pay="";
+    const nombre=t((PAGOS.find(p=>p.v===S.pago)||PAGOS[0]).t), pct=Math.round(adel*100);
+    if(S.pago==="mitad") pay=T.unico?tt(`<strong>50% ahora y 50% al entregar:</strong> empiezas con ${usd(T.unico*adel)} y pagas ${usd(T.unico-T.unico*adel)} cuando esté listo.${T.mes?` Lo mensual se paga al inicio de cada mes.`:""}`,`<strong>50% now, 50% on delivery:</strong> you start with ${usd(T.unico*adel)} and pay ${usd(T.unico-T.unico*adel)} when it's ready.${T.mes?" Monthly services are paid at the start of each month.":""}`):tt(`<strong>50% y 50%</strong> aplica a proyectos de pago único. Lo mensual se paga al inicio de cada mes, con tarjeta.`,`<strong>50/50</strong> applies to one-time projects. Monthly services are paid by card at the start of each month.`);
+    else if(S.pago==="cuotas") pay=T.unico?tt(`<strong>En cuotas:</strong> con Klarna o Afterpay serían 4 pagos de unos ${usd(T.unico/4)}, sujeto a su aprobación. Lo eliges al pagar.${T.mes?" Lo mensual va con tarjeta, cada mes.":""}`,`<strong>In installments:</strong> with Klarna or Afterpay that's 4 payments of about ${usd(T.unico/4)}, subject to approval. You choose at checkout.${T.mes?" Monthly services go on your card each month.":""}`):tt(`<strong>En cuotas:</strong> Klarna y Afterpay aplican a pagos únicos. Lo mensual se cobra con tarjeta cada mes.`,`<strong>In installments:</strong> Klarna and Afterpay apply to one-time payments. Monthly services are charged to your card each month.`);
+    else if(S.pago==="zelle") pay=tt(`<strong>Zelle o transferencia:</strong> escríbenos por WhatsApp y Raed te pasa los datos. ${T.unico?`Para empezar, el ${pct}% de adelanto: ${usd(T.unico*adel)}.`:""}`,`<strong>Zelle or bank transfer:</strong> message us on WhatsApp and Raed will send you the details. ${T.unico?`To get started, the ${pct}% deposit: ${usd(T.unico*adel)}.`:""}`);
+    else pay=tt(`<strong>Con tarjeta:</strong> te mandamos un enlace de pago seguro (Stripe).${T.mes?" Lo mensual se cobra solo cada mes.":""}${T.unico?` Si prefieres, empiezas con el ${pct}% (${usd(T.unico*adel)}).`:""}`,`<strong>By card:</strong> we send you a secure payment link (Stripe).${T.mes?" Monthly services are charged automatically.":""}${T.unico?` If you prefer, start with ${pct}% (${usd(T.unico*adel)}).`:""}`);
+    box.innerHTML=rows+`<div class="sum-pay">${pay}<div style="margin-top:8px"><button type="button" class="chip" id="cambiarPago">💳 ${tt("Forma de pago","Payment")}: ${esc(nombre)} · ${tt("cambiar","change")}</button></div></div>`;
+    $("#cambiarPago").addEventListener("click",()=>show("pago",true));
+    $("#wa").href="https://wa.me/"+WA+"?text="+encodeURIComponent(mensaje());
+    $("#legal").textContent=tt(`Precios en dólares (USD), no incluyen impuestos. Entregas en menos de ${D.urgencia.dias} días: +${Math.round(D.urgencia.pct*100)}%. Los proyectos de pago único empiezan con un adelanto del ${Math.round(D.adelanto*100)}%. Pyra te da una guía: el precio final se confirma al hablar contigo.`,`Prices in US dollars, taxes not included. Delivery in under ${D.urgencia.dias} days: +${Math.round(D.urgencia.pct*100)}%. One-time projects start with a ${Math.round(D.adelanto*100)}% deposit. Pyra gives you a guide: the final price is confirmed when we talk.`);
+    $("#nego").hidden=!S.plan.length;
+  }
+  function mensaje(){
+    const T=totales(), M=[];
+    const web=ITM?"Pyraxis × Impulsa Tu Marca":"Pyraxis";
+    M.push(tt(`¡Hola! 👋 Vengo de Pyra, en la web de ${web}.`,`Hi! 👋 I'm coming from Pyra, on the ${web} website.`));
+    if(S.nombre) M.push(tt(`Soy ${S.nombre}.`,`I'm ${S.nombre}.`));
+    M.push("", tt("Me interesa:","I'm interested in:"));
+    S.plan.forEach(p=>{ const s=SVC[p.id], e=ESP[p.id];
+      if(s) M.push(`• ${t(s.nombre)} — ${t(p.nivel)}: ${usd(precio(p))}${s.unidad==="al mes"?tt("/mes","/month"):tt(" (pago único)"," (one-time)")}`);
+      else M.push(`• ${t(e.nombre)}: ${e.desde?tt("desde ","from ")+usd(e.desde):tt("a cotizar","to be quoted")}`); });
+    M.push("");
+    if(T.unico) M.push(`${tt("Pago único","One-time")}: ${usd(T.unico)}${T.desde?tt(" (desde)"," (from)"):""}`);
+    if(T.mes) M.push(`${tt("Mensual","Monthly")}: ${usd(T.mes)}${tt("/mes","/month")}`);
+    if(S.etapa) M.push(`${tt("Mi negocio","My business")}: ${minus(t(ETAPAS.find(x=>x.n===S.etapa).v))}`);
+    if(S.pago) M.push(`${tt("Forma de pago preferida","Preferred payment")}: ${t(PAGOS.find(p=>p.v===S.pago).t)}`);
+    if(S.metas.length) M.push(`${tt("Lo que quiero lograr","What I want to achieve")}: ${minus(S.metas.map(t).join(", "))}`);
+    return M.join("\n");
+  }
+  $("#wa").addEventListener("click",()=>{ confetti(120); say("plan",tt("¡Genial! Te respondemos por WhatsApp desde el (346) 402-0312. ¡Gracias por confiar en nosotros! 💛","Great! We'll reply on WhatsApp from (346) 402-0312. Thanks for trusting us! 💛")); });
+  $("#again").addEventListener("click",()=>{ Object.assign(S,{metas:[],etapa:null,afinar:{},pago:null,plan:[]}); show("metas",true); });
+
+  /* ---------- catálogo ---------- */
+  function renderCat(){
+    const box=$("#cat"); if(box.childElementCount) return;
+    D.servicios.forEach(s=>{
+      const d=document.createElement("details");
+      d.innerHTML=`<summary><span class="em">${EMO[s.id]}</span><span><b>${esc(t(s.nombre))}</b><small>${esc(t(s.resumen))}</small></span><span class="from">${tt("desde","from")}<b>${usd(s.niveles[0].precio)}</b>${esc(t(s.unidad))}</span></summary>
+        <div class="tiers">${s.niveles.map(n=>`<div class="tier"><b>${esc(t(n.n))}</b><div class="p">${usd(n.precio)}</div><ul>${t(n.detalle).split(" · ").map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>
+        ${D.sueltos.filter(x=>x.servicio===s.id).map(x=>`<p class="note">➕ ${esc(t(x.nombre))}: <b>${esc(t(x.precio))}</b> · ${esc(t(x.detalle))}</p>`).join("")}
+        ${s.id==="ads"?`<p class="note">${NOTA_ADS()}</p>`:""}`;
+      box.appendChild(d);
+    });
+    D.especiales.forEach(e=>{
+      const d=document.createElement("details");
+      d.innerHTML=`<summary><span class="em">${EMO[e.id]}</span><span><b>${esc(t(e.nombre))}</b><small>${esc(t(e.resumen))}</small></span><span class="from">${e.desde?`${tt("desde","from")}<b>${usd(e.desde)}</b>${esc(t(e.unidad))}`:`<b style="font-size:15px">${tt("Se cotiza","Quoted")}</b>${esc(t(e.unidad))}`}</span></summary>
+        <div class="esp"><ul>${e.detalle.map(x=>`<li>${esc(t(x))}</li>`).join("")}</ul></div>`;
+      box.appendChild(d);
+    });
+    $("#catLegal").innerHTML=tt(`<b>Formas de pago:</b> tarjeta (Stripe), 50% de adelanto y 50% al entregar en proyectos de pago único, cuotas con Klarna o Afterpay (sujeto a aprobación), y Zelle o transferencia (escríbenos por WhatsApp y Raed te pasa los datos). <br><b>¿El presupuesto no cuadra?</b> Estos precios son una guía y se pueden conversar: cuéntanos cuánto puedes invertir y armamos algo a tu medida. Precios en dólares (USD), sin impuestos. Entregas en menos de ${D.urgencia.dias} días: +${Math.round(D.urgencia.pct*100)}%.`,`<b>Payment options:</b> card (Stripe), 50% deposit and 50% on delivery for one-time projects, installments with Klarna or Afterpay (subject to approval), and Zelle or bank transfer (message us on WhatsApp and Raed will send you the details). <br><b>Budget doesn't fit?</b> These prices are a guide and open to conversation: tell us how much you can invest and we'll put together something that fits. Prices in US dollars, taxes not included. Delivery in under ${D.urgencia.dias} days: +${Math.round(D.urgencia.pct*100)}%.`);
+  }
+
+  /* ---------- toast y confeti ---------- */
+  let tT; function toast(m){ const el=$("#toast"); el.textContent=m; el.classList.add("show"); clearTimeout(tT); tT=setTimeout(()=>el.classList.remove("show"),2200); }
+  const cv=$("#confetti"), cx=cv.getContext("2d"); let parts=[], raf=0;
+  function confetti(n){ if(reduced) return; cv.width=innerWidth*devicePixelRatio; cv.height=innerHeight*devicePixelRatio; cx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);
+    const cols=ITM?["#C6A15B","#E4CE9A","#9C2A48","#FFFFFF","#FF7A59"]:["#C6A15B","#E4CE9A","#FF7A59","#3DDC84","#5B8DEF","#FFFFFF"];
+    for(let i=0;i<n;i++) parts.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.5,y:innerHeight*.3,vx:(Math.random()-.5)*14,vy:-Math.random()*12-4,s:Math.random()*7+4,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:cols[i%cols.length],sh:Math.random()<.5,life:0});
+    if(!raf) tick(); }
+  function tick(){ cx.clearRect(0,0,innerWidth,innerHeight); parts=parts.filter(p=>p.life<170&&p.y<innerHeight+30);
+    parts.forEach(p=>{ p.life++; p.vy+=.32; p.vx*=.985; p.x+=p.vx; p.y+=p.vy; p.r+=p.vr; cx.save(); cx.translate(p.x,p.y); cx.rotate(p.r); cx.globalAlpha=Math.max(0,1-p.life/170); cx.fillStyle=p.c;
+      if(p.sh) cx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2); else { cx.beginPath(); cx.arc(0,0,p.s/2.6,0,7); cx.fill(); } cx.restore(); });
+    raf=parts.length?requestAnimationFrame(tick):0; if(!raf) cx.clearRect(0,0,innerWidth,innerHeight); }
+
+  if(Q.get("ver")==="precios") goCat();
+  show(Q.get("ver")==="precios"?"cat":"hola"); look();
+})();
+</script>
+</body>
+</html>
