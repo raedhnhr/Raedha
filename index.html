@@ -493,6 +493,10 @@ nav.stuck{
 .apps{border-top:1px solid var(--line)}
 .apps .work-grid{grid-template-columns:repeat(3,1fr)}
 .apps .work-grid .card-shot img{object-position:0 0}
+.recs{border-top:1px solid var(--line)}
+.recs .work-grid{grid-template-columns:repeat(2,1fr)}
+.recs .card-shot img{object-position:50% 50%}
+.recs-note{margin-top:28px;font-size:.85rem;color:var(--dim)}
 .apps-cta{
   margin-top:clamp(40px,5vw,64px);padding:clamp(28px,4vw,48px);border:1px solid rgba(198,161,91,.35);
   background:linear-gradient(135deg,rgba(198,161,91,.08),rgba(1,29,87,.25));display:grid;gap:22px;align-items:center;
@@ -641,7 +645,7 @@ footer{background:var(--ink);padding:clamp(54px,6vw,78px) 0 32px;border-top:1px 
   .nav-links a{font-size:.8rem;letter-spacing:.18em}
   .burger{display:flex;z-index:1001}
   .nav-right{gap:12px}
-  .work-grid,.apps .work-grid,.pillars,.proc-grid,.tst-grid{grid-template-columns:1fr}
+  .work-grid,.apps .work-grid,.recs .work-grid,.pillars,.proc-grid,.tst-grid{grid-template-columns:1fr}
   .work-grid .card.feat{grid-template-columns:1fr}
   .work-grid .card.feat .card-shot{aspect-ratio:16/10;min-height:0}
   .f-row{grid-template-columns:1fr}
@@ -1228,6 +1232,81 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
   </div>
 </section>
 
+<!-- ===================== RECOMENDACIONES ===================== -->
+<section class="recs" id="recomendaciones" data-page="inicio">
+  <div class="wrap">
+    <div class="rv head-c" style="max-width:62ch">
+      <span class="eyebrow" data-en="Recommendations">Recomendaciones</span>
+      <h2 class="sec-title" data-en="What I recommend,<br><em class=&quot;gold&quot;>compared and explained.</em>">Lo que recomiendo,<br><em class="gold">comparado y explicado.</em></h2>
+      <p class="lede" data-en="My Amazon storefront and three recommendation sites built by Pyraxis: creator gear, viral products that are actually worth it, and the best for dogs and cats.">
+        Mi tienda en Amazon y tres webs de recomendaciones hechas por Pyraxis: material para creadores,
+        productos virales que sí valen la pena y lo mejor para perros y gatos.
+      </p>
+    </div>
+
+    <div class="work-grid">
+      <a class="card rv" data-stagger href="https://www.amazon.com/shop/raedha" target="_blank" rel="noopener sponsored">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Amazon storefront">Tienda en Amazon</span>
+          <img src="assets/rec-amazon-tienda.webp" alt="Collage de productos recomendados: micrófonos, máquina de helados, juguete para perro, vaso térmico, quitapelos y luz" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Amazon Influencer</span>
+          <h3 data-en="My Amazon storefront">Mi tienda en Amazon</h3>
+          <p data-en="My favorite lists in one place: content creation gear, viral home finds and the best for dogs and cats.">
+            Mis listas de favoritos en un solo lugar: material para crear contenido, hallazgos virales para la casa y lo mejor para perros y gatos.
+          </p>
+          <span class="card-link">amazon.com/shop/raedha →</span>
+        </div>
+      </a>
+      <a class="card rv" data-stagger href="https://setup-creador.raedhassan15.workers.dev" target="_blank" rel="noopener sponsored">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Site · Creator gear">Web · Material para creadores</span>
+          <img src="assets/rec-setup-creador.webp" alt="Escritorio de creador con micrófono inalámbrico, luz y estabilizador" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Setup Creador</span>
+          <h3>Setup Creador</h3>
+          <p data-en="Side-by-side reviews of wireless mics, lights and gimbals for filming with your phone, with the pros and cons of each.">
+            Comparativas de micrófonos inalámbricos, luces y estabilizadores para grabar con el celular, con lo bueno y lo malo de cada uno.
+          </p>
+          <span class="card-link">setup-creador.raedhassan15.workers.dev →</span>
+        </div>
+      </a>
+      <a class="card rv" data-stagger href="https://viral-picks.raedhassan15.workers.dev" target="_blank" rel="noopener sponsored">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Site · Viral products">Web · Productos virales</span>
+          <img src="assets/rec-viral-picks.webp" alt="Selección de productos virales de cocina, limpieza y belleza" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Viral Picks</span>
+          <h3>Viral Picks</h3>
+          <p data-en="TikTok’s most viral kitchen, cleaning and beauty products, filtered: which are worth it, which aren’t, and who each one is for.">
+            Los productos más virales de TikTok en cocina, limpieza y belleza, filtrados: cuáles valen la pena, cuáles no y para quién es cada uno.
+          </p>
+          <span class="card-link">viral-picks.raedhassan15.workers.dev →</span>
+        </div>
+      </a>
+      <a class="card rv" data-stagger href="https://paw-picks.raedhassan15.workers.dev" target="_blank" rel="noopener sponsored">
+        <div class="card-shot">
+          <span class="card-tag" data-en="Site · Pets">Web · Mascotas</span>
+          <img src="assets/rec-paw-picks.webp" alt="Un perro y un gato descansando juntos en un salón" loading="lazy" width="1200" height="750">
+        </div>
+        <div class="card-body">
+          <span class="place">Paw Picks</span>
+          <h3>Paw Picks</h3>
+          <p data-en="Toys, feeders, fountains, brushes and cleaning for dogs and cats: what owners actually keep using.">
+            Juguetes, comederos, fuentes, cepillos y limpieza para perros y gatos: lo que los dueños de verdad siguen usando.
+          </p>
+          <span class="card-link">paw-picks.raedhassan15.workers.dev →</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="recs-note rv" data-en="As an Amazon Associate I earn from qualifying purchases.">Como Afiliado de Amazon, gano con las compras que cumplen los requisitos (As an Amazon Associate I earn from qualifying purchases).</p>
+  </div>
+</section>
+
 <!-- ===================== TA-UMM ===================== -->
 <section class="origin" id="taumm" data-page="taumm">
   <div class="wrap origin-grid">
@@ -1442,6 +1521,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <a href="#pyraxis">Pyraxis</a>
           <a href="#taumm">Ta-Umm</a>
           <a href="#trabajos" data-en="Portfolio">Portafolio</a>
+          <a href="#recomendaciones" data-en="Recommendations">Recomendaciones</a>
           <a href="#sobre" data-en="About">Sobre mí</a>
         </div>
         <div class="ft-col">
@@ -1457,6 +1537,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <b data-en="Contact">Contacto</b>
           <a href="mailto:pyraxisai@gmail.com">pyraxisai@gmail.com</a>
           <a href="https://www.instagram.com/raedha/" target="_blank" rel="noopener">@raedha</a>
+          <a href="https://www.amazon.com/shop/raedha" target="_blank" rel="noopener sponsored" data-en="My Amazon storefront">Mi tienda en Amazon</a>
           <a href="https://www.linkedin.com/in/raed-hassan-haidar" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.facebook.com/people/Pyraxis/61570810865327/" target="_blank" rel="noopener">Facebook · Pyraxis</a>
           <a href="#contacto" data-en="Start a project">Empezar un proyecto</a>
