@@ -436,7 +436,7 @@ nav.stuck{
 .svc-head h2{font-size:clamp(2.1rem,5vw,3.9rem);margin-top:20px}
 .svc-list{border-top:1px solid var(--line)}
 .svc{
-  display:grid;grid-template-columns:70px 1fr auto;gap:clamp(18px,3.2vw,42px);align-items:center;
+  display:grid;grid-template-columns:70px 1fr auto auto;gap:clamp(18px,3.2vw,42px);align-items:center;
   padding:clamp(26px,3.2vw,38px) clamp(10px,1.6vw,22px);
   border-bottom:1px solid var(--line);
   position:relative;transition:all .6s var(--ease);cursor:default;overflow:hidden;
@@ -452,6 +452,8 @@ nav.stuck{
 .svc:hover .svc-body p{transform:translateX(11px)}
 .svc-mark{font-size:1.05rem;color:var(--dim-2);opacity:0;transform:translateX(-14px);transition:all .6s var(--ease)}
 .svc:hover .svc-mark{opacity:1;transform:none;color:var(--gold)}
+.svc-img{width:clamp(76px,8.4vw,112px);height:auto;aspect-ratio:1;object-fit:cover;border-radius:14px;border:1px solid var(--line);opacity:.88;transition:transform .7s var(--ease),opacity .5s,border-color .5s}
+.svc:hover .svc-img{transform:scale(1.06);opacity:1;border-color:rgba(198,161,91,.5)}
 .svc-note{
   margin-top:32px;font-size:.86rem;color:var(--dim);display:flex;align-items:flex-start;gap:12px;max-width:72ch;
 }
@@ -600,6 +602,13 @@ nav.stuck{
 }
 .form-box button:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(198,161,91,.28);background:var(--gold-lt)}
 .form-alt{margin-top:16px;text-align:center;font-size:.78rem;color:var(--dim-2)}
+.f-more{margin:-4px 0 22px}
+.f-more>summary{cursor:pointer;list-style:none;font-size:.8rem;color:var(--gold-lt);display:inline-flex;align-items:center;gap:8px}
+.f-more>summary::-webkit-details-marker{display:none}
+.f-more>summary::before{content:'+';display:inline-block;width:18px;height:18px;line-height:16px;text-align:center;border:1px solid var(--line);border-radius:50%;font-size:.8rem}
+.f-more[open]>summary::before{content:'–'}
+.f-more[open]>summary{margin-bottom:18px}
+.f-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 .form-alt a{color:var(--gold-lt);text-decoration:none;border-bottom:1px solid var(--line)}
 .form-alt a:hover{color:var(--white)}
 .form-note{margin-top:14px;font-size:.76rem;color:var(--dim-2);text-align:center;line-height:1.6}
@@ -708,6 +717,12 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
   text-align:justify;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:9 4 4;
 }
 .head-c .lede,.svc-head .lede{text-align-last:center}
+/* Celular: la imagen del servicio le quita ancho al texto; sin justificar para que no queden huecos. */
+@media (max-width:768px){
+  .svc{grid-template-columns:30px 1fr 54px;gap:14px}
+  .svc-img{width:54px;border-radius:10px;align-self:start;margin-top:6px}
+  .svc-body p{text-align:left}
+}
 .pillar,.proc{text-align:center}
 .pillar-icon{margin-inline:auto}
 .pillar p,.proc p{text-wrap:balance}
@@ -1008,6 +1023,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Websites">Páginas web</h3>
           <p data-en="A premium one-page site, bilingual English/Spanish, with animations, a contact form and direct orders through WhatsApp. Handmade, never a template.">Sitio one-page premium, bilingüe inglés/español, con animaciones, formulario y pedidos directos por WhatsApp. Hecho a mano, nunca una plantilla.</p>
         </div>
+        <img class="svc-img" src="assets/svc-web.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1016,6 +1032,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Digital brand audit">Auditoría digital de marca</h3>
           <p data-en="Where you stand today: website, social media, offer, pricing, reviews and competitors. A 0–100 score, the real findings, and what to fix first.">Dónde estás hoy: web, redes, oferta, precios, reseñas y competencia. Puntuación 0–100, los hallazgos reales y qué mover primero.</p>
         </div>
+        <img class="svc-img" src="assets/svc-auditoria.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1024,6 +1041,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Logo &amp; visual identity">Logo e identidad visual</h3>
           <p data-en="Logo, color palette, typography and usage manual. A brand that looks just as good on a sign, on packaging and on a phone screen.">Logo, paleta de color, tipografías y manual de uso. Una marca que se ve igual de bien en un letrero, en un empaque y en un teléfono.</p>
         </div>
+        <img class="svc-img" src="assets/svc-identidad.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1032,6 +1050,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Full branding">Branding completo</h3>
           <p data-en="The whole system: identity, voice, messaging and applications. The finished brand — not a loose file you have to figure out.">El sistema entero: identidad, voz, mensajes y aplicaciones. La marca terminada, no un archivo suelto que tú tienes que descifrar.</p>
         </div>
+        <img class="svc-img" src="assets/svc-branding.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1040,6 +1059,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Content &amp; positioning">Contenido y posicionamiento</h3>
           <p data-en="Editorial calendar, scripts and a publishing system so your brand shows up every week without improvising.">Calendario editorial, guiones y sistema de publicación para que tu marca aparezca cada semana sin improvisar.</p>
         </div>
+        <img class="svc-img" src="assets/svc-contenido.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1048,6 +1068,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Automation &amp; AI">Automatización e inteligencia artificial</h3>
           <p data-en="Assistants that answer your customers, calculators, integrations and sales analysis — built with artificial intelligence.">Asistentes que responden a tus clientes, calculadoras, integraciones y análisis de ventas, construidos con inteligencia artificial.</p>
         </div>
+        <img class="svc-img" src="assets/svc-automatizacion.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1056,6 +1077,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Custom apps">Apps a la medida</h3>
           <p data-en="Web apps you can install on your phone, with accounts, subscription payments and built-in AI. The same foundation behind Sapphire, Ruby and Emerald.">Aplicaciones web instalables en el celular, con cuentas de usuario, cobros por suscripción e inteligencia artificial integrada. La misma base con la que construí Sapphire, Ruby y Emerald.</p>
         </div>
+        <img class="svc-img" src="assets/svc-apps.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
       <article class="svc rv" data-stagger>
@@ -1064,6 +1086,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <h3 data-en="Ads &amp; tracking">Anuncios y medición</h3>
           <p data-en="Meta and Google campaigns with real tracking: pixel and Conversions API connected to your sales, so the ads optimize for purchases, not for likes.">Campañas en Meta y Google con medición real: píxel y API de Conversiones conectados a tus ventas, para que los anuncios se optimicen por compras y no por «me gusta».</p>
         </div>
+        <img class="svc-img" src="assets/svc-anuncios.webp" alt="" loading="lazy" decoding="async" width="320" height="320">
         <span class="svc-mark">→</span>
       </article>
     </div>
@@ -1493,10 +1516,26 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
             <label for="m" data-en="Tell me about your brand">Cuéntame de tu marca</label>
             <textarea id="m" name="mensaje" placeholder="¿Qué vendes y qué quieres lograr?" data-en-ph="What do you sell and what do you want to achieve?"></textarea>
           </div>
+          <details class="f-more">
+            <summary data-en="Add more details (optional) and save us the first call">Añade más detalles (opcional) y nos ahorramos la primera llamada</summary>
+            <div class="f">
+              <label for="w" data-en="Your current website or social profile">Tu web o red social actual</label>
+              <input type="text" id="w" name="web" placeholder="tunegocio.com o @tunegocio" data-en-ph="yourbusiness.com or @yourbusiness">
+            </div>
+            <div class="f">
+              <label for="pu" data-en="Who are your customers?">¿Quiénes son tus clientes?</label>
+              <input type="text" id="pu" name="publico" placeholder="Familias de Katy, dueños de restaurantes…" data-en-ph="Families in Katy, restaurant owners…">
+            </div>
+            <div class="f">
+              <label for="me" data-en="What do you most want to improve?">¿Qué es lo que más quieres mejorar?</label>
+              <input type="text" id="me" name="mejorar" placeholder="Más clientes, verme más profesional, vender en línea…" data-en-ph="More customers, look more professional, sell online…">
+            </div>
+          </details>
+          <div class="f-trap" aria-hidden="true"><label for="sw">Sitio web</label><input type="text" id="sw" name="sitio_web" tabindex="-1" autocomplete="off"></div>
           <button type="submit" data-en="Send request">Enviar solicitud</button>
-          <p class="form-alt" data-en="Your request goes straight to Raed's inbox. Prefer to write yourself? &lt;a href=&quot;mailto:pyraxisai@gmail.com&quot;&gt;pyraxisai@gmail.com&lt;/a&gt;">
-            Tu solicitud llega directo al correo de Raed. ¿Prefieres escribir tú?
-            <a href="mailto:pyraxisai@gmail.com">pyraxisai@gmail.com</a>
+          <p class="form-alt" data-en="Your request goes straight to Raed and, if you leave your email, you get a confirmation. &lt;a href=&quot;/privacidad&quot;&gt;How we use your data&lt;/a&gt; · &lt;a href=&quot;mailto:pyraxisai@gmail.com&quot;&gt;pyraxisai@gmail.com&lt;/a&gt;">
+            Tu solicitud llega directo a Raed y, si dejas tu correo, te llega una confirmación.
+            <a href="/privacidad">Cómo usamos tus datos</a> · <a href="mailto:pyraxisai@gmail.com">pyraxisai@gmail.com</a>
           </p>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
         </form>
@@ -1541,6 +1580,7 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
           <a href="https://www.linkedin.com/in/raed-hassan-haidar" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.facebook.com/people/Pyraxis/61570810865327/" target="_blank" rel="noopener">Facebook · Pyraxis</a>
           <a href="#contacto" data-en="Start a project">Empezar un proyecto</a>
+          <a href="/privacidad" data-en="Help &amp; privacy">Ayuda y privacidad</a>
         </div>
       </div>
     </div>
@@ -1560,8 +1600,9 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var MAIL = 'pyraxisai@gmail.com';
-  /* Las solicitudes llegan al correo. Para cambiar de servicio, sustituye esta
-     única línea (Formspree: https://formspree.io/f/XXXXXXX). */
+  /* Las solicitudes entran a Onyx (contacto + oportunidad + confirmación al cliente).
+     Si Onyx no responde, van al correo por FormSubmit; si eso también falla, se ofrece mailto. */
+  var ONYX = 'https://onyx.pyraxisagency.com/api/formularios/';
   var ENDPOINT = 'https://formsubmit.co/ajax/' + MAIL;
 
   /* ---------- Bilingüe ES / EN ---------- */
@@ -1751,8 +1792,23 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
       [en ? 'Email' : 'Correo', val('e')],
       [en ? 'Brand' : 'Marca', val('mk')],
       [en ? 'Service' : 'Servicio', val('sv')],
-      [en ? 'About the brand' : 'Sobre la marca', val('m')]
+      [en ? 'About the brand' : 'Sobre la marca', val('m')],
+      [en ? 'Website / social' : 'Web o red social', val('w')],
+      [en ? 'Customers' : 'Clientes', val('pu')],
+      [en ? 'Wants to improve' : 'Quiere mejorar', val('me')]
     ];
+  }
+
+  /* Preguntas del formulario en Onyx (p1…p6, en este orden). El servicio va en español en los dos idiomas. */
+  function onyxPayload(){
+    var sv = document.getElementById('sv'), opt = sv.options[sv.selectedIndex];
+    return {
+      nombre: val('n'), telefono: val('t'), email: val('e'), sitio_web: val('sw'),
+      respuestas: {
+        p1: val('mk'), p2: (opt && opt.getAttribute('data-es')) || val('sv'), p3: val('m'),
+        p4: val('w'), p5: val('pu'), p6: val('me')
+      }
+    };
   }
 
   function subject(){
@@ -1791,8 +1847,8 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
   function sent(){
     btn.disabled = false;
     form.reset();
-    say(isEn() ? 'Sent. Your request is in Raed\'s inbox — you will hear back within 24 hours.'
-               : 'Enviado. Tu solicitud ya está en el correo de Raed — te responde en menos de 24 horas.', '#E4C88C');
+    say(isEn() ? 'Sent. Raed has your request and will reply within 24 hours. If you left your email, check it for the confirmation.'
+               : 'Enviado. Raed ya tiene tu solicitud y te responde en menos de 24 horas. Si dejaste tu correo, revisa la confirmación.', '#E4C88C');
   }
 
   function fallback(){
@@ -1808,18 +1864,29 @@ html.pg section.pg-first{padding-top:calc(clamp(86px,10vw,150px) + 40px)}
   form.addEventListener('submit', function(e){
     e.preventDefault();
     if (!validate()){ warn(); return; }
+    if (val('sw')){ sent(); return; }
     btn.disabled = true;
     say(isEn() ? 'Sending…' : 'Enviando…');
-    fetch(ENDPOINT, {
+    function porCorreo(){
+      return fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload())
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d && (d.success === true || d.success === 'true')) sent();
+        else fallback();
+      });
+    }
+    fetch(ONYX + (isEn() ? 'pyraxisagency-en' : 'pyraxisagency'), {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload())
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(onyxPayload())
     })
-    .then(function(r){ return r.json(); })
-    .then(function(d){
-      if (d && (d.success === true || d.success === 'true')) sent();
-      else fallback();
-    })
+    .then(function(r){ return r.json().catch(function(){ return null; }); })
+    .then(function(d){ return d && d.ok ? sent() : porCorreo(); })
+    .catch(function(){ return porCorreo(); })
     .catch(fallback);
   });
 })();
